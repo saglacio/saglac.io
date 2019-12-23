@@ -1,5 +1,3 @@
-/* eslint "no-console": "off" */
-
 const path = require("path");
 const _ = require("lodash");
 const moment = require("moment");
@@ -29,8 +27,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         slug = `/${_.kebabCase(node.frontmatter.slug)}`;
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, "date")) {
         const date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
-        if (!date.isValid)
+        if (!date.isValid) {
           console.warn(`WARNING: Invalid date.`, node.frontmatter);
+        }
 
         createNodeField({ node, name: "date", value: date.toISOString() });
       }
@@ -44,7 +43,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const postPage = path.resolve("src/templates/post.jsx");
   const tagPage = path.resolve("src/templates/tag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
-  const listingPage = path.resolve("./src/templates/listing.jsx");
+  const listingPage = path.resolve("src/templates/listing.jsx");
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
