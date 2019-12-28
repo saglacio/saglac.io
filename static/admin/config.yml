@@ -21,6 +21,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Facebook event", name: "event_url", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown", required: false }
       - { label: "Cover Image", name: "cover", widget: "image", required: false }
       - label: "Location"
@@ -32,17 +33,19 @@ collections:
         displayFields: ["id"]
 
       - label: "Talks"
+        label_singular: "Talk"
         name: "talks"
         widget: "list"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "markdown", required: false }
           - label: "Authors"
+            label_singular: "Author"
             name: "authors"
             widget: "list"
             fields:
               - label: "Author"
-                name: "author"
+                # name: "author"
                 widget: "relation"
                 collection: "authors"
                 searchFields: ["id", "name"]
