@@ -41,5 +41,32 @@ collections:
     slug: "{{fields.id}}"
     identifier_field: id
     fields:
-      - { label: "id", name: 'id', widget: "string", hint: "Unique identifier used in relations with events." }
+      - label: "id"
+        name: "id"
+        widget: "string"
+        hint: "Unique identifier used in relations with an event's talks."
+        pattern: ['.{5,}', "Must have at least 5 characters"]
+
       - { label: "Full name", name: "name", widget: "string" }
+
+      - label: "Personal website"
+        name: "website"
+        widget: "string"
+        required: false
+
+      - label: "Github username"
+        name: "github"
+        widget: "string"
+        hint: "Username without the @ sign."
+        required: false
+
+      - label: "Twitter handle"
+        name: "twitter"
+        widget: "string"
+        hint: "Handle without the @ sign."
+        required: false
+
+      - label: "Short bio"
+        name: bio
+        widget: "markdown"
+        required: false
