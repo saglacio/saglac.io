@@ -73,7 +73,8 @@
     "stylelint-config-standard": "^19.0.0",
     "stylelint-order": "^3.1.1",
     "stylelint-scss": "^3.13.0",
-    "write-good": "^1.0.1"
+    "write-good": "^1.0.1",
+    "yaml": "^1.7.2"
   },
   "keywords": [
     "gatsby"

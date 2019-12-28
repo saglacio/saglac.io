@@ -1,0 +1,126 @@
+aduquette:
+  name: Anthony Duquette
+  twitter: CantyCanadian
+  website: http://cantycanadian.com/
+  bio: |
+    Originaire de Gatineau, Anthony a travaillé chez Ludia à Montreal avant de déménager en Janvier 2018 pour rejoindre
+    l'équipe d'Ubisoft Saguenay en tant que programmeur généraliste.
+
+alexis_valotaire:
+  name: Alexis Valotaire
+  github: AlexisCode101
+
+chefjuanpi:
+  name: Juan Pablo Aguilar-Lliguin
+  website: http://lliguin.com
+
+claudia_belanger:
+  name: Claudia Bélanger
+  website: https://www.moulinacie.com/
+
+dany_ouellet:
+  name: Dany Ouellet
+
+elaberge:
+  name: Eric Laberge
+  github: elaberge
+
+emileber:
+  name: Émile Bergeron
+  twitter: emile_ber
+  github: emileber
+  website: http://www.prismalstudio.com/
+
+ferd:
+  name: Frédéric Trottier-Hebert
+  twitter: mononcqc
+  github: ferd
+  website: https://ferd.ca/
+  bio: |
+    Fred Hébert est l’auteur de <a href="http://learnyousomeerlang.com/" target="_blank">Learn You Some Erlang</a>, un
+    livre gratuit et en ligne (disponible également en version papier) qui vise à enseigner le langage de programmation
+    Erlang, de <a href="https://www.erlang-in-anger.com/" target="_blank">Erlang in Anger</a>, un ebook sur l’opération
+    de ce langage en production, et de <a href="https://propertesting.com/" target="_blank">PropEr Testing</a>, sur le
+    property-based testing.
+
+    Il est Architecte Système chez Genetec, entreprise de sécurité sur IP, vidéosurveillance, contrôle d’accès, et de
+    reconnaissance de plaques d’immatriculation. Par le passé, il agissait en tant qu’expert pour la plateforme de
+    routage et de logging de Heroku.
+
+jeanphilippe_gravel:
+  name: Jean-Philippe Gravel
+  twitter: formixian
+  github: formix
+  bio: Ingénieur, entrepreneur, geek, programmeur et électronicien amateur. RFID is fun, got a few readers here and there. You can run but you can't hide!
+
+gableroux:
+  name: Gabriel Le Breton
+  twitter: gableroux
+  github: GabLeRoux
+  website: https://gableroux.com/
+
+jim_plourde:
+  name: Jean-Michel Plourde
+  twitter: jimDePlour
+
+jipiboily:
+  name: Jean-Philippe Boily
+  twitter: jipiboily
+  github: jipiboily
+  website: https://metricswatch.com/
+
+joelthebert:
+  name: Joel Trottier-Hebert
+  twitter: JoelTHebert
+  github: Pacane
+
+jrobichaudg:
+  name: Jules Robichaud-Gagnon
+  github: jrobichaud
+
+kimlavoie:
+  name: Kim Lavoie
+  github: KimLavoie
+
+laurent_parenteau:
+  name: Laurent Parenteau
+
+m0xx:
+  name: Maxime Morin
+  github: m0xx
+  twitter: m0xx_
+  website: https://m0xx.github.io/
+  bio: Développeur web du Saguenay, il mange du JavaScript pour déjeuner, diner et souper!
+
+mathieu_auclair:
+  name: Mathieu Auclair
+  website: https://mathieuauclairweb.wordpress.com/
+  github: MathieuAuclair
+
+paulhenri_callens:
+  name: Paul-Henri Callens
+  twitter: phcallens
+  website: https://www.moulinacie.com/
+
+pa_audet:
+  name: Pierre-Alexandre Audet
+
+pierre_luc_tremblay:
+  name: Pierre-Luc Tremblay
+
+sjuair:
+  name: Steeve Juair
+  twitter: Juair
+
+valere_plantevin:
+  name: Valère Plantevin
+
+vincentpoirier:
+  name: Vincent Poirier
+  github: Eradash
+  website: https://eradash.github.io/
+
+yanick_ouellet:
+  name: Yanick Ouellet (Club Asimov)
+  twitter: ClubAsimov
+  website: https://www.facebook.com/ClubAsimov/
