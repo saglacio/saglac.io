@@ -45,7 +45,7 @@ collections:
         name: "id"
         widget: "string"
         hint: "Unique identifier used in relations with an event's talks."
-        pattern: ['.{5,}', "Must have at least 5 characters"]
+        pattern: ['.{4,}', "Must have at least 4 characters"]
 
       - { label: "Full name", name: "name", widget: "string" }
 
