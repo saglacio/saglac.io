@@ -3,25 +3,24 @@ const ERROR = 2;
 const OFF = 0;
 
 module.exports = {
-  "extends": ["airbnb"],
-  "plugins": ["react", "jsx-a11y", "import"],
+  extends: ['airbnb'],
+  plugins: ['react', 'jsx-a11y', 'import'],
+  parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 8,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
   },
-  "rules": {
-    // "react/prefer-stateless-function": "off",
-    // "react/prop-types": "off",
-    // "react/no-danger": "off",
-    // "jsx-a11y/anchor-is-valid": [ "error", {
-    //   "components": [ "Link" ],
-    //   "specialLink": [ "hrefLeft", "hrefRight", "to" ],
-    //   "aspects": [ "noHref", "invalidHref", "preferButton" ]
-    // }],
-        /**
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+    jest: true,
+  },
+  rules: {
+    /**
      * default eslint rules override
      */
     'class-methods-use-this': OFF,
@@ -65,8 +64,8 @@ module.exports = {
      */
     'jsx-a11y/anchor-is-valid': [ERROR, {
       components: ['Link'],
-      specialLink: ['hrefLeft', 'hrefRight', 'route'],
-      aspects: ['invalidHref', 'preferButton'],
+      specialLink: ['hrefLeft', 'hrefRight', 'to'],
+      aspects: ['noHref', 'invalidHref', 'preferButton'],
     }],
     'jsx-a11y/label-has-associated-control': [ERROR, {
       labelComponents: ['CustomInputLabel'],
@@ -82,6 +81,10 @@ module.exports = {
     'react/forbid-prop-types': OFF,
     'react/jsx-one-expression-per-line': [ERROR, { allow: 'single-child' }],
     'react/no-danger': ERROR,
+    'react/prop-types': [ERROR, {
+      // FIXME: remove when the website is ready to be developed
+      skipUndeclared: true,
+    }],
     'react/sort-comp': [ERROR, {
       order: [
         //   'type-annotations',
@@ -95,13 +98,7 @@ module.exports = {
       ],
     }],
   },
-  "settings": {
-    "import/core-modules": []
+  settings: {
+    'import/core-modules': [],
   },
-  "env": {
-    "browser": true,
-    node: true,
-    es6: true,
-    jest: true,
-  }
 };
