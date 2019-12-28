@@ -10,26 +10,44 @@ public_folder: assets
 publish_mode: editorial_workflow
 
 collections:
-  - name: blog
-    label: "Post"
-    folder: "content"
+  - name: io_events
+    label: "IO events"
+    label_singular: "IO event"
+    folder: "data/io-events"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}.md"
+    extension: yml
+    format: yml
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - label: "Post Author"
-        name: "author"
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - { label: "Cover Image", name: "cover", widget: "image", required: false }
+      - label: "Location"
+        name: "location"
         widget: "relation"
-        collection: "authors"
-        searchFields: ["name.first", "twitterHandle"]
-        valueField: "name.first"
-        displayFields: ["twitterHandle", "followerCount"]
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Cover Image", name: "cover", widget: "image" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Category", name: "category", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Body", name: "body", widget: "markdown" }
+        collection: "locations"
+        searchFields: ["name", "id"]
+        valueField: "id"
+        displayFields: ["id"]
+
+      - label: "Talks"
+        name: "talks"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "markdown", required: false }
+          - label: "Authors"
+            name: "authors"
+            widget: "list"
+            fields:
+              - label: "Author"
+                name: "author"
+                widget: "relation"
+                collection: "authors"
+                searchFields: ["id", "name"]
+                valueField: "id"
+                displayFields: ["id", "name"]
 
   - name: authors
     label: "Authors"
