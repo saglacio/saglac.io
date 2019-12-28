@@ -12,10 +12,11 @@
     "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
     "clean": "rm -rf public && rm -rf .cache",
     "lint:js": "eslint --ext .js,.jsx .",
+    "lint:styles": "stylelint ./**/*",
     "lint:md": "remark content/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
-    "format:js": "prettier '**/*.{js,jsx}' --write",
-    "format:styles": "prettier '**/*.{css,scss}' --write"
+    "format:js": "npm run lint:js -- --fix",
+    "format:styles": "npm run lint:styles -- --fix"
   },
   "dependencies": {
     "gatsby": "^2.15.28",
@@ -54,19 +55,19 @@
   },
   "devDependencies": {
     "cli-glob": "^0.1.0",
-    "eslint": "^6.5.0",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.17.0",
     "remark-cli": "^7.0.0",
     "remark-preset-lint-recommended": "^3.0.2",
     "stylelint": "^11.0.0",
-    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-config-recommended-scss": "^4.1.0",
     "stylelint-config-standard": "^19.0.0",
+    "stylelint-order": "^3.1.1",
+    "stylelint-scss": "^3.13.0",
     "write-good": "^1.0.1"
   },
   "keywords": [

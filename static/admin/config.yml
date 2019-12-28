@@ -6,8 +6,8 @@ backend:
 media_folder: static/assets
 public_folder: assets
 
-# # adds an interface for drafting, reviewing, and approving posts
-# publish_mode: editorial_workflow
+# adds an interface for drafting, reviewing, and approving posts
+publish_mode: editorial_workflow
 
 collections:
   - name: blog
@@ -17,9 +17,29 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}.md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - label: "Post Author"
+        name: "author"
+        widget: "relation"
+        collection: "authors"
+        searchFields: ["name.first", "twitterHandle"]
+        valueField: "name.first"
+        displayFields: ["twitterHandle", "followerCount"]
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Cover Image", name: "cover", widget: "image" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Category", name: "category", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: authors
+    label: "Authors"
+    label_singular: "Author"
+    folder: "data/authors"
+    create: true
+    extension: yml
+    format: yml
+    slug: "{{fields.id}}"
+    identifier_field: id
+    fields:
+      - { label: "id", name: 'id', widget: "string", hint: "Unique identifier used in relations with events." }
+      - { label: "Full name", name: "name", widget: "string" }
