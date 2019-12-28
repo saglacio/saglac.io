@@ -43,14 +43,14 @@ collections:
             label_singular: "Author"
             name: "authors"
             widget: "list"
-            fields:
-              - label: "Author"
-                # name: "author"
-                widget: "relation"
-                collection: "authors"
-                searchFields: ["id", "name"]
-                valueField: "id"
-                displayFields: ["id", "name"]
+            field:
+              label: "Author"
+              name: "author"
+              widget: "relation"
+              collection: "authors"
+              searchFields: ["id", "name"]
+              valueField: "id"
+              displayFields: ["id", "name"]
 
   - name: authors
     label: "Authors"
