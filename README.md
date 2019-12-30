@@ -1,4 +1,4 @@
-<div align="center" style="margin-bottom:30px">
+<div align="center" style="margin-bottom: 30px;">
     <a href='https://github.com/vagr9k/gatsby-advanced-starter/blob/master/LICENSE'>
     <img src="https://img.shields.io/github/license/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
     </a>
@@ -15,7 +15,7 @@
 
 
 
-<div align="center"  style="margin-bottom:30px">
+<div align="center"  style="margin-bottom: 30px;">
     <img src="static/logos/logo-1024.png" alt="Logo" width='200px' height='200px'/>
 </div>
 
@@ -143,7 +143,7 @@ npm run develop # or gatsby develop
 
 ## Configuration
 
-Edit the export object in `data/SiteConfig`:
+Edit the export object in `SiteConfig.js`:
 
 ```js
 module.exports = {

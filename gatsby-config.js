@@ -1,6 +1,6 @@
 const urljoin = require('url-join');
 const path = require('path');
-const config = require('./data/SiteConfig');
+const config = require('./SiteConfig');
 
 module.exports = {
   pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,
@@ -33,6 +33,14 @@ module.exports = {
       options: {
         name: 'posts',
         path: `${__dirname}/content/`,
+      },
+    },
+    'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/data/`,
       },
     },
     {

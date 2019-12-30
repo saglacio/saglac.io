@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layout';
 import PostListing from '../components/PostListing/PostListing';
-import config from '../../data/SiteConfig';
+import config from '../../SiteConfig';
 
 const TagTemplate = ({ data, pageContext: { tag } }) => (
   <Layout>
@@ -16,7 +16,6 @@ const TagTemplate = ({ data, pageContext: { tag } }) => (
 
 export default TagTemplate;
 
-/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query TagPage($tag: String) {
     allMarkdownRemark(
