@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import config from '../../SiteConfig';
-import './index.css';
+import '../scss/main.scss';
 
 const MainLayout = ({ children }) => (
   <div className="layout-container">

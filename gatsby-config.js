@@ -22,6 +22,13 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-lodash',
     {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        data: `@import "${__dirname}/src/scss/modules";`,
+        precision: 6, // recommended for Bootstrap 4
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'assets',
