@@ -1,5 +1,3 @@
-// const path = require('path');
-
 /**
  * Import aliases hash definition for the babel-module resolver plugin.
  *
@@ -12,5 +10,4 @@ module.exports = {
     '@': './src/',
     '~': './',
   },
-  logLevel: 'verbose',
 };
