@@ -1,10 +1,17 @@
+// const path = require('path');
+const resolverConfig = require('./resolver.config');
+
 const ERROR = 2;
 // const WARN = 1;
 const OFF = 0;
 
 module.exports = {
   extends: ['airbnb'],
-  plugins: ['react', 'jsx-a11y', 'import'],
+  plugins: [
+    'react',
+    'jsx-a11y',
+    'import',
+  ],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 8,
@@ -99,6 +106,9 @@ module.exports = {
     }],
   },
   settings: {
-    'import/core-modules': [],
+    // 'import/core-modules': [],
+    'import/resolver': {
+      'babel-module': resolverConfig,
+    },
   },
 };

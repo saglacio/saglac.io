@@ -60,9 +60,12 @@
     "url-join": "^4.0.0"
   },
   "devDependencies": {
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-preset-gatsby": "^0.2.26",
     "cli-glob": "^0.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-import-resolver-babel-module": "^5.1.0",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",

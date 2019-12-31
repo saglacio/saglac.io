@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "module": "commonjs",
+    "target": "es2017",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "jsx": "react",
     "paths": {
-      "*": [
-        "*",
-        "src/*"
-      ]
+      "@/*": ["./src/*"],
+      "~/*": ["./*"]
     }
   },
   "typeAcquisition": {
