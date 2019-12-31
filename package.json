@@ -17,7 +17,9 @@
     "lint:md": "remark content/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
     "format:js": "npm run lint:js -- --fix",
-    "format:styles": "npm run lint:styles -- --fix"
+    "format:styles": "npm run lint:styles -- --fix",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
@@ -60,6 +62,12 @@
     "url-join": "^4.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-preset-gatsby": "^0.2.26",
     "cli-glob": "^0.1.0",
