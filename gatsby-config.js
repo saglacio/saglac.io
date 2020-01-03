@@ -122,6 +122,15 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+      options: {
+        devMode: process.env.NODE_ENV !== 'production',
+        analyzerPort: 3001,
+        disable: process.env.APP_ANALYZE !== 'true',
+        openAnalyzer: process.env.APP_ANALYZE === 'true',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-feed',
       options: {
         setup(ref) {
