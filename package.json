@@ -12,7 +12,7 @@
     "build:storybook": "build-storybook -s static -o public/storybook",
     "clean": "gatsby clean",
     "lint": "run-s lint:*",
-    "lint:js": "eslint --ext .js,.jsx .",
+    "lint:js": "cross-env NODE_ENV=test eslint --ext .js,.jsx .",
     "lint:styles": "stylelint \"**/*.?(s)css\"",
     "lint:md": "remark content/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
