@@ -6,6 +6,8 @@ backend:
 media_folder: static/assets
 public_folder: assets
 
+logo_url: https://emileber-gatsby-test.netlify.com/static/logos/SaglacIO_Logo_Meetups.png
+
 # adds an interface for drafting, reviewing, and approving posts
 publish_mode: editorial_workflow
 
