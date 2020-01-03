@@ -1,13 +1,13 @@
 import React from 'react';
 import { Follow } from 'react-twitter-widgets';
 
-const UserInfo = ({ expanded, config: { userTwitter } }) => (
+const TwitterFollowButton = ({ expanded, username }) => (
   <Follow
-    username={userTwitter}
+    username={username}
     options={{
       count: expanded ? true : 'none',
     }}
   />
 );
 
-export default UserInfo;
+export default TwitterFollowButton;

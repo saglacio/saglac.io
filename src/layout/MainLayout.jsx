@@ -4,7 +4,7 @@ import config from '../../SiteConfig';
 import '../scss/main.scss';
 
 const MainLayout = ({ children }) => (
-  <div className="layout-container">
+  <div className="io-layout">
     <Helmet>
       <meta name="description" content={config.siteDescription} />
       <html lang="en" />

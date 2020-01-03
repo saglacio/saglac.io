@@ -16,7 +16,7 @@ const config = {
   postsPerPage: 4, // Amount of posts displayed per listing page.
   userName: 'Test User', // Username to display in the author segment.
   userEmail: 'test@example.com', // Email used for RSS feed's author segment
-  userTwitter: '', // Optionally renders "Follow Me" in the UserInfo segment.
+  userTwitter: 'saglacio', // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: 'Saguenay, Qc, CA', // User location to display in the author segment.
   userAvatar: 'https://api.adorable.io/avatars/150/test.png', // User avatar to display in the author segment.
   userDescription:
@@ -39,9 +39,10 @@ const config = {
       iconClassName: 'fa fa-envelope',
     },
   ],
-  copyright: `Copyright © ${(new Date()).getFullYear()}. Test`, // Copyright string for the footer of the website and RSS feed.
+  // Copyright string for the footer of the website and RSS feed.
+  copyright: `Copyright © 2013-${(new Date()).getFullYear()}. Test`,
   themeColor: '#7ecdc3', // Used for setting manifest and progress theme colors.
-  backgroundColor: '#161843', // Used for setting manifest background color.
+  backgroundColor: '#161843e6', // Used for setting manifest background color.
 };
 
 // Validate

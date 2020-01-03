@@ -22,14 +22,18 @@
     "analyze": "cross-env APP_ANALYZE=true npm run build"
   },
   "dependencies": {
+    "@storybook/addon-a11y": "^5.2.8",
     "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-backgrounds": "^5.2.8",
     "@storybook/addon-knobs": "^5.2.8",
     "@storybook/addon-links": "^5.2.8",
     "@storybook/addon-notes": "^5.2.8",
+    "@storybook/addon-storysource": "^5.2.8",
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
     "@storybook/theming": "^5.2.8",
     "bootstrap": "^4.4.1",
+    "classnames": "^2.2.6",
     "gatsby": "^2.18.17",
     "gatsby-image": "^2.2.23",
     "gatsby-plugin-catch-links": "^2.1.12",

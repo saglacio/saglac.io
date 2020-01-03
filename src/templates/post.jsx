@@ -1,13 +1,13 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import config from '~/SiteConfig';
 import Layout from '../layout';
-import UserInfo from '../components/UserInfo/UserInfo';
+import TwitterFollowButton from '../components/shared/TwitterFollowButton';
 import PostTags from '../components/PostTags/PostTags';
 import SocialLinks from '../components/SocialLinks/SocialLinks';
 import SEO from '../components/SEO/SEO';
 import Footer from '../components/Footer/Footer';
-import config from '../../SiteConfig';
 // import './b16-tomorrow-dark.css';
 import './post.css';
 
@@ -38,7 +38,7 @@ const PostTemplate = ({ data, pageContext: { slug } }) => {
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>
-          <UserInfo config={config} />
+          <TwitterFollowButton username={config.userTwitter} />
           <Footer config={config} />
         </div>
       </div>

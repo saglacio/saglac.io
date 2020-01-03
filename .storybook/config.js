@@ -1,10 +1,13 @@
 import { configure, addParameters, addDecorator } from '@storybook/react';
 import { themes } from '@storybook/theming';
+import { withKnobs } from '@storybook/addon-knobs';
+import { withA11y } from '@storybook/addon-a11y';
+import '@/scss/main.scss';
 import './globals';
-import Decorator from './Decorator';
 import README from './README.md';
 
-addDecorator(Decorator);
+addDecorator(withKnobs);
+addDecorator(withA11y);
 
 // Option defaults.
 addParameters({
@@ -12,7 +15,11 @@ addParameters({
     theme: themes.dark,
   },
   notes: { Introduction: README, 'How to?': 'test' },
-  viewports: { defaultViewport: 'Notes' },
+  backgrounds: [
+    { name: 'Light', value: '#fff', default: true },
+    // Same as our brand #161843e6 or rgba(22, 24, 67, .9) on white
+    { name: 'Dark', value: '#2d2e55' },
+  ],
 });
 
 // automatically import all files ending in *.stories.js
