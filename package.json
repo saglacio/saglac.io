@@ -9,7 +9,7 @@
     "serve": "gatsby serve",
     "build": "run-s build:gatsby build:storybook",
     "build:gatsby": "gatsby build",
-    "build:storybook": "build-storybook -s public -o public/storybook",
+    "build:storybook": "build-storybook -s static -o public/storybook",
     "clean": "gatsby clean",
     "lint": "run-s lint:*",
     "lint:js": "eslint --ext .js,.jsx .",
@@ -18,7 +18,7 @@
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
     "format:js": "npm run lint:js -- --fix",
     "format:styles": "npm run lint:styles -- --fix",
-    "storybook": "start-storybook -p 6006 -s public"
+    "storybook": "start-storybook -p 6006 -s static"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
