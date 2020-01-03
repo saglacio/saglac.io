@@ -1,6 +1,7 @@
 const urljoin = require('url-join');
 const path = require('path');
 const config = require('./SiteConfig');
+const sassConfig = require('./sass-loader.config');
 
 module.exports = {
   pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,
@@ -23,10 +24,7 @@ module.exports = {
     'gatsby-plugin-lodash',
     {
       resolve: 'gatsby-plugin-sass',
-      options: {
-        data: `@import "${__dirname}/src/scss/modules";`,
-        precision: 6, // recommended for Bootstrap 4
-      },
+      options: sassConfig,
     },
     {
       resolve: 'gatsby-source-filesystem',

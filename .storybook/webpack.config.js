@@ -1,4 +1,5 @@
 const path = require('path');
+const sassConfig = require('../sass-loader.config');
 
 module.exports = ({ config }) => {
   const rule = config.module.rules[0];
@@ -30,7 +31,13 @@ module.exports = ({ config }) => {
   // Adds SCSS parsing
   config.module.rules.push({
     test: /\.scss$/,
-    use: ['style-loader', 'css-loader', 'sass-loader'],
+    use: ['style-loader', 'css-loader', {
+      loader: 'sass-loader',
+      options: {
+        sourceMap: true,
+        ...sassConfig,
+      },
+    }],
     include: path.resolve(__dirname, '../'),
   }, {
     test: /\.stories\.jsx?$/,

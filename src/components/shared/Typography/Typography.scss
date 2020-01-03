@@ -1,3 +1,21 @@
 .io-typography {
-  // add style
+  margin: 0 0 30px 0;
+  padding: 0;
+
+  &.title {
+    margin: 0 0 20px 0;
+    padding: 0;
+    color: $primary;
+    font-family: $title-font;
+    font-weight: bold;
+    letter-spacing: -.5px;
+  }
+
+  &.light {
+    color: $fg-light;
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
 }

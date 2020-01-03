@@ -6,8 +6,19 @@ $brand-conference: #d75ba1;
 $bg-dark: fade-out($brand-background, .1);
 $bg-light: fade-out($brand-background, .95);
 
+$fg-dark: #9195a2;
+$fg-light: #fff;
+
+$title-font: 'Poppins', sans-serif;
+
 // Bootstrap overrides
+
+// COLORS
 $primary: $brand-meetup;
 
 $body-bg: transparent;
-$body-color: #9195a2;
+$body-color: $fg-dark;
+
+// TYPOGRAPHY
+$font-family-sans-serif: 'Roboto', sans-serif;
+// $font-family-monospace
