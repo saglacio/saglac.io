@@ -3,7 +3,11 @@ import { text, boolean } from '@storybook/addon-knobs';
 import config from '~/SiteConfig';
 import TwitterFollowButton from './TwitterFollowButton';
 
-export const TwitterFollowButtonStory = () => {
+export default {
+  title: 'Shared/Twitter',
+};
+
+export const FollowButton = () => {
   const expanded = boolean('Include the count? (expanded)', false);
   const username = text('Username', config.userTwitter);
   return (
@@ -12,10 +16,4 @@ export const TwitterFollowButtonStory = () => {
       expanded={expanded}
     />
   );
-};
-
-export default {
-  category: 'test',
-  title: 'Shared|Twitter follow',
-  // component: TwitterFollowButtonStory,
 };
