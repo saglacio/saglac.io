@@ -1,20 +1,28 @@
-import { configure } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { configure, addParameters, addDecorator } from '@storybook/react';
+import { themes } from '@storybook/theming';
+import './globals';
+import Decorator from './Decorator';
+
+addDecorator(Decorator);
+
+// Option defaults.
+addParameters({
+  options: {
+    theme: themes.dark,
+  },
+});
 
 // automatically import all files ending in *.stories.js
-configure(require.context('../stories', true, /\.stories\.js$/), module);
+const req = require.context('../stories', true, /\.stories\.jsx?$/);
+// const reqComponentStories = require.context('../src/components', true, /\.stories\.jsx?$/);
 
-// Gatsby's Link overrides:
-// Gatsby defines a global called ___loader to prevent its method calls from
-// creating console errors you override it here
-global.___loader = {
-  enqueue: () => {},
-  hovering: () => {},
-};
-// Gatsby internal mocking to prevent unnecessary errors in storybook testing environment
-global.__PATH_PREFIX__ = '';
-// This is to utilized to override the window.___navigate method Gatsby defines
-// and uses to report what path a Link would be taking us to if it wasn't inside a storybook
-window.___navigate = (pathname) => {
-  action('NavigateTo:')(pathname);
-};
+function loadStories() {
+  req.keys()
+    .forEach((filename) => req(filename));
+
+  // reqComponentStories.keys()
+  //   .forEach((filename) => reqComponentStories(filename));
+}
+
+// configure(loadStories, module);
+configure(require.context('../stories', true, /\.stories\.jsx?$/), module);

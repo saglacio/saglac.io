@@ -22,6 +22,11 @@
     "analyze": "cross-env APP_ANALYZE=true npm run build"
   },
   "dependencies": {
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "@storybook/theming": "^5.2.8",
     "bootstrap": "^4.4.1",
     "gatsby": "^2.18.17",
     "gatsby-image": "^2.2.23",
@@ -63,10 +68,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
-    "@storybook/addon-actions": "^5.2.8",
-    "@storybook/addon-links": "^5.2.8",
-    "@storybook/addons": "^5.2.8",
-    "@storybook/react": "^5.2.8",
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-preset-gatsby": "^0.2.26",

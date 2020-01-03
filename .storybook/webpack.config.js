@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = ({ config }) => {
   const rule = config.module.rules[0];
   const ruleUse = rule.use[0];
@@ -24,6 +26,13 @@ module.exports = ({ config }) => {
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   // eslint-disable-next-line no-param-reassign
   config.resolve.mainFields = ['browser', 'module', 'main'];
+
+  // Adds SCSS parsing
+  config.module.rules.push({
+    test: /\.scss$/,
+    use: ['style-loader', 'css-loader', 'sass-loader'],
+    include: path.resolve(__dirname, '../'),
+  });
 
   return config;
 };
