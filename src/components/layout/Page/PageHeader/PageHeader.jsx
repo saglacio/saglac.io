@@ -9,7 +9,7 @@ const PageHeader = () => (
   <header className="io-header">
     <Container className="header-container">
       <div className="logo">
-        <Link href="/">
+        <Link to="/">
           <img src={LogoImg} alt="" title="" />
         </Link>
       </div>
