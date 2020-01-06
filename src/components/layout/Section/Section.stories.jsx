@@ -1,5 +1,5 @@
 import React from 'react';
-import { text, boolean } from '@storybook/addon-knobs';
+import { text, boolean, select } from '@storybook/addon-knobs';
 import Section from './Section';
 
 export default {
@@ -12,10 +12,15 @@ plus tôt sont disponibles à prix plus bas. Des billets étudiants sont égalem
 sera requise à l'entrée. Aucune vente à la porte.
 `;
 
-export const DefautlSection = () => (
-  <Section
-    fluid={boolean('Full width?', false)}
-    title={text('Title:', 'Welcome to this section')}
-    subtitle={text('Subtitle:', SUBTITLE)}
-  />
-);
+export const DefaultSection = () => {
+  const color = select('Color?', ['default', 'dark', 'secondary']);
+  return (
+    <Section
+      fluid={boolean('Full width?', false)}
+      dark={color === 'dark'}
+      secondary={color === 'secondary'}
+      title={text('Title:', 'Welcome to this section')}
+      subtitle={text('Subtitle:', SUBTITLE)}
+    />
+  );
+};

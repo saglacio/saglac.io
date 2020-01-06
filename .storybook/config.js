@@ -24,6 +24,9 @@ addParameters({
     { name: 'Dark', value: '#101522' },
     { name: 'Darkest', value: '#040919' },
   ],
+  knobs: {
+    escapeHTML: false,
+  },
 });
 
 // automatically import all files ending in *.stories.js

@@ -10,9 +10,17 @@ const Section = ({
   fluid,
   title,
   subtitle,
+  dark,
+  secondary,
   ...props
 }) => (
-  <section className={cn('io-section', className)} {...props}>
+  <section
+    className={cn('io-section', className, {
+      dark,
+      secondary,
+    })}
+    {...props}
+  >
     <Container fluid={fluid}>
       <SectionHeader title={title}>
         {subtitle}
