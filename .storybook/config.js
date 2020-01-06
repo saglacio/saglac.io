@@ -2,12 +2,14 @@ import { configure, addParameters, addDecorator } from '@storybook/react';
 import { themes } from '@storybook/theming';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withA11y } from '@storybook/addon-a11y';
+import StoryWrapper from '~/stories/Wrapper';
 import '@/scss/main.scss';
 import './globals';
 import README from './README.md';
 
 addDecorator(withKnobs);
 addDecorator(withA11y);
+addDecorator(StoryWrapper());
 
 // Option defaults.
 addParameters({

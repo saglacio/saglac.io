@@ -1,11 +1,9 @@
 import React from 'react';
 import { text, boolean } from '@storybook/addon-knobs';
 import Button from './Button';
-import StoryWrapper from '~/stories/Wrapper';
 
 export default {
   title: 'Shared/Button',
-  decorators: [StoryWrapper()],
 };
 
 export const DefaultButtons = (otherProps) => {

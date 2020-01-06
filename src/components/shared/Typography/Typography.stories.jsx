@@ -1,11 +1,9 @@
 import React from 'react';
 import { text, boolean } from '@storybook/addon-knobs';
-import StoryWrapper from '~/stories/Wrapper';
 import Typography from './Typography';
 
 export default {
   title: 'Shared/Typography',
-  decorators: [StoryWrapper()],
 };
 
 const TEXT = 'À propos du Saglac IO';

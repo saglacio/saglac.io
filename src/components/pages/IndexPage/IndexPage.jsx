@@ -1,16 +1,16 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Layout from '../../../layout';
-import config from '../../../../SiteConfig';
+import config from '~/SiteConfig';
+import Page from '@/components/layout/Page';
 import './IndexPage.scss';
 
 const IndexPage = () => (
-  <Layout className="home-page">
+  <Page className="home-page">
     <Helmet title={`Home | ${config.siteTitle}`} />
     Test home page
     {' '}
     <a href="#top" alt="">test link</a>
-  </Layout>
+  </Page>
 );
 
 export default IndexPage;
