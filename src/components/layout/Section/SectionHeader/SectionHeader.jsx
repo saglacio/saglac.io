@@ -11,7 +11,7 @@ const SectionHeader = ({
 }) => (
   <header className={cn('io-section-header', className)} {...props}>
     <Typography variant="h2" uppercase>{title}</Typography>
-    <Typography>{children}</Typography>
+    <Typography lead>{children}</Typography>
   </header>
 );
 

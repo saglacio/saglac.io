@@ -38,6 +38,12 @@ export const otherTexts = () => {
       <Typography tag="span" {...props}>
         {content}
       </Typography>
+      <br />
+      <span>Lead</span>
+      <br />
+      <Typography lead {...props}>
+        {content}
+      </Typography>
     </>
   );
 };

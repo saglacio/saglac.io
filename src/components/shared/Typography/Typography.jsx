@@ -10,6 +10,7 @@ const Typography = ({
   tag,
   variant,
   light,
+  lead,
   uppercase,
 }) => {
   const Tag = tag || variant || 'p';
@@ -18,6 +19,7 @@ const Typography = ({
       title: TITLE_TAGS.includes(Tag),
       light,
       uppercase,
+      lead,
     })}
     >
       {children}
