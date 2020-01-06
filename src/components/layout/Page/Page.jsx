@@ -1,9 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import config from '../../SiteConfig';
-import '../scss/main.scss';
+import config from '~/SiteConfig';
+import '@/scss/main.scss';
+import './Page.scss';
 
-const MainLayout = ({ children }) => (
+const Page = ({ children }) => (
   <div className="io-layout">
     <Helmet>
       <meta name="description" content={config.siteDescription} />
@@ -13,4 +14,4 @@ const MainLayout = ({ children }) => (
   </div>
 );
 
-export default MainLayout;
+export default Page;

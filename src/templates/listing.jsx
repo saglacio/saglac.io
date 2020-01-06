@@ -1,10 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
-import Layout from '../layout';
-import PostListing from '../components/PostListing/PostListing';
-import SEO from '../components/SEO/SEO';
-import config from '../../SiteConfig';
+import config from '~/SiteConfig';
+import Page from '@/components/layout/Page';
+import PostListing from '@/components/PostListing/PostListing';
+import SEO from '@/components/SEO/SEO';
 import './listing.css';
 
 const Listing = ({ data, pageContext: { currentPageNum, pageCount } }) => {
@@ -13,7 +13,7 @@ const Listing = ({ data, pageContext: { currentPageNum, pageCount } }) => {
   const isFirstPage = currentPageNum === 1;
   const isLastPage = currentPageNum === pageCount;
   return (
-    <Layout>
+    <Page>
       <div className="listing-container">
         <div className="posts-container">
           <Helmet title={config.siteTitle} />
@@ -36,13 +36,12 @@ const Listing = ({ data, pageContext: { currentPageNum, pageCount } }) => {
           {!isLastPage && <Link to={nextPage}>Next</Link>}
         </div>
       </div>
-    </Layout>
+    </Page>
   );
 };
 
 export default Listing;
 
-/* eslint no-undef: "off" */
 export const listingQuery = graphql`
   query ListingQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(

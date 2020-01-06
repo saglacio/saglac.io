@@ -1,22 +1,21 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import Layout from '../layout';
+import Page from '@/components/layout/Page';
 import PostListing from '../components/PostListing/PostListing';
 import config from '../../SiteConfig';
 
 const CategoryTemplate = ({ data, pageContext: { category } }) => (
-  <Layout>
+  <Page>
     <div className="category-container">
       <Helmet title={`Posts in category "${category}" | ${config.siteTitle}`} />
       <PostListing postEdges={data.allMarkdownRemark.edges} />
     </div>
-  </Layout>
+  </Page>
 );
 
 export default CategoryTemplate;
 
-/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query CategoryPage($category: String) {
     allMarkdownRemark(

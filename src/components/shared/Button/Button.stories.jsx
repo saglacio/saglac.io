@@ -8,12 +8,13 @@ export default {
   decorators: [StoryWrapper()],
 };
 
-export const DefaultButton = () => {
+export const DefaultButtons = (otherProps) => {
   // const expanded = boolean('Include the count? (expanded)', false);
   const props = {
     children: text('Content', 'Click me'),
     disabled: boolean('Disabled?', false),
     className: 'ml-2',
+    ...otherProps,
   };
   return (
     <>
@@ -25,3 +26,6 @@ export const DefaultButton = () => {
     </>
   );
 };
+
+export const InternalLinkButtons = () => <DefaultButtons to="/test" />;
+export const ExternalLinkButtons = () => <DefaultButtons href="http://google.ca" target="_blank" />;

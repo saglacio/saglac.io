@@ -2,12 +2,12 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import config from '~/SiteConfig';
-import Layout from '../layout';
-import TwitterFollowButton from '../components/shared/TwitterFollowButton';
-import PostTags from '../components/PostTags/PostTags';
-import SocialLinks from '../components/SocialLinks/SocialLinks';
-import SEO from '../components/SEO/SEO';
-import Footer from '../components/Footer/Footer';
+import Page from '@/components/layout/Page';
+import TwitterFollowButton from '@/components/shared/TwitterFollowButton';
+import PostTags from '@/components/PostTags/PostTags';
+import SocialLinks from '@/components/SocialLinks/SocialLinks';
+import SEO from '@/components/SEO/SEO';
+import Footer from '@/components/layout/Footer';
 // import './b16-tomorrow-dark.css';
 import './post.css';
 
@@ -24,7 +24,7 @@ const PostTemplate = ({ data, pageContext: { slug } }) => {
   }
 
   return (
-    <Layout>
+    <Page>
       <div>
         <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
@@ -42,7 +42,7 @@ const PostTemplate = ({ data, pageContext: { slug } }) => {
           <Footer config={config} />
         </div>
       </div>
-    </Layout>
+    </Page>
   );
 };
 
