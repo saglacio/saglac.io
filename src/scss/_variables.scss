@@ -11,14 +11,129 @@ $fg-light: #fff;
 
 $title-font: 'Poppins', sans-serif;
 
+$title-font-weight-light: 400;
+$title-font-weight-normal: 500;
+$title-font-weight-bold: 700;
+
+//////////////////////////
 // Bootstrap overrides
+//
 
 // COLORS
 $primary: $brand-meetup;
+$secondary: $primary;
+// $success:       $green;
+// $info:          $cyan;
+// $warning:       $yellow;
+// $danger:        $red;
+// $light:         $gray-100;
+$dark: #222636;
 
 $body-bg: transparent;
 $body-color: $fg-dark;
 
+$yiq-text-dark: $fg-light;
+// $yiq-text-light: $white;
+
+// Links
+//
+// Style anchor elements.
+// $link-color:                              $primary !default;
+// $link-decoration:                         none !default;
+// $link-hover-color:                        darken($link-color, 15%) !default;
+$link-hover-decoration: none;
+
 // TYPOGRAPHY
 $font-family-sans-serif: 'Roboto', sans-serif;
 // $font-family-monospace
+
+// $font-size-root:              null !default;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.1;
+$font-size-sm: $font-size-base * .875;
+
+// Paragraphs
+//
+// Style p element.
+$paragraph-margin-bottom: 1.25rem;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+// $border-width:                1px !default;
+// $border-color:                $gray-300 !default;
+
+// $border-radius:               .25rem !default;
+// $border-radius-lg:            .3rem !default;
+// $border-radius-sm:            .2rem !default;
+
+$rounded-pill: 50rem;
+
+$transition-base: all .5s ease;
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y: .5rem;
+$input-btn-padding-x: 2rem;
+// $input-btn-font-family:       null !default;
+// $input-btn-font-size:         $font-size-base !default;
+$input-btn-line-height: 1.4;
+
+// $input-btn-focus-width:       .2rem !default;
+// $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
+// $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+$input-btn-padding-y-sm: .25rem;
+$input-btn-padding-x-sm: 1.5rem;
+// $input-btn-font-size-sm:      $font-size-sm !default;
+
+$input-btn-padding-y-lg: .6rem;
+$input-btn-padding-x-lg: 2.5rem;
+// $input-btn-font-size-lg:      $font-size-lg !default;
+
+$input-btn-border-width: 2px;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+// $btn-padding-y:               $input-btn-padding-y !default;
+// $btn-padding-x:               $input-btn-padding-x !default;
+// $btn-font-family:             $input-btn-font-family !default;
+// $btn-font-size:               $input-btn-font-size !default;
+// $btn-line-height:             $input-btn-line-height !default;
+// $btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
+
+// $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+// $btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+// $btn-font-size-sm:            $input-btn-font-size-sm !default;
+
+// $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+// $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+// $btn-font-size-lg:            $input-btn-font-size-lg !default;
+
+// $btn-border-width:            $input-btn-border-width !default;
+
+// $btn-font-weight:             $font-weight-normal !default;
+// $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+// $btn-focus-width:             $input-btn-focus-width !default;
+// $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+// $btn-disabled-opacity:        .65 !default;
+// $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+
+// $btn-link-color:              $link-color !default;
+// $btn-link-hover-color:        $link-hover-color !default;
+// $btn-link-disabled-color:     $gray-600 !default;
+
+// $btn-block-spacing-y:         .5rem !default;
+
+// // Allows for customizing button radius independently from global border radius
+$btn-border-radius: $rounded-pill;
+$btn-border-radius-lg: $rounded-pill;
+$btn-border-radius-sm: $rounded-pill;
+
+$btn-transition: color .5s ease, background-color .5s ease,
+  border-color .5s ease, box-shadow .5s ease;

@@ -1,0 +1,30 @@
+// Most styles comes from bootstrap and is personalized through variables.
+.io-button {
+  // border-radius: $rounded-pill;
+
+  &.btn-outline-primary {
+    color: $fg-light;
+  }
+
+  &.btn-dark {
+    // stylelint-disable indentation
+    @include button-variant(
+        $background: $dark,
+      $border: $dark,
+      $hover-background: $primary,
+      $hover-border: $primary,
+      $active-background: $primary
+    );
+    // stylelint-enable indentation
+  }
+
+  &.btn-lg {
+    font-family: $title-font;
+    font-weight: $title-font-weight-normal;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: default;
+  }
+}

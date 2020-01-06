@@ -18,7 +18,9 @@ addParameters({
   backgrounds: [
     { name: 'Light', value: '#fff', default: true },
     // Same as our brand #161843e6 or rgba(22, 24, 67, .9) on white
-    { name: 'Dark', value: '#2d2e55' },
+    { name: 'Background', value: '#2d2e55' },
+    { name: 'Dark', value: '#101522' },
+    { name: 'Darkest', value: '#040919' },
   ],
 });
 
