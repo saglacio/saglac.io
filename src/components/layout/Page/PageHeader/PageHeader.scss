@@ -1,0 +1,27 @@
+.io-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: ($spacer * 1.5) 0;
+  z-index: 997;
+
+  &.scrolled {
+    padding: $spacer 0;
+    background-color: $bg-dark;
+  }
+
+  .logo {
+    float: left;
+
+    img {
+      max-height: 40px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .header-container {
+      max-width: 100%;
+    }
+  }
+}

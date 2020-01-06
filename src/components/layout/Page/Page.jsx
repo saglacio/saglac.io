@@ -1,8 +1,9 @@
+import '@/scss/main.scss';
+import './Page.scss';
 import React from 'react';
 import Helmet from 'react-helmet';
 import config from '~/SiteConfig';
-import '@/scss/main.scss';
-import './Page.scss';
+import PageHeader from './PageHeader';
 
 const Page = ({ children }) => (
   <div className="io-layout">
@@ -10,6 +11,7 @@ const Page = ({ children }) => (
       <meta name="description" content={config.siteDescription} />
       <html lang="en" />
     </Helmet>
+    <PageHeader />
     {children}
   </div>
 );

@@ -7,7 +7,7 @@ import TwitterFollowButton from '@/components/shared/TwitterFollowButton';
 import PostTags from '@/components/PostTags/PostTags';
 import SocialLinks from '@/components/SocialLinks/SocialLinks';
 import SEO from '@/components/SEO/SEO';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/Page/Footer';
 // import './b16-tomorrow-dark.css';
 import './post.css';
 
