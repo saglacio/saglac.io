@@ -38,7 +38,7 @@ cd saglacio
 # Install the dependencies (if it fails, try `npm i`)
 npm ci
 # Start the development server
-npm run dev
+npm start
 ```
 
 To ease the development, there are some tools already installed.
@@ -59,7 +59,7 @@ http://localhost:8000/___graphql
 
 Since we're developing the website with React components, a Storybook app is available in development:
 
-```
+```sh
 # Run this in another shell in parallel with the dev server
 npm run storybook
 ```
@@ -80,6 +80,16 @@ The configuration file reside in the `static` directory and it is fetched by the
     static/admin/config.yml
 
 It manages the YAML under the `data/` directory.
+
+### Webpack Bundle Analyzer
+
+The plugin is configured. Just run
+
+```sh
+npm run analyze
+```
+
+Then it should automatically open the browser page.
 
 # Author
 
