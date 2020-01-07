@@ -1,0 +1,17 @@
+{
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "html.format.maxPreserveNewLines": 1,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#161843",
+    "titleBar.inactiveForeground": "#161843e6",
+    "titleBar.activeBackground": "#7ECDC3",
+    "titleBar.inactiveBackground": "#B4CAC7"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
