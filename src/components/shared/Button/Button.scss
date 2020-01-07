@@ -1,6 +1,7 @@
 // Most styles comes from bootstrap and is personalized through variables.
 .io-button {
-  // border-radius: $rounded-pill;
+  margin-right: $spacer * .25;
+  margin-left: $spacer * .25;
 
   &.btn-outline-primary {
     color: $fg-light;

@@ -35,6 +35,14 @@ $body-color: $fg-dark;
 $yiq-text-dark: $fg-light;
 // $yiq-text-light: $white;
 
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+
 // Links
 //
 // Style anchor elements.
@@ -51,6 +59,19 @@ $font-family-sans-serif: 'Roboto', sans-serif;
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
 $font-size-lg: $font-size-base * 1.1;
 $font-size-sm: $font-size-base * .875;
+
+$headings-margin-bottom: $spacer * 1.25;
+
+$display1-size: 4.5rem;
+$display2-size: 4rem;
+$display3-size: 3.5rem;
+$display4-size: 3rem;
+
+$display1-weight: 600;
+$display2-weight: 600;
+$display3-weight: 600;
+$display4-weight: 600;
+$display-line-height: 1;
 
 $lead-font-size: $font-size-base * 1.125;
 $lead-font-weight: 500;

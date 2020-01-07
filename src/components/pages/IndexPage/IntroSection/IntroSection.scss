@@ -16,14 +16,14 @@
     background: rgba(6, 12, 34, .6);
   }
 
-  .intro-container {
+  .intro-wrapper {
     display: flex;
     position: absolute;
     top: 90px;
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 0 $spacer;
+    // padding: 0 $spacer;
     text-align: center;
     justify-content: center;
     align-items: center;
