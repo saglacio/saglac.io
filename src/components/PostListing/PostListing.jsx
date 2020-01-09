@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
+import Link from '@/components/shared/Link';
 
 class PostListing extends React.Component {
   getPostList() {

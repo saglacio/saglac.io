@@ -5,7 +5,8 @@ module.exports = ({ config }) => {
   const rule = config.module.rules[0];
   const ruleUse = rule.use[0];
   // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
-  rule.exclude = [/node_modules\/(?!(gatsby)\/)/];
+  // @see https://github.com/gatsbyjs/gatsby/issues/10668#issuecomment-572384292
+  // rule.exclude = [/node_modules\/(?!(gatsby)\/)/];
 
   // use installed babel-loader which is v8.0-beta (which is meant to work with @babel/core@7)
   ruleUse.loader = require.resolve('babel-loader');

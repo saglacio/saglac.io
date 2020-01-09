@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from 'reactstrap/lib/Container';
-import { Link } from 'gatsby';
+import Link from '@/components/shared/Link';
 import MainNav from '@/components/navigation/MainNav';
 import LogoImg from '~/static/logos/SaglacIO_Logo_Meetups_Inverted.png';
 import './PageHeader.scss';

@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
-import { Link } from 'gatsby';
 import BootstrapButton from 'reactstrap/lib/Button';
+import Link from '@/components/shared/Link';
 import './Button.scss';
 
 const Button = ({
@@ -14,7 +14,6 @@ const Button = ({
     tag={to ? Link : undefined}
     to={to}
     className={cn('io-button', className)}
-    pill
     outline={color === 'primary'}
     color={color}
     {...props}

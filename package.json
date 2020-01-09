@@ -38,6 +38,7 @@
     "core-js": "^2.6.11",
     "gatsby": "^2.18.17",
     "gatsby-image": "^2.2.23",
+    "gatsby-link": "^2.2.27",
     "gatsby-plugin-catch-links": "^2.1.12",
     "gatsby-plugin-feed": "^2.3.15",
     "gatsby-plugin-google-analytics": "^2.1.19",

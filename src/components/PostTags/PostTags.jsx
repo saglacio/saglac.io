@@ -1,6 +1,6 @@
 import React from 'react';
 import kebabCase from 'lodash/kebabCase';
-import { Link } from 'gatsby';
+import Link from '@/components/shared/Link';
 
 const PostTags = ({ tags }) => (
   <div className="post-tag-container">
