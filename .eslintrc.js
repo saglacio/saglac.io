@@ -89,6 +89,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': [ERROR, { allow: 'single-child' }],
     'react/jsx-props-no-spreading': OFF,
     'react/no-danger': ERROR,
+    'react/no-unescaped-entities': [ERROR, { forbid: ['>', '}'] }],
     'react/prop-types': [ERROR, {
       // FIXME: remove when the website is ready to be developed
       skipUndeclared: true,

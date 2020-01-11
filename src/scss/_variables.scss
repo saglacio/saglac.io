@@ -3,7 +3,7 @@ $brand-background: #161843;
 $brand-meetup: #7ecdc3;
 $brand-conference: #d75ba1;
 
-$bg-dark: fade-out($brand-background, .1);
+$bg-dark: $brand-background;
 $bg-light: fade-out($brand-background, .95);
 
 $fg-dark: #9195a2;

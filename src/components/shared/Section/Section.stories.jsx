@@ -3,7 +3,7 @@ import { text, boolean, select } from '@storybook/addon-knobs';
 import Section from './Section';
 
 export default {
-  title: 'Layout/Section',
+  title: 'Shared/Section',
 };
 
 const SUBTITLE = `

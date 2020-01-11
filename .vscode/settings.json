@@ -1,7 +1,9 @@
 {
   "files.eol": "\n",
   "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "html.format.maxPreserveNewLines": 1,
+  "editor.formatOnSave": true,
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
@@ -13,5 +15,8 @@
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascript"
   }
 }
