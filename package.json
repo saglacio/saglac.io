@@ -15,7 +15,7 @@
     "lint": "run-s lint:*",
     "lint:js": "cross-env NODE_ENV=test eslint --ext .js,.jsx .",
     "lint:styles": "stylelint \"**/*.?(s)css\"",
-    "lint:md": "remark content/",
+    "lint:md": "remark .",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
     "format:js": "npm run lint:js -- --fix",
     "format:styles": "npm run lint:styles -- --fix",
