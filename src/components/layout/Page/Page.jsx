@@ -3,6 +3,7 @@ import './Page.scss';
 import React from 'react';
 import Helmet from 'react-helmet';
 import config from '~/SiteConfig';
+import Footer from '@/components/layout/Footer';
 import PageHeader from './PageHeader';
 
 const Page = ({ children }) => (
@@ -13,6 +14,7 @@ const Page = ({ children }) => (
     </Helmet>
     <PageHeader />
     {children}
+    <Footer config={config} />
   </div>
 );
 

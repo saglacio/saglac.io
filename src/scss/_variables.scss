@@ -12,14 +12,6 @@ $brand-colors: (
 $test-dark-bg: #101522;
 $test-darker-bg: #040919;
 
-// $gray-100: tint($brand-background, 8);
-// $gray-200: tint($brand-background, 6);
-// $gray-300: tint($brand-background, 4);
-// $gray-400: tint($brand-background, 2);
-// $gray-500: $brand-background;
-// $gray-600: shade($brand-background, 2);
-// $gray-700: shade($brand-background, 4);
-// $gray-800: shade($brand-background, 6);
 $gray-900: desaturate($brand-background, 40%);
 $gray-800: lighten($gray-900, 10%);
 $gray-700: lighten($gray-900, 20%);

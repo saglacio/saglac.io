@@ -1,2 +1,13 @@
 .io-footer {
+  background-color: $dark;
+
+  .footer-content {
+    background-color: $black;
+  }
+
+  .copyright {
+    padding: (2 * $spacer) 0;
+    color: fade-out(#fff, .8);
+    text-align: center;
+  }
 }
