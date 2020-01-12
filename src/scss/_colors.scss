@@ -1,0 +1,7 @@
+// Exported color classes, see _variables for their values.
+
+@each $name, $value in $brand-colors {
+  .io-brand-#{$name} {
+    color: $value !important;
+  }
+}

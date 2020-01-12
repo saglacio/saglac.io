@@ -2,39 +2,37 @@ import React from 'react';
 import Row from 'reactstrap/lib/Row';
 import Col from 'reactstrap/lib/Col';
 import Section from '@/components/shared/Section';
-import './AboutSection.scss';
 import Typography from '@/components/shared/Typography';
 
 const AboutSection = () => (
   <Section className="io-about-section" dark>
     <Row>
-      <Col lg={6}>
+      <Col>
         <Typography variant="h4" uppercase>
-          Qu'est-ce que le Saglac IO?
+          Saglac IO
         </Typography>
         <Typography light className="mb-0">
-          Le Saglac IO est un événement mensuel gratuit organisé par une
-          communauté de passionnés de technologies.
-          Dans une formule 5 à 7 informel, les passionnés d'informatique du
-          Saguenay—Lac-St-Jean partagent leur passion et leurs dernières découvertes.
+          Depuis 2013, le Saglac IO est une communauté bénévole de professionnels et d'amateurs
+          passionnés de technologies qui partagent et s'entraident toute l'année.
         </Typography>
       </Col>
       <Col>
         <Typography variant="h4" uppercase>
-          Où?
+          Meetups
         </Typography>
         <Typography light className="mb-0">
-          En alternance entre Saguenay et Alma. Chaque événement mentionne où il
-          aura lieu, dans un restaurant, à l'UQAC, etc.
+          À tous les mois, dans une formule 5 à 7 informel, la communauté
+          partagent leurs dernières découvertes dans de courtes présentations.
         </Typography>
       </Col>
       <Col>
         <Typography variant="h4" uppercase>
-          Quand?
+          Conférence
         </Typography>
         <Typography light className="mb-0">
-          À tous les mois, une date est décidée selon la disponibilité des
-          organisateurs et présentateurs.
+          Anuellement, une journée entière est dédiée à des présentations plus
+          complètes centrées sur les technologies du web, du jeu vidéo,
+          ou sur le développement en général.
         </Typography>
       </Col>
     </Row>

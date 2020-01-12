@@ -3,6 +3,12 @@ $brand-background: #161843;
 $brand-meetup: #7ecdc3;
 $brand-conference: #d75ba1;
 
+$brand-colors: (
+  'background': $brand-background,
+  'meetup': $brand-meetup,
+  'conference': $brand-conference
+);
+
 $bg-dark: $brand-background;
 $bg-light: fade-out($brand-background, .95);
 
@@ -161,3 +167,28 @@ $btn-border-radius-sm: $rounded-pill;
 
 $btn-transition: color .5s ease, background-color .5s ease,
   border-color .5s ease, box-shadow .5s ease;
+
+// Cards
+
+// $card-spacer-y: 1.25rem;
+// $card-spacer-x: 1.25rem;
+// $card-title-spacer-y: .75rem;
+$card-border-width: 0;
+$card-border-radius: 0;
+// $card-border-color: rgba($black, .125);
+// $card-inner-border-radius: subtract(
+//   $card-border-radius,
+//   $card-border-width
+// );
+// $card-cap-padding-y: .75rem;
+// $card-cap-padding-x: 1.25rem;
+// $card-cap-bg: rgba($black, .03);
+// $card-cap-color: null;
+// $card-height: null;
+// $card-color: null;
+// $card-bg: $white;
+
+// $card-img-overlay-padding: 1.25rem;
+
+// $card-group-margin: $grid-gutter-width / 2;
+// $card-deck-margin: $card-group-margin;

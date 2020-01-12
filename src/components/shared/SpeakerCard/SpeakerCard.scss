@@ -1,0 +1,9 @@
+.io-speaker-card {
+  .details {
+    top: auto;
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+    background-color: fade-out($color: $dark, $amount: .25);
+    text-align: center;
+  }
+}

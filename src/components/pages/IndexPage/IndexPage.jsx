@@ -6,12 +6,14 @@ import Page from '@/components/layout/Page';
 import './IndexPage.scss';
 import IntroSection from './IntroSection';
 import AboutSection from './AboutSection';
+import NextEventSection from './NextEventSection';
 
 const IndexPage = () => (
   <Page className="home-page">
     <Helmet title={`Home | ${config.siteTitle}`} />
     <IntroSection />
     <AboutSection />
+    <NextEventSection />
   </Page>
 );
 

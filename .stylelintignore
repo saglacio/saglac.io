@@ -2,3 +2,5 @@ node_modules/
 docs/
 public/
 .cache/
+**/*.jsx
+**/*.js
