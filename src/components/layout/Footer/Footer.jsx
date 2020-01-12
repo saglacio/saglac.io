@@ -11,7 +11,7 @@ const Footer = ({ config }) => {
     return null;
   }
   return (
-    <footer className="footer">
+    <footer className="io-footer">
       <UserLinks config={config} labeled />
       <div className="notice-container">
         <h4>{copyright}</h4>

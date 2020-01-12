@@ -10,10 +10,7 @@ export default {
 export const DefaultSpeakerCard = () => (
   <Row>
     <Col lg={{ size: 6 }}>
-      <SpeakerCard />
-    </Col>
-    <Col lg={{ size: 6 }}>
-      <SpeakerCard />
+      <SpeakerCard author="Émile Bergeron" talk="Test gatsby" />
     </Col>
   </Row>
 );

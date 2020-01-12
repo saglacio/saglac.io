@@ -26,7 +26,6 @@ const NextEventSection = () => (
           <SpeakerCard author="Émile B" talk="Configuration hell" />
         </Col>
       </Row>
-
     </Section>
     <Section fluid>
       <LocationInfo

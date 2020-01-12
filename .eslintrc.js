@@ -106,6 +106,7 @@ module.exports = {
         'render',
       ],
     }],
+    'react/state-in-constructor': [ERROR, 'never'],
   },
   settings: {
     // 'import/core-modules': [],

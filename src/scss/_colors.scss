@@ -5,3 +5,13 @@
     color: $value !important;
   }
 }
+
+@each $name, $value in $grays {
+  .bg-gray-#{$name} {
+    background-color: $value !important;
+  }
+
+  .gray-#{$name} {
+    color: $value !important;
+  }
+}
