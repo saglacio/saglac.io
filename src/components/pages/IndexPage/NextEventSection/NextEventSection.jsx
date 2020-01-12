@@ -12,25 +12,30 @@ const LOCATION_NAME = 'Hotel le montagnais';
 const LOCATION_DESCRIPTION = 'L’Hôtel Le Montagnais est l’un des plus grands hôtels au Québec avec un centre de congrès intégré. Le service attentionné à tous les instants et la qualité de la nourriture est leur priorité et leur renommé.';
 
 const NextEventSection = () => (
-  <Section
-    className="io-about-section"
-    title="Événement"
-    subtitle="Les informations sur la prochaine rencontre mensuelle."
-  >
-    <Row className="mb-5">
-      <Col>
-        <SpeakerCard author="Émile B" talk="Configuration hell" />
-      </Col>
-      <Col>
-        <SpeakerCard author="Émile B" talk="Configuration hell" />
-      </Col>
-    </Row>
-    <LocationInfo
-      mapSrc={MAP}
-      name={LOCATION_NAME}
-      description={LOCATION_DESCRIPTION}
-    />
-  </Section>
+  <>
+    <Section
+      className="io-about-section"
+      title="Événement"
+      subtitle="Les informations sur la prochaine rencontre mensuelle."
+    >
+      <Row>
+        <Col>
+          <SpeakerCard author="Émile B" talk="Configuration hell" />
+        </Col>
+        <Col>
+          <SpeakerCard author="Émile B" talk="Configuration hell" />
+        </Col>
+      </Row>
+
+    </Section>
+    <Section fluid>
+      <LocationInfo
+        mapSrc={MAP}
+        name={LOCATION_NAME}
+        description={LOCATION_DESCRIPTION}
+      />
+    </Section>
+  </>
 );
 
 export default NextEventSection;
