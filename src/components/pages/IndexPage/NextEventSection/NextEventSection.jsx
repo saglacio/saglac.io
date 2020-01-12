@@ -2,7 +2,7 @@ import React from 'react';
 import Row from 'reactstrap/lib/Row';
 import Col from 'reactstrap/lib/Col';
 import Section from '@/components/shared/Section';
-import Typography from '@/components/shared/Typography';
+// import Typography from '@/components/shared/Typography';
 import SpeakerCard from '@/components/shared/SpeakerCard';
 
 const NextEventSection = () => (
