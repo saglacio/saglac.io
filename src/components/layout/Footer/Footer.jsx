@@ -8,6 +8,7 @@ import Col from 'reactstrap/lib/Col';
 import LogoLink from '@/components/shared/LogoLink';
 import Typography from '@/components/shared/Typography';
 import Section from '@/components/shared/Section';
+import FooterNav from '@/components/navigation/FooterNav/FooterNav';
 import './Footer.scss';
 
 const Footer = ({ config }) => {
@@ -30,6 +31,7 @@ const Footer = ({ config }) => {
             <Typography uppercase variant="h4" className="h6">
               Liens pratiques
             </Typography>
+            <FooterNav />
           </Col>
           <Col lg={4} md={6}>
             <Typography uppercase variant="h4" className="h6">

@@ -24,6 +24,21 @@
     font-weight: $title-font-weight-normal;
   }
 
+  &.btn-link {
+    // missing in bootstrap, it's only applied to `<a>` tags.
+    // @see https://github.com/twbs/bootstrap/blob/v4.4.1/scss/mixins/_text-emphasis.scss
+    @each $color, $value in $theme-colors {
+      &.text-#{$color} {
+        @include hover-focus() {
+          color: darken(
+              $value,
+              $emphasized-link-hover-darken-percentage
+            ) !important;
+        }
+      }
+    }
+  }
+
   &:disabled,
   &.disabled {
     cursor: default;

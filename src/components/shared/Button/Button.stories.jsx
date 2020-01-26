@@ -7,13 +7,12 @@ export default {
 };
 
 const ButtonStory = (otherProps) => {
-  // const expanded = boolean('Include the count? (expanded)', false);
   const props = {
     children: text('Content', 'Click me'),
     disabled: boolean('Disabled?', false),
-    className: 'mr-2',
     ...otherProps,
   };
+
   return (
     <div className="mb-4">
       <Button color="primary" size="lg" {...props} />
@@ -21,6 +20,10 @@ const ButtonStory = (otherProps) => {
       <Button {...props} />
       <Button color="dark" {...props} />
       <Button size="sm" {...props} />
+      <br />
+      <Button color="link" size="lg" {...props} />
+      <Button color="link" {...props} />
+      <Button color="link" size="sm" className="text-light" {...props} />
     </div>
   );
 };

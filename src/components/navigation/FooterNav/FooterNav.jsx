@@ -1,22 +1,18 @@
 import React from 'react';
 import Nav from 'reactstrap/lib/Nav';
-import NavItem from 'reactstrap/lib/NavItem';
-import NavLink from 'reactstrap/lib/NavLink';
+import FooterNavItem from './FooterNavItem';
+
+const LINKS = [
+  {
+    children: 'Saglac IO Conference',
+    href: 'https://conference.saglac.io/',
+    targetBlank: true,
+  },
+];
 
 const FooterNav = () => (
-  <Nav className="io-footer-nav">
-    <NavItem>
-      <NavLink href="#">Link</NavLink>
-    </NavItem>
-    <NavItem>
-      <NavLink href="#">Link</NavLink>
-    </NavItem>
-    <NavItem>
-      <NavLink href="#">Another Link</NavLink>
-    </NavItem>
-    <NavItem>
-      <NavLink disabled href="#">Disabled Link</NavLink>
-    </NavItem>
+  <Nav vertical className="io-footer-nav">
+    {LINKS.map((linkProps) => <FooterNavItem {...linkProps} />)}
   </Nav>
 );
 
