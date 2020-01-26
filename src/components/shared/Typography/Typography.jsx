@@ -11,6 +11,7 @@ const Typography = ({
   variant,
   light,
   lead,
+  size,
   uppercase,
 }) => {
   const Tag = tag || variant || 'p';
@@ -20,6 +21,7 @@ const Typography = ({
       light,
       uppercase,
       lead,
+      [`text-${size}`]: size,
     })}
     >
       {children}
