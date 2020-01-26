@@ -8,16 +8,27 @@ const Button = ({
   to,
   className,
   color,
+  icon,
+  children,
   ...props
 }) => (
   <BootstrapButton
     tag={to ? Link : undefined}
     to={to}
-    className={cn('io-button', className)}
+    className={cn('io-button', className, {
+      'icon-only': !children,
+    })}
     outline={color === 'primary'}
     color={color}
     {...props}
-  />
+  >
+    {icon && (
+      <div className="icon">
+        {icon}
+      </div>
+    )}
+    {children}
+  </BootstrapButton>
 );
 
 export default Button;

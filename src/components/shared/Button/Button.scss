@@ -1,7 +1,17 @@
 // Most styles comes from bootstrap and is personalized through variables.
 .io-button {
+  position: relative;
   margin-right: $spacer * .25;
   margin-left: $spacer * .25;
+
+  .icon {
+    display: inline-block;
+    width: 1.35em;
+    height: 1.35em;
+    // margin: 0 .5rem;
+    // position: absolute;
+    margin-left: -$btn-padding-x * .625;
+  }
 
   &.btn-outline-primary {
     color: $fg-light;
@@ -22,6 +32,17 @@
   &.btn-lg {
     font-family: $title-font;
     font-weight: $title-font-weight-normal;
+    line-height: $btn-line-height;
+
+    .icon {
+      margin-left: -$btn-padding-x-lg * .625;
+    }
+  }
+
+  &.btn-sm {
+    .icon {
+      margin-left: -$btn-padding-x-sm * .625;
+    }
   }
 
   &.btn-link {
@@ -42,5 +63,21 @@
   &:disabled,
   &.disabled {
     cursor: default;
+  }
+
+  &.icon-only {
+    padding: $btn-padding-y;
+
+    &.btn-lg {
+      padding: $btn-padding-y-lg;
+    }
+
+    &.btn-sm {
+      padding: $btn-padding-y-sm;
+    }
+
+    .icon {
+      margin-left: 0;
+    }
   }
 }

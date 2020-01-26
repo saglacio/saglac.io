@@ -1,5 +1,7 @@
 import React from 'react';
 import { text, boolean } from '@storybook/addon-knobs';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import Button from './Button';
 
 export default {
@@ -10,13 +12,16 @@ const ButtonStory = (otherProps) => {
   const props = {
     children: text('Content', 'Click me'),
     disabled: boolean('Disabled?', false),
+    icon: boolean('Icon?', false) ? <FontAwesomeIcon icon={faFacebookF} /> : null,
     ...otherProps,
   };
 
   return (
     <div className="mb-4">
-      <Button color="primary" size="lg" {...props} />
-      <Button color="primary" {...props} />
+      <div className="bg-dark d-inline-block p-1">
+        <Button color="primary" size="lg" {...props} />
+        <Button color="primary" {...props} />
+      </div>
       <Button {...props} />
       <Button color="dark" {...props} />
       <Button size="sm" {...props} />

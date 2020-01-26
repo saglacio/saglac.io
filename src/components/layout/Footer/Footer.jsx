@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 // import Link from '@/components/shared/Link';
 import Container from 'reactstrap/lib/Container';
 import Row from 'reactstrap/lib/Row';
-import Col from 'reactstrap/lib/Col';
 import LogoLink from '@/components/shared/LogoLink';
 import Typography from '@/components/shared/Typography';
 import Section from '@/components/shared/Section';
 import FooterNav from '@/components/navigation/FooterNav';
-import './Footer.scss';
 import FooterCol from './FooterCol';
+import './Footer.scss';
 
 const Footer = ({ config }) => {
   // const url = config.siteRss;
