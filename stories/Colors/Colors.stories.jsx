@@ -35,7 +35,11 @@ class Color extends Component {
         ref={(ref) => { this.ref = ref; }}
         className={`text-monospace color-block bg-${color}`}
       >
-        <small>{`.${color}`}</small>
+        <small>
+          <strong>
+            {color}
+          </strong>
+        </small>
         <div>{hex}</div>
       </div>
     );
@@ -46,8 +50,16 @@ const COLOR_RANGE = Array.from(Array(9), (_, i) => i + 1);
 
 const ColorStory = ({ color }) => (
   COLOR_RANGE.map((i) => (
-    <Color color={`${color}-${i}00`} />
+    <Color key={`${color}-${i}`} color={`${color}-${i}00`} />
   ))
 );
 
-export const Grays = () => <ColorStory color="gray" />;
+export const Grays = () => (
+  <>
+    <ColorStory color="gray" />
+    <div>
+      <Color color="light" />
+      <Color color="dark" />
+    </div>
+  </>
+);

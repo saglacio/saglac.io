@@ -7,6 +7,7 @@ import Col from 'reactstrap/lib/Col';
 // import UserLinks from '@/components/UserLinks/UserLinks';
 import LogoLink from '@/components/shared/LogoLink';
 import Typography from '@/components/shared/Typography';
+import Section from '@/components/shared/Section';
 import './Footer.scss';
 
 const Footer = ({ config }) => {
@@ -15,29 +16,28 @@ const Footer = ({ config }) => {
 
   return (
     <footer className="io-footer">
-      <div className="footer-content">
-        <Container>
-          <Row>
-            <Col lg={4} md={6}>
-              <LogoLink />
-              <Typography>
+      <Section className="footer-content">
+        <Row>
+          <Col lg={4} md={6}>
+            <LogoLink className="mb-2" />
+            <Typography light>
             Le saglac.io est une communauté de passionnés de technologies,
-            organisée par un groupe de bénévoles de la région qui ont le partage de connaissances à coeur.
-              </Typography>
-            </Col>
-            <Col lg={4} md={6}>
-              <Typography uppercase variant="h4">
+            organisée par un groupe de bénévoles de la région qui ont le partage
+            de connaissances à coeur.
+            </Typography>
+          </Col>
+          <Col lg={4} md={6}>
+            <Typography uppercase variant="h4" className="h6">
               Liens pratiques
-              </Typography>
-            </Col>
-            <Col lg={4} md={6}>
-              <Typography uppercase variant="h4">
+            </Typography>
+          </Col>
+          <Col lg={4} md={6}>
+            <Typography uppercase variant="h4" className="h6">
                 Nous contacter
-              </Typography>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+            </Typography>
+          </Col>
+        </Row>
+      </Section>
       <Container className="copyright">
         <small>
           {copyright}
