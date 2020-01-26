@@ -43,5 +43,3 @@ export const DefaultButtons = () => (
     <ButtonStory href="http://google.ca" target="_blank" />
   </>
 );
-// export const InternalLinkButtons = () => <ButtonStory to="/test" />;
-// export const ExternalLinkButtons = () => <ButtonStory href="http://google.ca" target="_blank" />;
