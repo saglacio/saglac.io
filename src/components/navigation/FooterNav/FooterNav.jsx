@@ -20,7 +20,7 @@ const LINKS = [
 ];
 
 const FooterNav = () => (
-  <Nav vertical className="io-footer-nav">
+  <Nav tag="nav" vertical className="io-footer-nav">
     {LINKS.map((linkProps) => <FooterNavItem {...linkProps} />)}
   </Nav>
 );

@@ -1,6 +1,4 @@
 import React from 'react';
-// import NavItem from 'reactstrap/lib/NavItem';
-// import NavLink from 'reactstrap/lib/NavLink';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import Link from '@/components/shared/Link';
@@ -13,18 +11,24 @@ const FooterNavItem = ({
   ...props
 }) => {
   const Tag = to ? Link : 'a';
+
   return (
-    <li className="io-footer-nav-item">
+    <div className="io-footer-nav-item">
       <FontAwesomeIcon icon={faAngleRight} className="icon" />
       <Tag
         className="content"
         tag={to ? Link : 'a'}
         target={targetBlank ? '_blank' : undefined}
+        to={to}
+        {...(to ? {
+          // Link component props
+          activeClassName: 'active',
+        } : {})}
         {...props}
       >
         {children}
       </Tag>
-    </li>
+    </div>
   );
 };
 

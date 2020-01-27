@@ -1,0 +1,33 @@
+.io-main-nav-item {
+  position: relative;
+  margin-left: $spacer * .5;
+  padding: $spacer * .5;
+  color: $light;
+  font-family: $title-font;
+  font-weight: 500;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: $primary;
+    transition: all .3s ease-in-out 0s;
+    visibility: hidden;
+  }
+
+  &.active {
+    color: $fg-light;
+
+    &::before {
+      width: 100%;
+      visibility: visible;
+    }
+  }
+
+  @include hover-focus() {
+    @extend .active;
+  }
+}
