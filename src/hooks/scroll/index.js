@@ -39,11 +39,11 @@ export function useScrollPosition(effect, deps, { element, useWindow, wait } = {
   }, deps);
 }
 
-export function useIsScrolled({ element, wait } = {}) {
+export function useIsScrolled({ element, wait, offset = 0 } = {}) {
   const [isScrolled, setScrolled] = useState(false);
 
   useScrollPosition(({ currPos }) => {
-    const isShow = currPos.y > 0;
+    const isShow = currPos.y > (0 + offset);
     if (isShow !== isScrolled) setScrolled(isShow);
   }, [isScrolled], { element, useWindow: !element, wait });
 
