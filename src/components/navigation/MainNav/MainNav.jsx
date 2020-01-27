@@ -1,6 +1,4 @@
 import React from 'react';
-// import Nav from 'reactstrap/lib/Nav';
-// import Link from '@/components/shared/Link';
 import Button from '@/components/shared/Button';
 import MainNavItem from './MainNavItem';
 import './MainNav.scss';
