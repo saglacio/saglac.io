@@ -11,7 +11,8 @@
     margin-left: -$btn-padding-x * .625;
   }
 
-  &.btn-outline-primary {
+  &[class^='btn-outline-'],
+  &[class*=' btn-outline-'] {
     color: $fg-light;
   }
 

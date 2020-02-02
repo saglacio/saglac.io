@@ -29,7 +29,9 @@ const ButtonStory = (otherProps) => {
 
   return (
     <div className="mb-4">
-      <div className="bg-dark d-inline-block p-1">
+      <Button color="conference" {...props} />
+      <div className="bg-dark d-inline-block p-2">
+        <Button color="conference" outline {...props} />
         <Button color="primary" {...props} />
       </div>
       <Button {...props} />

@@ -46,6 +46,10 @@ $secondary: $primary;
 // $light:         $gray-100;
 $dark: #222636;
 
+$theme-colors: (
+  'conference': $brand-conference
+);
+
 $body-bg: transparent;
 $body-color: $fg-dark;
 

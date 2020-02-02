@@ -8,6 +8,7 @@ const Button = ({
   to,
   className,
   color,
+  outline,
   icon,
   children,
   ...props
@@ -18,7 +19,7 @@ const Button = ({
     className={cn('io-button', className, {
       'icon-only': !children,
     })}
-    outline={color === 'primary'}
+    outline={outline === Boolean(outline) ? outline : color === 'primary'}
     color={color}
     {...props}
   >
