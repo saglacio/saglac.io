@@ -1,8 +1,9 @@
 .io-main-nav-item {
+  display: inline-block;
   position: relative;
   margin-left: $spacer * .5;
   padding: $spacer * .5;
-  color: $light;
+  color: $gray-200;
   font-family: $title-font;
   font-weight: 500;
 
