@@ -8,8 +8,9 @@ import IntroSection from './IntroSection';
 import AboutSection from './AboutSection';
 import NextEventSection from './NextEventSection';
 
-const IndexPage = () => (
+const IndexPage = ({ event }) => (
   <Page className="home-page">
+    {console.log('dEBUG', event)}
     <Helmet title={`Home | ${config.siteTitle}`} />
     <IntroSection />
     <AboutSection />

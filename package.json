@@ -76,7 +76,7 @@
     "react-helmet": "^5.2.1",
     "react-share": "^3.0.1",
     "react-twitter-widgets": "^1.7.1",
-    "reactstrap": "^8.2.0",
+    "reactstrap": "^8.4.1",
     "url-join": "^4.0.0"
   },
   "devDependencies": {

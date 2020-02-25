@@ -1,0 +1,10 @@
+# Prisma's GraphQL extension makes it possible to run queries directly
+# in VS Code.
+# @see https://marketplace.visualstudio.com/items?itemName=Prisma.vscode-graphql
+#
+# N.B. Causes false-positive error on the first line of all JSX files.
+schemaPath: "schema.graphql"
+includes: ["**/*.jsx"]
+extensions:
+  endpoints:
+    default: "http://localhost:8000/___graphql"

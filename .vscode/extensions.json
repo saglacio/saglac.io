@@ -1,7 +1,6 @@
 {
   // See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
   // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
-
   // List of extensions which should be recommended for users of this workspace.
   "recommendations": [
     // For auto format and linting
@@ -9,9 +8,12 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "stylelint.vscode-stylelint",
-
+    // Auto-complete and query validation.
+    "apollographql.vscode-apollo",
+    // Makes it possible to run queries.
+    "prisma.vscode-graphql",
     // Additional useful extensions
-    "bungcip.better-toml",
+    "bungcip.better-toml"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": [

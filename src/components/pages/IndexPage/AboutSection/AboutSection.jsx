@@ -11,7 +11,7 @@ const AboutSection = () => (
         <Typography variant="h4" uppercase>
           Saglac IO
         </Typography>
-        <Typography light className="mb-0">
+        <Typography light>
           Depuis 2013, le Saglac IO est une communauté bénévole de professionnels et d'amateurs
           passionnés de technologies qui partagent et s'entraident toute l'année.
         </Typography>
@@ -20,7 +20,7 @@ const AboutSection = () => (
         <Typography variant="h4" uppercase>
           Meetups
         </Typography>
-        <Typography light className="mb-0">
+        <Typography light>
           À tous les mois, dans une formule 5 à 7 informel, la communauté
           partagent leurs dernières découvertes dans de courtes présentations.
         </Typography>
@@ -29,7 +29,7 @@ const AboutSection = () => (
         <Typography variant="h4" uppercase>
           Conférence
         </Typography>
-        <Typography light className="mb-0">
+        <Typography light>
           Anuellement, une journée entière est dédiée à des présentations plus
           complètes centrées sur les technologies du web, du jeu vidéo,
           ou sur le développement en général.
