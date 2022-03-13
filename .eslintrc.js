@@ -6,7 +6,7 @@ const ERROR = 2;
 const OFF = 0;
 
 module.exports = {
-  extends: ['react-app', 'prettier'],
+  extends: ['react-app', 'prettier', 'plugin:storybook/recommended'],
   plugins: ['import', 'prettier'],
   parser: '@babel/eslint-parser',
   parserOptions: {
@@ -27,6 +27,7 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': ERROR,
+
     /**
      * default eslint rules override
      */
