@@ -1,6 +1,6 @@
 <div align="center"  style="margin-bottom: 30px;">
   <a alt="Saglac IO website" href="https://saglac.io" target="_blank">
-    <img src="static/logos/SaglacIO_Logo_Meetups.png" alt="Logo" height="200px"/>
+    <img src="static/admin/logos/SaglacIO_Logo_Meetups.png" alt="Logo" height="200px"/>
   </a>
 </div>
 

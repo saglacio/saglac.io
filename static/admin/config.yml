@@ -3,148 +3,148 @@ backend:
   branch: master # Branch to update
   repo: emileber/gatsby-test # Repo for pushing new commits. Make sure to replace with your repo!
 
-media_folder: static/assets
-public_folder: assets
+media_folder: static/uploads
+public_folder: /uploads
 
-logo_url: https://emileber-gatsby-test.netlify.app/static/logos/SaglacIO_Logo_Meetups.png
+logo_url: https://emileber-gatsby-test.netlify.app/logos/SaglacIO_Logo_Meetups.png
 
 # adds an interface for drafting, reviewing, and approving posts
 publish_mode: editorial_workflow
 
 collections:
   - name: io_events
-    label: "IO events"
-    label_singular: "IO event"
-    folder: "data/io-events"
+    label: 'IO events'
+    label_singular: 'IO event'
+    folder: 'data/io-events'
     create: true
     extension: yml
     format: yml
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Facebook event", name: "event_url", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Facebook event', name: 'event_url', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - {
-          label: "Cover Image",
-          name: "cover",
-          widget: "image",
+          label: 'Cover Image',
+          name: 'cover',
+          widget: 'image',
           required: false,
         }
-      - label: "Location"
-        name: "location"
-        widget: "relation"
-        collection: "locations"
-        searchFields: ["name", "id"]
-        valueField: "id"
-        displayFields: ["id"]
+      - label: 'Location'
+        name: 'location'
+        widget: 'relation'
+        collection: 'locations'
+        searchFields: ['name', 'id']
+        valueField: 'id'
+        displayFields: ['id']
 
-      - label: "Talks"
-        label_singular: "Talk"
-        name: "talks"
-        widget: "list"
+      - label: 'Talks'
+        label_singular: 'Talk'
+        name: 'talks'
+        widget: 'list'
         fields:
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: 'Title', name: 'title', widget: 'string' }
           - {
-              label: "Description",
-              name: "description",
-              widget: "markdown",
+              label: 'Description',
+              name: 'description',
+              widget: 'markdown',
               required: false,
             }
-          - label: "Authors"
-            label_singular: "Author"
-            name: "authors"
-            widget: "list"
+          - label: 'Authors'
+            label_singular: 'Author'
+            name: 'authors'
+            widget: 'list'
             field:
-              label: "Author"
-              name: "author"
-              widget: "relation"
-              collection: "authors"
-              searchFields: ["id", "name"]
-              valueField: "id"
-              displayFields: ["id", "name"]
+              label: 'Author'
+              name: 'author'
+              widget: 'relation'
+              collection: 'authors'
+              searchFields: ['id', 'name']
+              valueField: 'id'
+              displayFields: ['id', 'name']
 
   - name: authors
-    label: "Authors"
-    label_singular: "Author"
-    folder: "data/authors"
+    label: 'Authors'
+    label_singular: 'Author'
+    folder: 'data/authors'
     create: true
     extension: yml
     format: yml
-    slug: "{{fields.id}}"
+    slug: '{{fields.id}}'
     identifier_field: id
     fields:
-      - label: "id"
-        name: "id"
-        widget: "string"
+      - label: 'id'
+        name: 'id'
+        widget: 'string'
         hint: "Unique identifier used in relations with an event's talks."
-        pattern: [".{4,}", "Must have at least 4 characters"]
+        pattern: ['.{4,}', 'Must have at least 4 characters']
 
-      - { label: "Full name", name: "name", widget: "string" }
+      - { label: 'Full name', name: 'name', widget: 'string' }
 
-      - label: "Personal website"
-        name: "website"
-        widget: "string"
+      - label: 'Personal website'
+        name: 'website'
+        widget: 'string'
         required: false
 
-      - label: "Github username"
-        name: "github"
-        widget: "string"
-        hint: "Username without the @ sign."
+      - label: 'Github username'
+        name: 'github'
+        widget: 'string'
+        hint: 'Username without the @ sign.'
         required: false
 
-      - label: "Twitter handle"
-        name: "twitter"
-        widget: "string"
-        hint: "Handle without the @ sign."
+      - label: 'Twitter handle'
+        name: 'twitter'
+        widget: 'string'
+        hint: 'Handle without the @ sign.'
         required: false
 
-      - label: "Short bio"
+      - label: 'Short bio'
         name: bio
-        widget: "markdown"
+        widget: 'markdown'
         required: false
 
   - name: locations
-    label: "Locations"
-    label_singular: "Location"
-    folder: "data/locations"
+    label: 'Locations'
+    label_singular: 'Location'
+    folder: 'data/locations'
     create: true
     extension: yml
     format: yml
-    slug: "{{fields.id}}"
+    slug: '{{fields.id}}'
     identifier_field: id
     fields:
-      - label: "id"
-        name: "id"
-        widget: "string"
+      - label: 'id'
+        name: 'id'
+        widget: 'string'
         hint: "Unique identifier used in relations with an event's talks."
-        pattern: [".{4,}", "Must have at least 4 characters"]
+        pattern: ['.{4,}', 'Must have at least 4 characters']
 
-      - { label: "Display name", name: "name", widget: "string" }
+      - { label: 'Display name', name: 'name', widget: 'string' }
 
-      - label: "Full address"
-        name: "address"
-        widget: "string"
-        hint: "123 rue de la place, Ville, Québec"
+      - label: 'Full address'
+        name: 'address'
+        widget: 'string'
+        hint: '123 rue de la place, Ville, Québec'
 
-      - label: "Public website"
-        name: "url"
-        widget: "string"
+      - label: 'Public website'
+        name: 'url'
+        widget: 'string'
         required: false
 
-      - label: "Facebook page"
-        name: "facebook"
-        widget: "string"
-        hint: "Full facebook page url."
+      - label: 'Facebook page'
+        name: 'facebook'
+        widget: 'string'
+        hint: 'Full facebook page url.'
         required: false
 
-      - label: "Google map iframe"
-        name: "map"
-        widget: "string"
-        hint: "Copy/paste the iframe from Google Maps share dialog."
+      - label: 'Google map iframe'
+        name: 'map'
+        widget: 'string'
+        hint: 'Copy/paste the iframe from Google Maps share dialog.'
         required: false
 
-      - label: "Description"
+      - label: 'Description'
         name: description
-        widget: "markdown"
+        widget: 'markdown'
         required: false

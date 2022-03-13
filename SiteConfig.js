@@ -2,7 +2,7 @@ const config = {
   siteTitle: 'Saglac IO conference & meetups', // Site title.
   siteTitleShort: 'Saglac IO', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: 'GatsbyJS Advanced Starter', // Alternative site title for SEO.
-  siteLogo: '/logos/logo-1024.png', // Logo used for SEO and manifest.
+  siteLogo: '/admin/logos/SaglacIO_Logo_Meetups_Inverted.png', // Logo used for SEO and manifest.
   siteUrl: 'https://emileber-gatsby-test.netlify.app/', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: 'Rencontre technologique du Saguenay&mdash;Lac-St-Jean', // Website description used for RSS feeds/meta description tag.
