@@ -8,8 +8,12 @@ const sourceData = YAML.parse(sourceFile);
 
 Object.keys(sourceData).forEach((locationId) => {
   const location = sourceData[locationId];
-  fs.writeFile(`${__dirname}/data/locations/${locationId}.yml`, YAML.stringify({
-    id: locationId,
-    ...location,
-  }), console.log);
+  fs.writeFile(
+    `${__dirname}/data/locations/${locationId}.yml`,
+    YAML.stringify({
+      id: locationId,
+      ...location,
+    }),
+    console.log
+  );
 });

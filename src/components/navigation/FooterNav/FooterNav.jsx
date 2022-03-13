@@ -21,7 +21,9 @@ const LINKS = [
 
 const FooterNav = () => (
   <Nav tag="nav" vertical className="io-footer-nav">
-    {LINKS.map((linkProps) => <FooterNavItem {...linkProps} />)}
+    {LINKS.map((linkProps) => (
+      <FooterNavItem {...linkProps} />
+    ))}
   </Nav>
 );
 

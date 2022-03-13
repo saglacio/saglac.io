@@ -8,18 +8,19 @@ export default {
 
 const TEXT = 'À propos du Saglac IO';
 
-export const titles = () => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].map((variant) => (
-  <>
-    <span>{variant}</span>
-    <Typography
-      variant={variant}
-      uppercase={boolean('Uppercase?', false)}
-      light={boolean('light?', false)}
-    >
-      {text('Text:', TEXT)}
-    </Typography>
-  </>
-));
+export const titles = () =>
+  ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].map((variant) => (
+    <>
+      <span>{variant}</span>
+      <Typography
+        variant={variant}
+        uppercase={boolean('Uppercase?', false)}
+        light={boolean('light?', false)}
+      >
+        {text('Text:', TEXT)}
+      </Typography>
+    </>
+  ));
 
 export const otherTexts = () => {
   const content = text('Text:', TEXT);
@@ -30,9 +31,7 @@ export const otherTexts = () => {
   return (
     <>
       <span>Paragraph</span>
-      <Typography {...props}>
-        {content}
-      </Typography>
+      <Typography {...props}>{content}</Typography>
       <span>Span</span>
       <br />
       <Typography tag="span" {...props}>

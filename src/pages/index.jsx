@@ -3,9 +3,9 @@
  * @see https://github.com/gatsbyjs/gatsby/issues/12384
  */
 // export { default } from '../components/pages/IndexPage';
-import React from "react";
-import { graphql } from "gatsby";
-import IndexPage from "../components/pages/IndexPage";
+import React from 'react';
+import { graphql } from 'gatsby';
+import IndexPage from '../components/pages/IndexPage';
 
 export default function Index({
   data: {

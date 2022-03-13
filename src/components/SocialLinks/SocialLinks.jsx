@@ -17,18 +17,16 @@ import urljoin from 'url-join';
 import config from '../../../SiteConfig';
 import './SocialLinks.css';
 
-const SocialLinks = ({
-  postNode,
-  postPath,
-  mobile,
-}) => {
+const SocialLinks = ({ postNode, postPath, mobile }) => {
   const post = postNode.frontmatter;
   const url = urljoin(config.siteUrl, config.pathPrefix, postPath);
   const iconSize = mobile ? 36 : 48;
 
   const filter = (count) => (count > 0 ? count : '');
 
-  const renderShareCount = (count) => <div className="share-count">{filter(count)}</div>;
+  const renderShareCount = (count) => (
+    <div className="share-count">{filter(count)}</div>
+  );
 
   return (
     <div className="social-links">
@@ -47,7 +45,11 @@ const SocialLinks = ({
           {(count) => renderShareCount(count)}
         </FacebookShareCount>
       </FacebookShareButton>
-      <LinkedinShareButton url={url} title={post.title} description={postNode.excerpt}>
+      <LinkedinShareButton
+        url={url}
+        title={post.title}
+        description={postNode.excerpt}
+      >
         <LinkedinIcon round size={iconSize} />
       </LinkedinShareButton>
       <TelegramShareButton url={url}>

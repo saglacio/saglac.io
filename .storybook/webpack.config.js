@@ -30,21 +30,28 @@ module.exports = ({ config }) => {
   config.resolve.mainFields = ['browser', 'module', 'main'];
 
   // Adds SCSS parsing
-  config.module.rules.push({
-    test: /\.scss$/,
-    use: ['style-loader', 'css-loader', {
-      loader: 'sass-loader',
-      options: {
-        sourceMap: true,
-        ...sassConfig,
-      },
-    }],
-    include: path.resolve(__dirname, '../'),
-  }, {
-    test: /\.stories\.jsx?$/,
-    loaders: [require.resolve('@storybook/source-loader')],
-    enforce: 'pre',
-  });
+  config.module.rules.push(
+    {
+      test: /\.scss$/,
+      use: [
+        'style-loader',
+        'css-loader',
+        {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true,
+            ...sassConfig,
+          },
+        },
+      ],
+      include: path.resolve(__dirname, '../'),
+    },
+    {
+      test: /\.stories\.jsx?$/,
+      loaders: [require.resolve('@storybook/source-loader')],
+      enforce: 'pre',
+    }
+  );
 
   return config;
 };

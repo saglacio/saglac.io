@@ -23,11 +23,7 @@ const Button = ({
     color={color}
     {...props}
   >
-    {icon && (
-      <div className="icon">
-        {icon}
-      </div>
-    )}
+    {icon && <div className="icon">{icon}</div>}
     {children}
   </BootstrapButton>
 );

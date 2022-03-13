@@ -25,8 +25,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
     if (
-      hasOwnProperty.call(node, 'frontmatter')
-      && hasOwnProperty.call(node.frontmatter, 'title')
+      hasOwnProperty.call(node, 'frontmatter') &&
+      hasOwnProperty.call(node.frontmatter, 'title')
     ) {
       slug = `/${_.kebabCase(node.frontmatter.title)}`;
     } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {

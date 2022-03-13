@@ -4,12 +4,7 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import Link from '@/components/shared/Link';
 import './FooterNavItem.scss';
 
-const FooterNavItem = ({
-  to,
-  targetBlank,
-  children,
-  ...props
-}) => {
+const FooterNavItem = ({ to, targetBlank, children, ...props }) => {
   const Tag = to ? Link : 'a';
 
   return (
@@ -20,10 +15,12 @@ const FooterNavItem = ({
         tag={to ? Link : 'a'}
         target={targetBlank ? '_blank' : undefined}
         to={to}
-        {...(to ? {
-          // Link component props
-          activeClassName: 'active',
-        } : {})}
+        {...(to
+          ? {
+              // Link component props
+              activeClassName: 'active',
+            }
+          : {})}
         {...props}
       >
         {children}

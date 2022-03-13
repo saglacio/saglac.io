@@ -16,13 +16,14 @@ const Typography = ({
 }) => {
   const Tag = tag || variant || 'p';
   return (
-    <Tag className={cn('io-typography', className, {
-      title: TITLE_TAGS.includes(Tag),
-      light,
-      uppercase,
-      lead,
-      [`text-${size}`]: size,
-    })}
+    <Tag
+      className={cn('io-typography', className, {
+        title: TITLE_TAGS.includes(Tag),
+        light,
+        uppercase,
+        lead,
+        [`text-${size}`]: size,
+      })}
     >
       {children}
     </Tag>

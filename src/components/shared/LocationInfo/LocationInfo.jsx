@@ -18,9 +18,7 @@ const LocationInfo = ({ name, description, mapSrc }) => (
     <Col className="location-details" lg={6}>
       <Row className="justify-content-center">
         <Col lg={8}>
-          <Typography variant="h4">
-            {name}
-          </Typography>
+          <Typography variant="h4">{name}</Typography>
           <Typography className="mb-0" light>
             {description}
           </Typography>

@@ -19,7 +19,9 @@ const ButtonStory = (otherProps) => {
     children: text('Content', 'Click me'),
     size: select('Size?', SIZES, null),
     disabled: boolean('Disabled?', false),
-    icon: boolean('Icon?', false) ? <FontAwesomeIcon icon={faFacebookF} /> : null,
+    icon: boolean('Icon?', false) ? (
+      <FontAwesomeIcon icon={faFacebookF} />
+    ) : null,
     ...otherProps,
   };
 

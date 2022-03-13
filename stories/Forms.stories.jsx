@@ -6,6 +6,4 @@ export default {
   title: 'Forms',
 };
 
-export const Inputs = () => (
-  <div />
-);
+export const Inputs = () => <div />;

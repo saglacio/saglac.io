@@ -22,22 +22,20 @@ const Footer = ({ config }) => {
             <LogoLink className="mb-4" />
             <Typography size="sm" light className="title-font">
               Le saglac.io est une communauté de passionnés de technologies,
-              organisée par un groupe de bénévoles de la région qui ont le partage
-              de connaissances à coeur.
+              organisée par un groupe de bénévoles de la région qui ont le
+              partage de connaissances à coeur.
             </Typography>
           </FooterCol>
           <FooterCol lg={4} md={6} title="Liens pratiques">
             <FooterNav />
           </FooterCol>
           <FooterCol lg={4} md={6} title="Nous contacter">
-          test
+            test
           </FooterCol>
         </Row>
       </Section>
       <Container className="copyright">
-        <small>
-          {copyright}
-        </small>
+        <small>{copyright}</small>
       </Container>
     </footer>
   );

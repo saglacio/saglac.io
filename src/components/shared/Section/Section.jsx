@@ -22,11 +22,7 @@ const Section = ({
     {...props}
   >
     <Container fluid={fluid}>
-      {title && (
-        <SectionHeader title={title}>
-          {subtitle}
-        </SectionHeader>
-      )}
+      {title && <SectionHeader title={title}>{subtitle}</SectionHeader>}
       {children}
     </Container>
   </section>

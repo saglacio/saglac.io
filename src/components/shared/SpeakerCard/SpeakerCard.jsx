@@ -8,7 +8,8 @@ import './SpeakerCard.scss';
 
 // Avoids browser caching and reusing the same image.
 let imageIndex = 0;
-const getDefaultSpeakerImage = () => `https://source.unsplash.com/600x400/?programming,code&sig=${imageIndex++}`;
+const getDefaultSpeakerImage = () =>
+  `https://source.unsplash.com/600x400/?programming,code&sig=${imageIndex++}`;
 
 const SpeakerCard = ({ src, author, talk }) => (
   <Card className="io-speaker-card">

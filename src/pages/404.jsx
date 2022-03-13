@@ -6,7 +6,7 @@ import Page from '@/components/layout/Page';
 const HomePage = () => (
   <Page className="home-page">
     <Helmet title={`Oups | ${config.siteTitle}`} />
-      404
+    404
   </Page>
 );
 

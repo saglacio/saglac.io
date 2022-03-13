@@ -8,7 +8,7 @@ const AboutPage = () => (
   <Page>
     <div className="about-container">
       <Helmet title={`About | ${config.siteTitle}`} />
-    Edit the components/pages/AboutPage
+      Edit the components/pages/AboutPage
     </div>
   </Page>
 );

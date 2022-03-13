@@ -11,7 +11,7 @@ export default {
 function rgb2hex(color) {
   const rgb = color.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
   function hex(x) {
-    return (`0${parseInt(x, 10).toString(16)}`).slice(-2);
+    return `0${parseInt(x, 10).toString(16)}`.slice(-2);
   }
   return `#${hex(rgb[1])}${hex(rgb[2])}${hex(rgb[3])}`;
 }
@@ -19,7 +19,7 @@ function rgb2hex(color) {
 class Color extends Component {
   state = {
     hex: '',
-  }
+  };
 
   componentDidMount() {
     const styles = window.getComputedStyle(this.ref);
@@ -32,13 +32,13 @@ class Color extends Component {
     const { hex } = this.state;
     return (
       <div
-        ref={(ref) => { this.ref = ref; }}
+        ref={(ref) => {
+          this.ref = ref;
+        }}
         className={`text-monospace color-block bg-${color}`}
       >
         <small>
-          <strong>
-            {color}
-          </strong>
+          <strong>{color}</strong>
         </small>
         <div>{hex}</div>
       </div>
@@ -48,11 +48,10 @@ class Color extends Component {
 
 const COLOR_RANGE = Array.from(Array(9), (_, i) => i + 1);
 
-const ColorStory = ({ color }) => (
+const ColorStory = ({ color }) =>
   COLOR_RANGE.map((i) => (
     <Color key={`${color}-${i}`} color={`${color}-${i}00`} />
-  ))
-);
+  ));
 
 export const Grays = () => (
   <>
