@@ -12,6 +12,9 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
+    '@storybook/addon-notes/register',
+    // '@storybook/addon-storysource',
+    // '@storybook/addon-a11y',
   ],
   framework: '@storybook/react',
   core: {
