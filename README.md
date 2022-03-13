@@ -49,7 +49,7 @@ An in-browser IDE for exploring GraphQL data available in our Gatsby setup.
 
 While the development server is started (with the previous command), the IDE should be avaible at:
 
-http://localhost:8000/___graphql
+[http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql)
 
 ### Storybook
 
