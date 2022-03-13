@@ -12,24 +12,28 @@ function getScrollPosition({ element, useWindow }) {
   return { x: position.left, y: position.top };
 }
 
-export function useScrollPosition(effect, deps, { element, useWindow, wait } = {}) {
+export function useScrollPosition(
+  effect,
+  deps,
+  { element, useWindow, wait } = {}
+) {
   const position = useRef(getScrollPosition({ useWindow }));
 
-  let throttleTimeout = null;
+  const throttleTimeout = useRef(null);
 
   const callBack = () => {
     const currPos = getScrollPosition({ element, useWindow });
     effect({ prevPos: position.current, currPos });
     position.current = currPos;
-    throttleTimeout = null;
+    throttleTimeout.current = null;
   };
 
   useLayoutEffect(() => {
     const handleScroll = () => {
       if (!wait) callBack();
 
-      if (throttleTimeout === null) {
-        throttleTimeout = setTimeout(callBack, wait);
+      if (throttleTimeout.current === null) {
+        throttleTimeout.current = setTimeout(callBack, wait);
       }
     };
 
@@ -42,10 +46,14 @@ export function useScrollPosition(effect, deps, { element, useWindow, wait } = {
 export function useIsScrolled({ element, wait, offset = 0 } = {}) {
   const [isScrolled, setScrolled] = useState(false);
 
-  useScrollPosition(({ currPos }) => {
-    const isShow = currPos.y > (0 + offset);
-    if (isShow !== isScrolled) setScrolled(isShow);
-  }, [isScrolled], { element, useWindow: !element, wait });
+  useScrollPosition(
+    ({ currPos }) => {
+      const isShow = currPos.y > 0 + offset;
+      if (isShow !== isScrolled) setScrolled(isShow);
+    },
+    [isScrolled],
+    { element, useWindow: !element, wait }
+  );
 
   return isScrolled;
 }

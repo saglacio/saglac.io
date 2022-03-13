@@ -6,7 +6,7 @@ $brand-conference: #d75ba1;
 $brand-colors: (
   'background': $brand-background,
   'meetup': $brand-meetup,
-  'conference': $brand-conference
+  'conference': $brand-conference,
 );
 
 $gray-900: #0a0c15;
@@ -21,7 +21,7 @@ $gray-100: lighten($gray-900, 80%);
 $black: #040507;
 
 $bg-dark: $brand-background;
-$bg-light: fade-out($brand-background, .95);
+$bg-light: fade-out($brand-background, 0.95);
 
 $fg-dark: #9195a2;
 $fg-light: #fff;
@@ -47,7 +47,7 @@ $secondary: $primary;
 $dark: #222636;
 
 $theme-colors: (
-  'conference': $brand-conference
+  'conference': $brand-conference,
 );
 
 $body-bg: transparent;
@@ -79,7 +79,7 @@ $font-family-sans-serif: 'Roboto', sans-serif;
 // $font-size-root:              null !default;
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
 $font-size-lg: $font-size-base * 1.1;
-$font-size-sm: $font-size-base * .875;
+$font-size-sm: $font-size-base * 0.875;
 
 $headings-margin-bottom: $spacer * 1.25;
 
@@ -115,13 +115,13 @@ $paragraph-margin-bottom: 1.25rem;
 
 $rounded-pill: 50rem;
 
-$transition-base: all .5s ease;
+$transition-base: all 0.5s ease;
 
 // Buttons + Forms
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y: .5rem;
+$input-btn-padding-y: 0.5rem;
 $input-btn-padding-x: 2rem;
 // $input-btn-font-family:       null !default;
 // $input-btn-font-size:         $font-size-base !default;
@@ -131,11 +131,11 @@ $input-btn-line-height: 1.4;
 // $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
 // $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm: .25rem;
+$input-btn-padding-y-sm: 0.25rem;
 $input-btn-padding-x-sm: 1.5rem;
 // $input-btn-font-size-sm:      $font-size-sm !default;
 
-$input-btn-padding-y-lg: .6rem;
+$input-btn-padding-y-lg: 0.6rem;
 $input-btn-padding-x-lg: 2.5rem;
 // $input-btn-font-size-lg:      $font-size-lg !default;
 
@@ -180,8 +180,8 @@ $btn-border-radius: $rounded-pill;
 $btn-border-radius-lg: $rounded-pill;
 $btn-border-radius-sm: $rounded-pill;
 
-$btn-transition: color .5s ease, background-color .5s ease,
-  border-color .5s ease, box-shadow .5s ease;
+$btn-transition: color 0.5s ease, background-color 0.5s ease,
+  border-color 0.5s ease, box-shadow 0.5s ease;
 
 // Cards
 

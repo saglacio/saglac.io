@@ -6,19 +6,18 @@ const ERROR = 2;
 const OFF = 0;
 
 module.exports = {
-  extends: ['airbnb'],
-  plugins: [
-    'react',
-    'jsx-a11y',
-    'import',
-  ],
-  parser: 'babel-eslint',
+  extends: ['react-app', 'prettier'],
+  plugins: ['import', 'prettier'],
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 8,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
+  },
+  globals: {
+    __PATH_PREFIX__: true,
   },
   env: {
     browser: true,
@@ -27,24 +26,31 @@ module.exports = {
     jest: true,
   },
   rules: {
+    'prettier/prettier': ERROR,
     /**
      * default eslint rules override
      */
     'class-methods-use-this': OFF,
-    'comma-dangle': [ERROR, {
-      arrays: 'always-multiline',
-      objects: 'always-multiline',
-      imports: 'always-multiline',
-      exports: 'always-multiline',
-      functions: 'never',
-    }],
+    // 'comma-dangle': [
+    //   ERROR,
+    //   {
+    //     arrays: 'always-multiline',
+    //     objects: 'always-multiline',
+    //     imports: 'always-multiline',
+    //     exports: 'always-multiline',
+    //     functions: 'never',
+    //   },
+    // ],
     'consistent-return': OFF,
     'func-names': [ERROR, 'as-needed'],
-    indent: [ERROR,
-      2, {
-        // One indent of 2 spaces
-        SwitchCase: 1,
-      }],
+    // indent: [
+    //   ERROR,
+    //   2,
+    //   {
+    //     // One indent of 2 spaces
+    //     SwitchCase: 1,
+    //   },
+    // ],
     'linebreak-style': [ERROR, 'unix'],
     'no-else-return': [ERROR, { allowElseIf: true }],
     'no-multi-assign': OFF,
@@ -59,27 +65,50 @@ module.exports = {
      */
     'import/no-cycle': OFF,
     'import/extensions': ERROR,
-    'import/no-extraneous-dependencies': [ERROR, {
-      devDependencies: true,
-    }],
+    'import/no-extraneous-dependencies': [
+      ERROR,
+      {
+        devDependencies: true,
+      },
+    ],
     'import/no-named-as-default': OFF,
     'import/prefer-default-export': OFF,
-    'import/order': ERROR,
+    'import/order': [
+      ERROR,
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+          'type',
+        ],
+      },
+    ],
 
     /**
      * jsx-a11y plugin rules
      */
-    'jsx-a11y/anchor-is-valid': [ERROR, {
-      components: ['Link'],
-      specialLink: ['hrefLeft', 'hrefRight', 'to'],
-      aspects: ['noHref', 'invalidHref', 'preferButton'],
-    }],
-    'jsx-a11y/label-has-associated-control': [ERROR, {
-      labelComponents: ['CustomInputLabel'],
-      labelAttributes: ['label'],
-      controlComponents: ['CustomInput'],
-      depth: 3,
-    }],
+    'jsx-a11y/anchor-is-valid': [
+      ERROR,
+      {
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight', 'to'],
+        aspects: ['noHref', 'invalidHref', 'preferButton'],
+      },
+    ],
+    'jsx-a11y/label-has-associated-control': [
+      ERROR,
+      {
+        labelComponents: ['CustomInputLabel'],
+        labelAttributes: ['label'],
+        controlComponents: ['CustomInput'],
+        depth: 3,
+      },
+    ],
     'jsx-a11y/label-has-for': OFF,
 
     /**
@@ -90,24 +119,38 @@ module.exports = {
     'react/jsx-props-no-spreading': OFF,
     'react/no-danger': ERROR,
     'react/no-unescaped-entities': [ERROR, { forbid: ['>', '}'] }],
-    'react/prop-types': [ERROR, {
-      // FIXME: remove when the website is ready to be developed
-      skipUndeclared: true,
-    }],
-    'react/sort-comp': [ERROR, {
-      order: [
-        //   'type-annotations',
-        'static-variables',
-        'static-methods',
-        'instance-variables',
-        'lifecycle',
-        //   'instance-methods',
-        'everything-else',
-        'render',
-      ],
-    }],
+    'react/prop-types': [
+      ERROR,
+      {
+        // FIXME: remove when the website is ready to be developed
+        skipUndeclared: true,
+      },
+    ],
+    'react/sort-comp': [
+      ERROR,
+      {
+        order: [
+          //   'type-annotations',
+          'static-variables',
+          'static-methods',
+          'instance-variables',
+          'lifecycle',
+          //   'instance-methods',
+          'everything-else',
+          'render',
+        ],
+      },
+    ],
     'react/state-in-constructor': [ERROR, 'never'],
   },
+  overrides: [
+    {
+      files: ['*.stories.*'],
+      rules: {
+        'import/no-anonymous-default-export': OFF,
+      },
+    },
+  ],
   settings: {
     // 'import/core-modules': [],
     'import/resolver': {

@@ -6,7 +6,7 @@ backend:
 media_folder: static/assets
 public_folder: assets
 
-logo_url: https://emileber-gatsby-test.netlify.com/static/logos/SaglacIO_Logo_Meetups.png
+logo_url: https://emileber-gatsby-test.netlify.app/static/logos/SaglacIO_Logo_Meetups.png
 
 # adds an interface for drafting, reviewing, and approving posts
 publish_mode: editorial_workflow
@@ -25,7 +25,12 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Facebook event", name: "event_url", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown", required: false }
-      - { label: "Cover Image", name: "cover", widget: "image", required: false }
+      - {
+          label: "Cover Image",
+          name: "cover",
+          widget: "image",
+          required: false,
+        }
       - label: "Location"
         name: "location"
         widget: "relation"
@@ -40,7 +45,12 @@ collections:
         widget: "list"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "markdown", required: false }
+          - {
+              label: "Description",
+              name: "description",
+              widget: "markdown",
+              required: false,
+            }
           - label: "Authors"
             label_singular: "Author"
             name: "authors"
@@ -68,7 +78,7 @@ collections:
         name: "id"
         widget: "string"
         hint: "Unique identifier used in relations with an event's talks."
-        pattern: ['.{4,}', "Must have at least 4 characters"]
+        pattern: [".{4,}", "Must have at least 4 characters"]
 
       - { label: "Full name", name: "name", widget: "string" }
 
@@ -108,7 +118,7 @@ collections:
         name: "id"
         widget: "string"
         hint: "Unique identifier used in relations with an event's talks."
-        pattern: ['.{4,}', "Must have at least 4 characters"]
+        pattern: [".{4,}", "Must have at least 4 characters"]
 
       - { label: "Display name", name: "name", widget: "string" }
 
