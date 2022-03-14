@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 import Link from '@/components/shared/Link';
-import LogoImg from '~/static/admin/logos/SaglacIO_Logo_Meetups_Inverted.png';
+import LogoImg from '~/static/images/logos/SaglacIO_Logo_Meetups_Inverted.png';
 import './LogoLink.scss';
 
 const LogoLink = ({ className }) => (
