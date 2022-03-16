@@ -1,4 +1,5 @@
-// const path = require('path');
+const path = require('path');
+const fs = require('fs');
 const resolverConfig = require('./resolver.config');
 
 const ERROR = 2;
@@ -7,7 +8,7 @@ const OFF = 0;
 
 module.exports = {
   extends: ['react-app', 'prettier', 'plugin:storybook/recommended'],
-  plugins: ['import', 'prettier'],
+  plugins: ['import', 'graphql', 'prettier'],
   parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 8,
@@ -27,7 +28,17 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': ERROR,
-
+    'graphql/template-strings': [
+      ERROR,
+      {
+        env: `relay`,
+        schemaString: fs.readFileSync(
+          path.resolve(__dirname, './schema.graphql'),
+          { encoding: 'utf-8', flag: 'r' }
+        ),
+        tagName: `graphql`,
+      },
+    ],
     /**
      * default eslint rules override
      */

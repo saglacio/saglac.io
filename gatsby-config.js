@@ -207,5 +207,6 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-extract-schema',
   ],
 };
