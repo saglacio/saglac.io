@@ -18,7 +18,6 @@ export const pageQuery = graphql`
       date
       event_url
       talks {
-        id
         title
         description
         authors {

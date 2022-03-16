@@ -40,14 +40,14 @@ module.exports = {
         path: `${__dirname}/content/`,
       },
     },
-    'gatsby-transformer-yaml',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'posts',
+        name: 'data',
         path: `${__dirname}/data/`,
       },
     },
+    'gatsby-transformer-yaml',
     {
       resolve: 'gatsby-transformer-remark',
       options: {

@@ -836,7 +836,7 @@ type IoEventsYaml implements Node {
 }
 
 type IoEventsYamlTalks implements Node {
-  authors: [AuthorsYaml]
+  authors: [AuthorsYaml!]!
   description: String
   title: String
   id: ID!

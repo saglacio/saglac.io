@@ -9,10 +9,10 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
   const typeDefs = `
     type IoEventsYaml implements Node {
-      location: LocationsYaml @link
+      location: LocationsYaml @link(by: "yamlId")
     }
     type IoEventsYamlTalks implements Node {
-      authors: [AuthorsYaml] @link
+      authors: [AuthorsYaml!]! @link(by: "yamlId")
     }
   `;
   createTypes(typeDefs);
