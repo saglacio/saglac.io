@@ -1,7 +1,6 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import config from '~/SiteConfig';
-import Page from '@/components/layout/Page';
+import PageLayout from '@/components/layout/PageLayout';
 // import IntroSection
 import './IndexPage.scss';
 import IntroSection from './IntroSection';
@@ -9,13 +8,12 @@ import AboutSection from './AboutSection';
 import NextEventSection from './NextEventSection';
 
 const IndexPage = ({ event }) => (
-  <Page className="home-page">
+  <PageLayout className="home-page" title="Home">
     {console.log('dEBUG', event)}
-    <Helmet title={`Home | ${config.siteTitle}`} />
     <IntroSection />
     <AboutSection />
     <NextEventSection />
-  </Page>
+  </PageLayout>
 );
 
 export default IndexPage;

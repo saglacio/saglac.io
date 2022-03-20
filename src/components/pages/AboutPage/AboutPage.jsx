@@ -1,16 +1,11 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import config from '~/SiteConfig';
-import Page from '@/components/layout/Page';
+import PageLayout from '@/components/layout/PageLayout';
 import './AboutPage.scss';
 
 const AboutPage = () => (
-  <Page>
-    <div className="about-container">
-      <Helmet title={`About | ${config.siteTitle}`} />
-      Edit the components/pages/AboutPage
-    </div>
-  </Page>
+  <PageLayout title="About">
+    <div className="about-container">Edit the components/pages/AboutPage</div>
+  </PageLayout>
 );
 
 export default AboutPage;

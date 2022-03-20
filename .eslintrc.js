@@ -7,8 +7,13 @@ const ERROR = 2;
 const OFF = 0;
 
 module.exports = {
-  extends: ['react-app', 'prettier', 'plugin:storybook/recommended'],
-  plugins: ['import', 'graphql', 'prettier'],
+  extends: [
+    'react-app',
+    'plugin:jsx-a11y/recommended',
+    'prettier',
+    'plugin:storybook/recommended',
+  ],
+  plugins: ['import', 'graphql', 'jsx-a11y', 'prettier'],
   parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 8,
@@ -154,6 +159,7 @@ module.exports = {
       },
     ],
     'react/state-in-constructor': [ERROR, 'never'],
+    'react/jsx-curly-brace-presence': ERROR,
   },
   overrides: [
     {

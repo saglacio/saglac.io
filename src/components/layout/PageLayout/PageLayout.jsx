@@ -1,14 +1,15 @@
 import '@/scss/main.scss';
-import './Page.scss';
+import './PageLayout.scss';
 import React from 'react';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 import config from '~/SiteConfig';
 import Footer from '@/components/layout/Footer';
 import PageHeader from './PageHeader';
 
-const Page = ({ children }) => (
+const PageLayout = ({ children, title }) => (
   <div className="io-layout">
-    <Helmet>
+    <Helmet title={`${title} | ${config.siteTitle}`}>
       <meta name="description" content={config.siteDescription} />
       <html lang="en" />
     </Helmet>
@@ -18,4 +19,9 @@ const Page = ({ children }) => (
   </div>
 );
 
-export default Page;
+PageLayout.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};
+
+export default PageLayout;
