@@ -2,6 +2,16 @@ backend:
   name: github # Refer to https://www.netlifycms.org/docs/authentication-backends/ for auth backend list and instructions
   branch: master # Branch to update
   repo: emileber/gatsby-test # Repo for pushing new commits. Make sure to replace with your repo!
+  squash_merges: true
+  commit_messages:
+    create: Create {{collection}} "{{slug}}"
+    update: Update {{collection}} "{{slug}}"
+    delete: Delete {{collection}} "{{slug}}"
+    uploadMedia: Upload "{{path}}"
+    deleteMedia: Delete "{{path}}"
+    openAuthoring: '{{message}}'
+
+local_backend: true
 
 media_folder: static/uploads
 public_folder: /uploads
@@ -15,22 +25,39 @@ collections:
   - name: io_events
     label: 'IO events'
     label_singular: 'IO event'
+    # description: ""
     folder: 'data/io-events'
     create: true
+    delete: false
     extension: yml
     format: yml
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: "{{date | date('YYY-MM-DD')}}, {{title}}"
+    sortable_fields: ['date', 'title']
+    view_groups:
+      - label: Year
+        field: date
+        # groups items based on the value matched by the pattern
+        pattern: \d{4}
+
+      - label: Location
+        field: location
+
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'datetime' }
       - { label: 'Facebook event', name: 'event_url', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-      - {
-          label: 'Cover Image',
-          name: 'cover',
-          widget: 'image',
-          required: false,
-        }
+      - label: 'Description'
+        name: 'description'
+        widget: 'markdown'
+        hint: 'Any additional information.'
+        required: false
+
+      - label: 'Cover Image'
+        name: 'cover'
+        widget: 'image'
+        required: false
+
       - label: 'Location'
         name: 'location'
         widget: 'relation'
@@ -69,15 +96,17 @@ collections:
     label_singular: 'Author'
     folder: 'data/authors'
     create: true
+    delete: false
     extension: yml
     format: yml
     slug: '{{fields.id}}'
+    summary: '{{name}} ({{id}})'
     identifier_field: id
     fields:
       - label: 'id'
         name: 'id'
         widget: 'string'
-        hint: "Unique identifier used in relations with an event's talks."
+        hint: 'Unique identifier used as a foreign key inside an event's talks.'
         pattern: ['.{4,}', 'Must have at least 4 characters']
 
       - { label: 'Full name', name: 'name', widget: 'string' }
@@ -109,15 +138,17 @@ collections:
     label_singular: 'Location'
     folder: 'data/locations'
     create: true
+    delete: false
     extension: yml
     format: yml
     slug: '{{fields.id}}'
+    summary: '{{name}} ({{id}})'
     identifier_field: id
     fields:
       - label: 'id'
         name: 'id'
         widget: 'string'
-        hint: "Unique identifier used in relations with an event's talks."
+        hint: 'Unique identifier used as a foreign key inside events.'
         pattern: ['.{4,}', 'Must have at least 4 characters']
 
       - { label: 'Display name', name: 'name', widget: 'string' }
@@ -125,7 +156,7 @@ collections:
       - label: 'Full address'
         name: 'address'
         widget: 'string'
-        hint: '123 rue de la place, Ville, Québec'
+        hint: 'E.g.: 123 rue de la place, Ville, Québec'
 
       - label: 'Public website'
         name: 'url'
@@ -147,4 +178,5 @@ collections:
       - label: 'Description'
         name: description
         widget: 'markdown'
+        hint: 'How to get there? Parking instructions? Are food and beuverage sold at this location? etc.'
         required: false

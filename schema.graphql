@@ -1022,6 +1022,7 @@ type AdminYaml implements Node {
   children: [Node!]!
   internal: Internal!
   backend: AdminYamlBackend
+  local_backend: Boolean
   media_folder: String
   public_folder: String
   logo_url: String
@@ -1033,6 +1034,17 @@ type AdminYamlBackend {
   name: String
   branch: String
   repo: String
+  squash_merges: Boolean
+  commit_messages: AdminYamlBackendCommit_messages
+}
+
+type AdminYamlBackendCommit_messages {
+  create: String
+  update: String
+  delete: String
+  uploadMedia: String
+  deleteMedia: String
+  openAuthoring: String
 }
 
 type AdminYamlCollections {
@@ -1113,7 +1125,7 @@ type Query {
   allDataYaml(filter: DataYamlFilterInput, sort: DataYamlSortInput, skip: Int, limit: Int): DataYamlConnection!
   authorsYaml(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, name: StringQueryOperatorInput, github: StringQueryOperatorInput, yamlId: StringQueryOperatorInput, website: StringQueryOperatorInput, twitter: StringQueryOperatorInput, bio: StringQueryOperatorInput): AuthorsYaml
   allAuthorsYaml(filter: AuthorsYamlFilterInput, sort: AuthorsYamlSortInput, skip: Int, limit: Int): AuthorsYamlConnection!
-  adminYaml(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, backend: AdminYamlBackendFilterInput, media_folder: StringQueryOperatorInput, public_folder: StringQueryOperatorInput, logo_url: StringQueryOperatorInput, publish_mode: StringQueryOperatorInput, collections: AdminYamlCollectionsFilterListInput): AdminYaml
+  adminYaml(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, backend: AdminYamlBackendFilterInput, local_backend: BooleanQueryOperatorInput, media_folder: StringQueryOperatorInput, public_folder: StringQueryOperatorInput, logo_url: StringQueryOperatorInput, publish_mode: StringQueryOperatorInput, collections: AdminYamlCollectionsFilterListInput): AdminYaml
   allAdminYaml(filter: AdminYamlFilterInput, sort: AdminYamlSortInput, skip: Int, limit: Int): AdminYamlConnection!
 }
 
@@ -1540,6 +1552,7 @@ input AdminYamlFilterInput {
   children: NodeFilterListInput
   internal: InternalFilterInput
   backend: AdminYamlBackendFilterInput
+  local_backend: BooleanQueryOperatorInput
   media_folder: StringQueryOperatorInput
   public_folder: StringQueryOperatorInput
   logo_url: StringQueryOperatorInput
@@ -1551,6 +1564,17 @@ input AdminYamlBackendFilterInput {
   name: StringQueryOperatorInput
   branch: StringQueryOperatorInput
   repo: StringQueryOperatorInput
+  squash_merges: BooleanQueryOperatorInput
+  commit_messages: AdminYamlBackendCommit_messagesFilterInput
+}
+
+input AdminYamlBackendCommit_messagesFilterInput {
+  create: StringQueryOperatorInput
+  update: StringQueryOperatorInput
+  delete: StringQueryOperatorInput
+  uploadMedia: StringQueryOperatorInput
+  deleteMedia: StringQueryOperatorInput
+  openAuthoring: StringQueryOperatorInput
 }
 
 input AdminYamlCollectionsFilterListInput {
@@ -2652,6 +2676,14 @@ enum FileFieldsEnum {
   childrenAdminYaml___backend___name
   childrenAdminYaml___backend___branch
   childrenAdminYaml___backend___repo
+  childrenAdminYaml___backend___squash_merges
+  childrenAdminYaml___backend___commit_messages___create
+  childrenAdminYaml___backend___commit_messages___update
+  childrenAdminYaml___backend___commit_messages___delete
+  childrenAdminYaml___backend___commit_messages___uploadMedia
+  childrenAdminYaml___backend___commit_messages___deleteMedia
+  childrenAdminYaml___backend___commit_messages___openAuthoring
+  childrenAdminYaml___local_backend
   childrenAdminYaml___media_folder
   childrenAdminYaml___public_folder
   childrenAdminYaml___logo_url
@@ -2720,6 +2752,14 @@ enum FileFieldsEnum {
   childAdminYaml___backend___name
   childAdminYaml___backend___branch
   childAdminYaml___backend___repo
+  childAdminYaml___backend___squash_merges
+  childAdminYaml___backend___commit_messages___create
+  childAdminYaml___backend___commit_messages___update
+  childAdminYaml___backend___commit_messages___delete
+  childAdminYaml___backend___commit_messages___uploadMedia
+  childAdminYaml___backend___commit_messages___deleteMedia
+  childAdminYaml___backend___commit_messages___openAuthoring
+  childAdminYaml___local_backend
   childAdminYaml___media_folder
   childAdminYaml___public_folder
   childAdminYaml___logo_url
@@ -5331,6 +5371,14 @@ enum AdminYamlFieldsEnum {
   backend___name
   backend___branch
   backend___repo
+  backend___squash_merges
+  backend___commit_messages___create
+  backend___commit_messages___update
+  backend___commit_messages___delete
+  backend___commit_messages___uploadMedia
+  backend___commit_messages___deleteMedia
+  backend___commit_messages___openAuthoring
+  local_backend
   media_folder
   public_folder
   logo_url
