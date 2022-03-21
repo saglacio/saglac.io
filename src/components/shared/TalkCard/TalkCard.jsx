@@ -4,25 +4,30 @@ import CardImg from 'reactstrap/lib/CardImg';
 import CardImgOverlay from 'reactstrap/lib/CardImgOverlay';
 import Typography from '@/components/shared/Typography';
 // import DefaultTalkImage from '~/static/images/default-talk.jpg';
-import './SpeakerCard.scss';
+import { talkType } from '@/types';
+import './TalkCard.scss';
 
 // Avoids browser caching and reusing the same image.
 let imageIndex = 0;
 const getDefaultSpeakerImage = () =>
   `https://source.unsplash.com/600x400/?programming,code&sig=${imageIndex++}`;
 
-const SpeakerCard = ({ src, author, talk }) => (
-  <Card className="io-speaker-card">
-    <CardImg src={src || getDefaultSpeakerImage()} alt="Card image cap" />
+const TalkCard = ({ talk: { title, authors } }) => (
+  <Card className="io-talk-card">
+    <CardImg src={getDefaultSpeakerImage()} alt="Card image cap" />
     <CardImgOverlay className="details">
       <Typography variant="h4" className="mb-1">
-        {author}
+        {title}
       </Typography>
       <Typography variant="span" light>
-        <em>{talk}</em>
+        <em>{authors.map((author) => author.name).join(', ')}</em>
       </Typography>
     </CardImgOverlay>
   </Card>
 );
 
-export default SpeakerCard;
+TalkCard.propTypes = {
+  talk: talkType.isRequired,
+};
+
+export default TalkCard;

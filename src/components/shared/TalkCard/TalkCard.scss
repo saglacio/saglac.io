@@ -1,0 +1,9 @@
+.io-talk-card {
+  .details {
+    top: auto;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    background-color: fade-out($color: $dark, $amount: 0.2);
+    text-align: center;
+  }
+}

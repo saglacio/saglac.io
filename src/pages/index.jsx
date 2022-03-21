@@ -15,6 +15,10 @@ export const pageQuery = graphql`
     latestEvent: ioEventsYaml {
       id
       title
+      formattedDate: date(
+        formatString: "dddd DD MMMM YYYY, [à] LT"
+        locale: "fr"
+      )
       date
       event_url
       talks {
@@ -29,6 +33,11 @@ export const pageQuery = graphql`
       location {
         id
         name
+        address
+        url
+        facebook
+        description
+        map
       }
     }
   }

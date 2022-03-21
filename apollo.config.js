@@ -7,9 +7,19 @@
  */
 module.exports = {
   client: {
+    tagName: 'graphql',
+    addTypename: false,
+    excludes: [],
+    includes: [
+      './src/**/*.jsx',
+      './src/**/*.js',
+      // './node_modules/gatsby-source-contentful/src/*.js',
+      './node_modules/gatsby-transformer-sharp/src/*.js',
+      './node_modules/gatsby-image/src/*.js',
+    ],
     service: {
       name: 'saglacio',
-      url: 'http://localhost:8000/__graphql',
+      localSchemaFile: './schema.graphql',
     },
   },
 };

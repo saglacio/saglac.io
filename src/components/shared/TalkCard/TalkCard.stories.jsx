@@ -1,16 +1,16 @@
 import React from 'react';
 import Row from 'reactstrap/lib/Row';
 import Col from 'reactstrap/lib/Col';
-import SpeakerCard from './SpeakerCard';
+import TalkCard from './TalkCard';
 
 export default {
-  title: 'Shared/SpeakerCard',
+  title: 'Shared/TalkCard',
 };
 
 export const DefaultSpeakerCard = () => (
   <Row>
     <Col lg={{ size: 6 }}>
-      <SpeakerCard author="Émile Bergeron" talk="Test gatsby" />
+      <TalkCard author="Émile Bergeron" talk="Test gatsby" />
     </Col>
   </Row>
 );

@@ -18,5 +18,6 @@
   },
   "emmet.includeLanguages": {
     "javascript": "javascript"
-  }
+  },
+  "apollographql.display.showRunInStudioButton": false
 }
