@@ -106,7 +106,7 @@ collections:
       - label: 'id'
         name: 'id'
         widget: 'string'
-        hint: 'Unique identifier used as a foreign key inside an event's talks.'
+        hint: "Unique identifier used as a foreign key inside an event's talks."
         pattern: ['.{4,}', 'Must have at least 4 characters']
 
       - { label: 'Full name', name: 'name', widget: 'string' }

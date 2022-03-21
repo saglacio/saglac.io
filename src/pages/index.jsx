@@ -15,6 +15,7 @@ export const pageQuery = graphql`
     latestEvent: ioEventsYaml {
       id
       title
+      description
       formattedDate: date(
         formatString: "dddd DD MMMM YYYY, [à] LT"
         locale: "fr"
