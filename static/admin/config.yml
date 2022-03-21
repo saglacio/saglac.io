@@ -138,10 +138,10 @@ collections:
         hint: 'Full facebook page url.'
         required: false
 
-      - label: 'Google map iframe'
+      - label: 'Google map iframe URL'
         name: 'map'
         widget: 'string'
-        hint: 'Copy/paste the iframe from Google Maps share dialog.'
+        hint: 'Copy/paste ONLY the iframe URL from Google Maps share dialog.'
         required: false
 
       - label: 'Description'
