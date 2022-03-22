@@ -7,12 +7,13 @@ import LogoLink from '@/components/shared/LogoLink';
 import Typography from '@/components/shared/Typography';
 import Section from '@/components/shared/Section';
 import FooterNav from '@/components/navigation/FooterNav';
+import SocialLinks from '@/components/SocialLinks';
 import FooterCol from './FooterCol';
 import './Footer.scss';
 
 const Footer = ({ config }) => {
   // const url = config.siteRss;
-  const { copyright } = config;
+  const { copyright, facebookPage, linkedInPage, twitterPage } = config;
 
   return (
     <footer className="io-footer">
@@ -30,7 +31,14 @@ const Footer = ({ config }) => {
             <FooterNav />
           </FooterCol>
           <FooterCol lg={4} md={6} title="Nous contacter">
-            test
+            <SocialLinks
+              size="sm"
+              color="dark"
+              // outline
+              facebook={facebookPage}
+              twitter={twitterPage}
+              linkedIn={linkedInPage}
+            />
           </FooterCol>
         </Row>
       </Section>

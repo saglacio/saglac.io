@@ -1,62 +1,91 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  TelegramShareButton,
-  RedditShareButton,
-  FacebookShareCount,
-  RedditShareCount,
-  FacebookIcon,
-  TwitterIcon,
-  TelegramIcon,
-  LinkedinIcon,
-  RedditIcon,
-} from 'react-share';
-import urljoin from 'url-join';
-import config from '../../../SiteConfig';
-import './SocialLinks.css';
+  faFacebookF,
+  faGithub,
+  faLinkedinIn,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
+import PropTypes from 'prop-types';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
+import classNames from 'classnames';
+import Button from '@/components/shared/Button';
 
-const SocialLinks = ({ postNode, postPath, mobile }) => {
-  const post = postNode.frontmatter;
-  const url = urljoin(config.siteUrl, config.pathPrefix, postPath);
-  const iconSize = mobile ? 36 : 48;
+const SocialLinks = ({
+  className,
+  // button props
+  size,
+  outline,
+  color,
+  btnClassName,
 
-  const filter = (count) => (count > 0 ? count : '');
-
-  const renderShareCount = (count) => (
-    <div className="share-count">{filter(count)}</div>
-  );
+  // links
+  facebook,
+  twitter,
+  linkedIn,
+  github,
+  other,
+}) => {
+  const btnProps = {
+    className: btnClassName,
+    size,
+    outline,
+    color,
+    target: '_blank',
+  };
 
   return (
-    <div className="social-links">
-      <RedditShareButton url={url} title={post.title}>
-        <RedditIcon round size={iconSize} />
-        <RedditShareCount url={url}>
-          {(count) => renderShareCount(count)}
-        </RedditShareCount>
-      </RedditShareButton>
-      <TwitterShareButton url={url} title={post.title}>
-        <TwitterIcon round size={iconSize} />
-      </TwitterShareButton>
-      <FacebookShareButton url={url} quote={postNode.excerpt}>
-        <FacebookIcon round size={iconSize} />
-        <FacebookShareCount url={url}>
-          {(count) => renderShareCount(count)}
-        </FacebookShareCount>
-      </FacebookShareButton>
-      <LinkedinShareButton
-        url={url}
-        title={post.title}
-        description={postNode.excerpt}
-      >
-        <LinkedinIcon round size={iconSize} />
-      </LinkedinShareButton>
-      <TelegramShareButton url={url}>
-        <TelegramIcon round size={iconSize} />
-      </TelegramShareButton>
+    <div className={classNames('social-links', className)}>
+      {facebook && (
+        <Button
+          {...btnProps}
+          icon={<FontAwesomeIcon icon={faFacebookF} />}
+          href={facebook}
+        />
+      )}
+      {linkedIn && (
+        <Button
+          {...btnProps}
+          icon={<FontAwesomeIcon icon={faLinkedinIn} />}
+          href={linkedIn}
+        />
+      )}
+      {twitter && (
+        <Button
+          {...btnProps}
+          icon={<FontAwesomeIcon icon={faTwitter} />}
+          href={twitter}
+        />
+      )}
+      {github && (
+        <Button
+          {...btnProps}
+          icon={<FontAwesomeIcon icon={faGithub} />}
+          href={github}
+        />
+      )}
+      {other && (
+        <Button
+          {...btnProps}
+          icon={<FontAwesomeIcon icon={faLink} />}
+          href={other}
+        />
+      )}
     </div>
   );
+};
+
+SocialLinks.propTypes = {
+  className: PropTypes.string,
+  btnClassName: PropTypes.string,
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
+  outline: PropTypes.bool,
+  color: PropTypes.oneOf(['primary', 'conference', 'dark']),
+  facebook: PropTypes.string,
+  twitter: PropTypes.string,
+  linkedIn: PropTypes.string,
+  github: PropTypes.string,
+  other: PropTypes.string,
 };
 
 export default SocialLinks;

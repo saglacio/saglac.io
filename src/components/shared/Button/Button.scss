@@ -1,14 +1,15 @@
 // Most styles comes from bootstrap and is personalized through variables.
 .io-button {
   position: relative;
-  margin-right: $spacer * .25;
-  margin-left: $spacer * .25;
+  margin-right: $spacer * 0.25;
+  margin-left: $spacer * 0.25;
+  line-height: 1.35em;
 
   .icon {
     display: inline-block;
     width: 1.35em;
     height: 1.35em;
-    margin-left: -$btn-padding-x * .625;
+    margin-left: -$btn-padding-x * 0.625;
   }
 
   &[class^='btn-outline-'],
@@ -19,7 +20,7 @@
   &.btn-dark {
     // stylelint-disable indentation
     @include button-variant(
-        $background: $dark,
+      $background: $dark,
       $border: $dark,
       $hover-background: $primary,
       $hover-border: $primary,
@@ -31,16 +32,16 @@
   &.btn-lg {
     font-family: $title-font;
     font-weight: $title-font-weight-normal;
-    line-height: $btn-line-height;
+    // line-height: $btn-line-height;
 
     .icon {
-      margin-left: -$btn-padding-x-lg * .625;
+      margin-left: -$btn-padding-x-lg * 0.625;
     }
   }
 
   &.btn-sm {
     .icon {
-      margin-left: -$btn-padding-x-sm * .625;
+      margin-left: -$btn-padding-x-sm * 0.625;
     }
   }
 
@@ -51,9 +52,9 @@
       &.text-#{$color} {
         @include hover-focus() {
           color: darken(
-              $value,
-              $emphasized-link-hover-darken-percentage
-            ) !important;
+            $value,
+            $emphasized-link-hover-darken-percentage
+          ) !important;
         }
       }
     }

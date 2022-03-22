@@ -21,7 +21,11 @@ const config = {
   userAvatar: 'https://api.adorable.io/avatars/150/test.png', // User avatar to display in the author segment.
   userDescription:
     "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
-  // Links to social profiles/projects you want to display in the author segment/navigation bar.
+  facebookPage: 'https://www.facebook.com/saglacio', // Facebook Page URL.
+  twitterPage: 'https://twitter.com/saglacio', // Twitter Page URL.
+  linkedInPage: 'https://www.linkedin.com/company/saglacio', // LinkedIn Page URL.
+
+  // TO REMOVE: Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
       label: 'GitHub',

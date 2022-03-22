@@ -814,6 +814,7 @@ type ImageSharpResize {
 type IoEventsYaml implements Node {
   location: LocationsYaml
   title: String
+  description: String
   date(
     # Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
     formatString: String
@@ -1053,17 +1054,28 @@ type AdminYamlCollections {
   label_singular: String
   folder: String
   create: Boolean
+  delete: Boolean
   extension: String
   format: String
   slug: String
+  summary: String
+  sortable_fields: [String]
+  view_groups: [AdminYamlCollectionsView_groups]
   fields: [AdminYamlCollectionsFields]
   identifier_field: String
+}
+
+type AdminYamlCollectionsView_groups {
+  label: String
+  field: String
+  pattern: String
 }
 
 type AdminYamlCollectionsFields {
   label: String
   name: String
   widget: String
+  hint: String
   required: Boolean
   collection: String
   searchFields: [String]
@@ -1071,7 +1083,6 @@ type AdminYamlCollectionsFields {
   displayFields: [String]
   label_singular: String
   fields: [AdminYamlCollectionsFieldsFields]
-  hint: String
   pattern: [String]
 }
 
@@ -1113,7 +1124,7 @@ type Query {
   allMarkdownRemark(filter: MarkdownRemarkFilterInput, sort: MarkdownRemarkSortInput, skip: Int, limit: Int): MarkdownRemarkConnection!
   imageSharp(fixed: ImageSharpFixedFilterInput, fluid: ImageSharpFluidFilterInput, gatsbyImageData: JSONQueryOperatorInput, original: ImageSharpOriginalFilterInput, resize: ImageSharpResizeFilterInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): ImageSharp
   allImageSharp(filter: ImageSharpFilterInput, sort: ImageSharpSortInput, skip: Int, limit: Int): ImageSharpConnection!
-  ioEventsYaml(location: LocationsYamlFilterInput, title: StringQueryOperatorInput, date: DateQueryOperatorInput, event_url: StringQueryOperatorInput, talks: IoEventsYamlTalksFilterListInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): IoEventsYaml
+  ioEventsYaml(location: LocationsYamlFilterInput, title: StringQueryOperatorInput, description: StringQueryOperatorInput, date: DateQueryOperatorInput, event_url: StringQueryOperatorInput, talks: IoEventsYamlTalksFilterListInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): IoEventsYaml
   allIoEventsYaml(filter: IoEventsYamlFilterInput, sort: IoEventsYamlSortInput, skip: Int, limit: Int): IoEventsYamlConnection!
   ioEventsYamlTalks(authors: AuthorsYamlFilterListInput, description: StringQueryOperatorInput, title: StringQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): IoEventsYamlTalks
   allIoEventsYamlTalks(filter: IoEventsYamlTalksFilterInput, sort: IoEventsYamlTalksSortInput, skip: Int, limit: Int): IoEventsYamlTalksConnection!
@@ -1328,6 +1339,7 @@ input IoEventsYamlFilterListInput {
 input IoEventsYamlFilterInput {
   location: LocationsYamlFilterInput
   title: StringQueryOperatorInput
+  description: StringQueryOperatorInput
   date: DateQueryOperatorInput
   event_url: StringQueryOperatorInput
   talks: IoEventsYamlTalksFilterListInput
@@ -1587,11 +1599,25 @@ input AdminYamlCollectionsFilterInput {
   label_singular: StringQueryOperatorInput
   folder: StringQueryOperatorInput
   create: BooleanQueryOperatorInput
+  delete: BooleanQueryOperatorInput
   extension: StringQueryOperatorInput
   format: StringQueryOperatorInput
   slug: StringQueryOperatorInput
+  summary: StringQueryOperatorInput
+  sortable_fields: StringQueryOperatorInput
+  view_groups: AdminYamlCollectionsView_groupsFilterListInput
   fields: AdminYamlCollectionsFieldsFilterListInput
   identifier_field: StringQueryOperatorInput
+}
+
+input AdminYamlCollectionsView_groupsFilterListInput {
+  elemMatch: AdminYamlCollectionsView_groupsFilterInput
+}
+
+input AdminYamlCollectionsView_groupsFilterInput {
+  label: StringQueryOperatorInput
+  field: StringQueryOperatorInput
+  pattern: StringQueryOperatorInput
 }
 
 input AdminYamlCollectionsFieldsFilterListInput {
@@ -1602,6 +1628,7 @@ input AdminYamlCollectionsFieldsFilterInput {
   label: StringQueryOperatorInput
   name: StringQueryOperatorInput
   widget: StringQueryOperatorInput
+  hint: StringQueryOperatorInput
   required: BooleanQueryOperatorInput
   collection: StringQueryOperatorInput
   searchFields: StringQueryOperatorInput
@@ -1609,7 +1636,6 @@ input AdminYamlCollectionsFieldsFilterInput {
   displayFields: StringQueryOperatorInput
   label_singular: StringQueryOperatorInput
   fields: AdminYamlCollectionsFieldsFieldsFilterListInput
-  hint: StringQueryOperatorInput
   pattern: StringQueryOperatorInput
 }
 
@@ -1987,6 +2013,7 @@ enum FileFieldsEnum {
   childrenIoEventsYaml___location___yamlId
   childrenIoEventsYaml___location___twitter
   childrenIoEventsYaml___title
+  childrenIoEventsYaml___description
   childrenIoEventsYaml___date
   childrenIoEventsYaml___event_url
   childrenIoEventsYaml___talks
@@ -2076,6 +2103,7 @@ enum FileFieldsEnum {
   childIoEventsYaml___location___yamlId
   childIoEventsYaml___location___twitter
   childIoEventsYaml___title
+  childIoEventsYaml___description
   childIoEventsYaml___date
   childIoEventsYaml___event_url
   childIoEventsYaml___talks
@@ -2694,13 +2722,21 @@ enum FileFieldsEnum {
   childrenAdminYaml___collections___label_singular
   childrenAdminYaml___collections___folder
   childrenAdminYaml___collections___create
+  childrenAdminYaml___collections___delete
   childrenAdminYaml___collections___extension
   childrenAdminYaml___collections___format
   childrenAdminYaml___collections___slug
+  childrenAdminYaml___collections___summary
+  childrenAdminYaml___collections___sortable_fields
+  childrenAdminYaml___collections___view_groups
+  childrenAdminYaml___collections___view_groups___label
+  childrenAdminYaml___collections___view_groups___field
+  childrenAdminYaml___collections___view_groups___pattern
   childrenAdminYaml___collections___fields
   childrenAdminYaml___collections___fields___label
   childrenAdminYaml___collections___fields___name
   childrenAdminYaml___collections___fields___widget
+  childrenAdminYaml___collections___fields___hint
   childrenAdminYaml___collections___fields___required
   childrenAdminYaml___collections___fields___collection
   childrenAdminYaml___collections___fields___searchFields
@@ -2708,7 +2744,6 @@ enum FileFieldsEnum {
   childrenAdminYaml___collections___fields___displayFields
   childrenAdminYaml___collections___fields___label_singular
   childrenAdminYaml___collections___fields___fields
-  childrenAdminYaml___collections___fields___hint
   childrenAdminYaml___collections___fields___pattern
   childrenAdminYaml___collections___identifier_field
   childAdminYaml___id
@@ -2770,13 +2805,21 @@ enum FileFieldsEnum {
   childAdminYaml___collections___label_singular
   childAdminYaml___collections___folder
   childAdminYaml___collections___create
+  childAdminYaml___collections___delete
   childAdminYaml___collections___extension
   childAdminYaml___collections___format
   childAdminYaml___collections___slug
+  childAdminYaml___collections___summary
+  childAdminYaml___collections___sortable_fields
+  childAdminYaml___collections___view_groups
+  childAdminYaml___collections___view_groups___label
+  childAdminYaml___collections___view_groups___field
+  childAdminYaml___collections___view_groups___pattern
   childAdminYaml___collections___fields
   childAdminYaml___collections___fields___label
   childAdminYaml___collections___fields___name
   childAdminYaml___collections___fields___widget
+  childAdminYaml___collections___fields___hint
   childAdminYaml___collections___fields___required
   childAdminYaml___collections___fields___collection
   childAdminYaml___collections___fields___searchFields
@@ -2784,7 +2827,6 @@ enum FileFieldsEnum {
   childAdminYaml___collections___fields___displayFields
   childAdminYaml___collections___fields___label_singular
   childAdminYaml___collections___fields___fields
-  childAdminYaml___collections___fields___hint
   childAdminYaml___collections___fields___pattern
   childAdminYaml___collections___identifier_field
   id
@@ -4323,6 +4365,7 @@ enum IoEventsYamlFieldsEnum {
   location___yamlId
   location___twitter
   title
+  description
   date
   event_url
   talks
@@ -5389,13 +5432,21 @@ enum AdminYamlFieldsEnum {
   collections___label_singular
   collections___folder
   collections___create
+  collections___delete
   collections___extension
   collections___format
   collections___slug
+  collections___summary
+  collections___sortable_fields
+  collections___view_groups
+  collections___view_groups___label
+  collections___view_groups___field
+  collections___view_groups___pattern
   collections___fields
   collections___fields___label
   collections___fields___name
   collections___fields___widget
+  collections___fields___hint
   collections___fields___required
   collections___fields___collection
   collections___fields___searchFields
@@ -5408,7 +5459,6 @@ enum AdminYamlFieldsEnum {
   collections___fields___fields___widget
   collections___fields___fields___required
   collections___fields___fields___label_singular
-  collections___fields___hint
   collections___fields___pattern
   collections___identifier_field
 }

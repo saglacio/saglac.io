@@ -21,7 +21,7 @@ const MainNav = ({ className, vertical, ...props }) => (
       target="_blank"
       size="sm"
       className="ml-3"
-      color="primary"
+      outline
     >
       {'Conference '}
       <FontAwesomeIcon size="sm" icon={faExternalLinkAlt} />

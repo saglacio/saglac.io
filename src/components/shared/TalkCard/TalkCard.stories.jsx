@@ -7,10 +7,19 @@ export default {
   title: 'Shared/TalkCard',
 };
 
-export const DefaultSpeakerCard = () => (
+const MOCK_TALK = {
+  title: 'NPM: NPM Package Manager',
+  authors: [
+    {
+      name: 'Oven Cooling',
+    },
+  ],
+};
+
+export const DefaultTalkCard = () => (
   <Row>
     <Col lg={{ size: 6 }}>
-      <TalkCard author="Émile Bergeron" talk="Test gatsby" />
+      <TalkCard talk={MOCK_TALK} />
     </Col>
   </Row>
 );

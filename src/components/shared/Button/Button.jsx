@@ -7,7 +7,7 @@ import './Button.scss';
 const Button = ({
   to,
   className,
-  color,
+  color = 'primary',
   outline,
   icon,
   children,
@@ -19,7 +19,7 @@ const Button = ({
     className={cn('io-button', className, {
       'icon-only': !children,
     })}
-    outline={outline === Boolean(outline) ? outline : color === 'primary'}
+    outline={outline}
     color={color}
     {...props}
   >

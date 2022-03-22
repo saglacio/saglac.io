@@ -1,7 +1,11 @@
 import React from 'react';
 import { text, boolean, select } from '@storybook/addon-knobs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import {
+  faFacebookF,
+  faLinkedin,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
 import Button from './Button';
 
 export default {
@@ -25,8 +29,6 @@ const ButtonStory = (otherProps) => {
     ...otherProps,
   };
 
-  // const largeProps = { size: 'lg', ...props };
-  // const smallProps = { size: 'sm', ...props };
   const linkProps = { color: 'link', ...props };
 
   return (
@@ -39,14 +41,8 @@ const ButtonStory = (otherProps) => {
       <Button {...props} />
       <Button color="dark" {...props} />
       <Button {...linkProps} />
-      {/* <br />
-      <Button size="sm" {...props} />
-      <Button size="sm" {...props} />
-      <Button size="sm" {...props} />
-      <br />
-      <Button size="lg" {...linkProps} />
 
-      <Button size="sm" className="text-light" {...linkProps} /> */}
+      <Button size="sm" className="text-light" {...linkProps} />
     </div>
   );
 };
@@ -59,5 +55,32 @@ export const DefaultButtons = () => (
     <ButtonStory to="/test" />
     <p>External link buttons</p>
     <ButtonStory href="http://google.ca" target="_blank" />
+  </>
+);
+
+const IconStory = (otherProps) => (
+  <div className="mb-4">
+    <Button
+      icon={<FontAwesomeIcon icon={faFacebookF} />}
+      color="primary"
+      {...otherProps}
+    />
+    <Button
+      icon={<FontAwesomeIcon icon={faLinkedin} />}
+      color="secondary"
+      {...otherProps}
+    />
+    <Button icon={<FontAwesomeIcon icon={faTwitter} />} {...otherProps} />
+  </div>
+);
+
+export const IconButtons = () => (
+  <>
+    <p>Small icon buttons</p>
+    <IconStory size="sm" />
+    <p>Medium icon buttons</p>
+    <IconStory size="md" />
+    <p>Large icon buttons</p>
+    <IconStory size="lg" />
   </>
 );

@@ -23,7 +23,7 @@ const IntroSection = () => (
               </Typography>
             </Typography>
             <Button size="lg">Participer!</Button>
-            <Button color="primary" size="lg">
+            <Button outline size="lg">
               En savoir plus
             </Button>
           </Col>

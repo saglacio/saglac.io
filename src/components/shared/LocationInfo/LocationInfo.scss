@@ -12,5 +12,9 @@
   .location-details {
     padding: ($spacer * 3.75) $spacer;
     background-color: $bg-dark;
+
+    hr {
+      background-color: $gray-300;
+    }
   }
 }
