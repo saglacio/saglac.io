@@ -4,8 +4,8 @@ import Col from 'reactstrap/lib/Col';
 import Section from '@/components/shared/Section';
 import Typography from '@/components/shared/Typography';
 
-const AboutSection = () => (
-  <Section className="io-about-section pb-4" dark>
+const AboutSection = ({ id }) => (
+  <Section id={id} className="io-about-section pb-4" dark>
     <Row>
       <Col>
         <Typography variant="h4" uppercase>

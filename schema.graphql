@@ -838,8 +838,8 @@ type IoEventsYaml implements Node {
 
 type IoEventsYamlTalks implements Node {
   authors: [AuthorsYaml!]!
-  description: String
   title: String
+  description: String
   id: ID!
   parent: Node
   children: [Node!]!
@@ -1126,7 +1126,7 @@ type Query {
   allImageSharp(filter: ImageSharpFilterInput, sort: ImageSharpSortInput, skip: Int, limit: Int): ImageSharpConnection!
   ioEventsYaml(location: LocationsYamlFilterInput, title: StringQueryOperatorInput, description: StringQueryOperatorInput, date: DateQueryOperatorInput, event_url: StringQueryOperatorInput, talks: IoEventsYamlTalksFilterListInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): IoEventsYaml
   allIoEventsYaml(filter: IoEventsYamlFilterInput, sort: IoEventsYamlSortInput, skip: Int, limit: Int): IoEventsYamlConnection!
-  ioEventsYamlTalks(authors: AuthorsYamlFilterListInput, description: StringQueryOperatorInput, title: StringQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): IoEventsYamlTalks
+  ioEventsYamlTalks(authors: AuthorsYamlFilterListInput, title: StringQueryOperatorInput, description: StringQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): IoEventsYamlTalks
   allIoEventsYamlTalks(filter: IoEventsYamlTalksFilterInput, sort: IoEventsYamlTalksSortInput, skip: Int, limit: Int): IoEventsYamlTalksConnection!
   locationsYaml(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, name: StringQueryOperatorInput, address: StringQueryOperatorInput, url: StringQueryOperatorInput, facebook: StringQueryOperatorInput, description: StringQueryOperatorInput, map: StringQueryOperatorInput, yamlId: StringQueryOperatorInput, twitter: StringQueryOperatorInput): LocationsYaml
   allLocationsYaml(filter: LocationsYamlFilterInput, sort: LocationsYamlSortInput, skip: Int, limit: Int): LocationsYamlConnection!
@@ -1370,8 +1370,8 @@ input IoEventsYamlTalksFilterListInput {
 
 input IoEventsYamlTalksFilterInput {
   authors: AuthorsYamlFilterListInput
-  description: StringQueryOperatorInput
   title: StringQueryOperatorInput
+  description: StringQueryOperatorInput
   id: StringQueryOperatorInput
   parent: NodeFilterInput
   children: NodeFilterListInput
@@ -2026,8 +2026,8 @@ enum FileFieldsEnum {
   childrenIoEventsYaml___talks___authors___website
   childrenIoEventsYaml___talks___authors___twitter
   childrenIoEventsYaml___talks___authors___bio
-  childrenIoEventsYaml___talks___description
   childrenIoEventsYaml___talks___title
+  childrenIoEventsYaml___talks___description
   childrenIoEventsYaml___talks___id
   childrenIoEventsYaml___talks___parent___id
   childrenIoEventsYaml___talks___parent___children
@@ -2116,8 +2116,8 @@ enum FileFieldsEnum {
   childIoEventsYaml___talks___authors___website
   childIoEventsYaml___talks___authors___twitter
   childIoEventsYaml___talks___authors___bio
-  childIoEventsYaml___talks___description
   childIoEventsYaml___talks___title
+  childIoEventsYaml___talks___description
   childIoEventsYaml___talks___id
   childIoEventsYaml___talks___parent___id
   childIoEventsYaml___talks___parent___children
@@ -4390,8 +4390,8 @@ enum IoEventsYamlFieldsEnum {
   talks___authors___website
   talks___authors___twitter
   talks___authors___bio
-  talks___description
   talks___title
+  talks___description
   talks___id
   talks___parent___id
   talks___parent___parent___id
@@ -4601,8 +4601,8 @@ enum IoEventsYamlTalksFieldsEnum {
   authors___website
   authors___twitter
   authors___bio
-  description
   title
+  description
   id
   parent___id
   parent___parent___id

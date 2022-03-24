@@ -1,5 +1,5 @@
 import React from 'react';
-import EventDetails from '@/components/shared/EventDetails';
+import EventDetails from '@/components/pages/IndexPage/NextEventSection/EventDetails';
 
 const DESCRIPTION = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis

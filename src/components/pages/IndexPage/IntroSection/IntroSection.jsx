@@ -7,7 +7,7 @@ import Col from 'reactstrap/lib/Col';
 import Typography from '@/components/shared/Typography';
 import Button from '@/components/shared/Button';
 
-const IntroSection = () => (
+const IntroSection = ({ eventUrl, moreInfoUrl }) => (
   <section id="intro" className="io-intro-section">
     <div className="intro-wrapper">
       <Container>
@@ -22,8 +22,10 @@ const IntroSection = () => (
                 du Saguenay—Lac-St-Jean
               </Typography>
             </Typography>
-            <Button size="lg">Participer!</Button>
-            <Button outline size="lg">
+            <Button size="lg" target="_blank" href={eventUrl}>
+              Participer!
+            </Button>
+            <Button outline size="lg" href={moreInfoUrl}>
               En savoir plus
             </Button>
           </Col>
