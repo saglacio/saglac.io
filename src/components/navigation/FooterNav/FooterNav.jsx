@@ -5,7 +5,7 @@ import './FooterNav.scss';
 
 const LINKS = [
   {
-    children: 'Saglac IO Conference',
+    children: 'La conférence',
     href: 'https://conference.saglac.io/',
     targetBlank: true,
   },
