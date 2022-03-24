@@ -1,5 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
+import PropTypes from 'prop-types';
 import BootstrapButton from 'reactstrap/lib/Button';
 import Link from '@/components/shared/Link';
 import './Button.scss';
@@ -27,5 +28,15 @@ const Button = ({
     {children}
   </BootstrapButton>
 );
+
+Button.propTypes = {
+  className: PropTypes.string,
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
+  outline: PropTypes.bool,
+  color: PropTypes.oneOf(['primary', 'conference', 'dark', 'link']),
+  to: PropTypes.string,
+  icon: PropTypes.node,
+  children: PropTypes.node,
+};
 
 export default Button;

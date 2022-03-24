@@ -78,9 +78,9 @@ const SocialLinks = ({
 SocialLinks.propTypes = {
   className: PropTypes.string,
   btnClassName: PropTypes.string,
-  size: PropTypes.oneOf(['sm', 'md', 'lg']),
-  outline: PropTypes.bool,
-  color: PropTypes.oneOf(['primary', 'conference', 'dark']),
+  size: Button.propTypes.size,
+  outline: Button.propTypes.outline,
+  color: Button.propTypes.color,
   facebook: PropTypes.string,
   twitter: PropTypes.string,
   linkedIn: PropTypes.string,

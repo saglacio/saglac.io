@@ -2,10 +2,9 @@ import React from 'react';
 import Row from 'reactstrap/lib/Row';
 import Col from 'reactstrap/lib/Col';
 import Section from '@/components/shared/Section';
-import LocationInfo from '@/components/shared/LocationInfo';
+import EventDetails from '@/components/shared/EventDetails';
 import { eventType } from '@/types';
 import TalkCard from '@/components/shared/TalkCard';
-import Button from '@/components/shared/Button';
 import Typography from '@/components/shared/Typography';
 
 const TALK_LAYOUT = [2, 2, 3, 2];
@@ -41,8 +40,26 @@ const NextEventSection = ({
             ))}
           </Row>
         )}
-        <LocationInfo location={location} />
+        <EventDetails
+          location={location}
+          title={title}
+          description={description}
+          eventUrl={event_url}
+        />
       </div>
+    </Section>
+
+    <Section secondary>
+      {/* <Row>
+        <Col xs={12} className="text-center">
+          <Typography variant="h4">{title}</Typography>
+          {description && <Typography>{description}</Typography>}
+          <Button size="lg" tag="a" href={event_url} target="_blank">
+            Je participe
+          </Button>
+        </Col>
+      </Row> */}
+
       <Row>
         <Col xs={12} lg={4}>
           <Typography variant="h4" uppercase>
@@ -72,18 +89,6 @@ const NextEventSection = ({
             Ouvert au public, tous les passionnés de technologies, autant
             professionnels qu'amateurs, sont invités à se joindre à nous.
           </Typography>
-        </Col>
-      </Row>
-    </Section>
-
-    <Section secondary>
-      <Row>
-        <Col xs={12} className="text-center">
-          <Typography variant="h4">{title}</Typography>
-          {description && <Typography>{description}</Typography>}
-          <Button size="lg" tag="a" href={event_url} target="_blank">
-            Je participe
-          </Button>
         </Col>
       </Row>
     </Section>

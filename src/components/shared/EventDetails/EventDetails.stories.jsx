@@ -1,16 +1,16 @@
 import React from 'react';
 import { text } from '@storybook/addon-knobs';
-import LocationInfo from './LocationInfo';
+import EventDetails from './EventDetails';
 
 export default {
-  title: 'Shared/LocationInfo',
+  title: 'Shared/EventDetails',
 };
 
 const MAP =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2648.3839459486885!2d-71.0561580843414!3d48.410772779246145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb89228a5876e8b%3A0x93cac562dd8cb02b!2sH%C3%B4tel+le+Montagnais!5e0!3m2!1sen!2sca!4v1560892250568!5m2!1sen!2sca';
 
 export const DefaultLocationInfo = () => (
-  <LocationInfo
+  <EventDetails
     mapSrc={MAP}
     name={text('Name?', 'Hotel le montagnais')}
     description={text(

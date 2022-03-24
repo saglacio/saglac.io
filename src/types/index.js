@@ -10,7 +10,7 @@ export const authorType = PropTypes.shape({
 
 export const talkType = PropTypes.shape({
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   authors: PropTypes.arrayOf(authorType).isRequired,
 });
 

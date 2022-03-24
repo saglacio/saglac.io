@@ -1,4 +1,4 @@
-.io-location-info {
+.io-event-details {
   padding-bottom: (3 * $spacer);
 
   .location-map {
@@ -9,7 +9,7 @@
     }
   }
 
-  .location-details {
+  .event-details {
     padding: ($spacer * 3.75) $spacer;
     background-color: $bg-dark;
 
