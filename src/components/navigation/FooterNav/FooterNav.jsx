@@ -14,6 +14,10 @@ const LINKS = [
     to: '/about',
   },
   {
+    children: 'Nous joindre',
+    to: '/contact',
+  },
+  {
     children: 'FAQ',
     to: '/faq',
   },

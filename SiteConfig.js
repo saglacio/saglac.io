@@ -14,35 +14,35 @@ const config = {
   dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
   dateFormat: 'YYYY/MM/DD', // Date format for display.
   postsPerPage: 4, // Amount of posts displayed per listing page.
-  userName: 'Test User', // Username to display in the author segment.
-  userEmail: 'test@example.com', // Email used for RSS feed's author segment
-  userTwitter: 'saglacio', // Optionally renders "Follow Me" in the UserInfo segment.
+  username: "L'organisation du Saglac IO", // Username to display in the author segment.
+  email: 'info@saglac.io', // Email used for RSS feed's author segment
+  twitter: 'saglacio',
   userLocation: 'Saguenay, Qc, CA', // User location to display in the author segment.
-  userAvatar: 'https://api.adorable.io/avatars/150/test.png', // User avatar to display in the author segment.
-  userDescription:
-    "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
+  // userAvatar: 'https://api.adorable.io/avatars/150/test.png', // User avatar to display in the author segment.
+  // userDescription:
+  //   "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
   facebookPage: 'https://www.facebook.com/saglacio', // Facebook Page URL.
   twitterPage: 'https://twitter.com/saglacio', // Twitter Page URL.
   linkedInPage: 'https://www.linkedin.com/company/saglac-io', // LinkedIn Page URL.
 
   // TO REMOVE: Links to social profiles/projects you want to display in the author segment/navigation bar.
-  userLinks: [
-    {
-      label: 'GitHub',
-      url: 'https://github.com/Vagr9K/gatsby-advanced-starter',
-      iconClassName: 'fa fa-github',
-    },
-    {
-      label: 'Twitter',
-      url: 'https://twitter.com/Vagr9K',
-      iconClassName: 'fa fa-twitter',
-    },
-    {
-      label: 'Email',
-      url: 'mailto:vagr9k@gmail.com',
-      iconClassName: 'fa fa-envelope',
-    },
-  ],
+  // userLinks: [
+  //   {
+  //     label: 'GitHub',
+  //     url: 'https://github.com/Vagr9K/gatsby-advanced-starter',
+  //     iconClassName: 'fa fa-github',
+  //   },
+  //   {
+  //     label: 'Twitter',
+  //     url: 'https://twitter.com/Vagr9K',
+  //     iconClassName: 'fa fa-twitter',
+  //   },
+  //   {
+  //     label: 'Email',
+  //     url: 'mailto:vagr9k@gmail.com',
+  //     iconClassName: 'fa fa-envelope',
+  //   },
+  // ],
   // Copyright string for the footer of the website and RSS feed.
   copyright: `Copyright © 2013-${new Date().getFullYear()}. Test`,
   themeColor: '#7ecdc3', // Used for setting manifest and progress theme colors.

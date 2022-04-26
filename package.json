@@ -10,7 +10,7 @@
     "dev": "npm run develop",
     "serve": "gatsby serve",
     "serve:cms": "netlify-cms-proxy-server",
-    "build": "run-s build:gatsby build:storybook",
+    "build": "run-s clean build:gatsby build:storybook",
     "build:gatsby": "gatsby build",
     "build:storybook": "build-storybook -s static -o public/storybook",
     "clean": "gatsby clean",

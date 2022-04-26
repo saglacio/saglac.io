@@ -9,6 +9,6 @@ export default {
 
 export const FollowButton = () => {
   const expanded = boolean('Include the count? (expanded)', false);
-  const username = text('Username', config.userTwitter);
+  const username = text('Username', config.twitter);
   return <TwitterFollowButton username={username} expanded={expanded} />;
 };

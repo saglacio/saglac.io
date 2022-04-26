@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import config from '~/SiteConfig';
 import Footer from '@/components/layout/Footer';
-import Typography from '@/components/shared/Typography';
 import PageHeader from './PageHeader';
 import PageIntro from './PageIntro';
 import './PageLayout.scss';
@@ -16,13 +15,7 @@ const PageLayout = ({ children, title, intro }) => (
       <html lang="en" />
     </Helmet>
     <PageHeader />
-    {intro || (
-      <PageIntro>
-        <Typography variant="h1" className="display-3 mb-5" uppercase light>
-          {title}
-        </Typography>
-      </PageIntro>
-    )}
+    {intro || <PageIntro title={title} />}
     {children}
     <Footer config={config} />
   </div>
