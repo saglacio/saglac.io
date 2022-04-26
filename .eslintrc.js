@@ -131,8 +131,9 @@ module.exports = {
     /**
      * react plugin rules
      */
+    // 'react/jsx-child-element-spacing': ERROR,
     'react/forbid-prop-types': OFF,
-    'react/jsx-one-expression-per-line': [ERROR, { allow: 'single-child' }],
+    // 'react/jsx-one-expression-per-line': [ERROR, { allow: 'single-child' }],
     'react/jsx-props-no-spreading': OFF,
     'react/no-danger': ERROR,
     'react/no-unescaped-entities': [ERROR, { forbid: ['>', '}'] }],

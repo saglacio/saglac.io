@@ -7,7 +7,7 @@ import LogoLink from '@/components/shared/LogoLink';
 import Typography from '@/components/shared/Typography';
 import Section from '@/components/shared/Section';
 import FooterNav from '@/components/navigation/FooterNav';
-import SocialLinks from '@/components/SocialLinks';
+import SocialLinks from '@/components/navigation/SocialLinks';
 import FooterCol from './FooterCol';
 import './Footer.scss';
 

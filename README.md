@@ -1,6 +1,6 @@
 <div align="center"  style="margin-bottom: 30px;">
   <a alt="Saglac IO website" href="https://saglac.io" target="_blank">
-    <img src="static/admin/logos/SaglacIO_Logo_Meetups.png" alt="Logo" height="200px"/>
+    <img src="static/images/logos/SaglacIO_Logo_Meetups.png" alt="Logo" height="200px"/>
   </a>
 </div>
 
@@ -35,8 +35,8 @@ Install the project:
 ```sh
 git clone https://github.com/saglacio/saglac.io.git saglacio
 cd saglacio
-# Install the dependencies (if it fails, try `npm i`)
-npm ci
+# Install the dependencies
+npm i
 # Start the development server
 npm start
 ```

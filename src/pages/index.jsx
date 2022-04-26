@@ -4,7 +4,7 @@
  */
 import React from 'react';
 import { graphql } from 'gatsby';
-import IndexPage from '../components/pages/IndexPage';
+import IndexPage from '@/components/pages/IndexPage';
 
 export default function Index({
   data: {

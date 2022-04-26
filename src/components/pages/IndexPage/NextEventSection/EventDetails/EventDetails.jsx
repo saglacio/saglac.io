@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { locationType } from '@/types';
 import Typography from '@/components/shared/Typography';
 import Button from '@/components/shared/Button';
-import SocialLinks from '@/components/SocialLinks';
+import SocialLinks from '@/components/navigation/SocialLinks';
 import './EventDetails.scss';
 
 const EventDetails = ({
