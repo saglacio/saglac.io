@@ -19,7 +19,7 @@ public_folder: /uploads
 logo_url: /images/logos/SaglacIO_Logo_Meetups.png
 
 # adds an interface for drafting, reviewing, and approving posts
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
 collections:
   - name: io_events
@@ -81,15 +81,17 @@ collections:
           - label: 'Authors'
             label_singular: 'Author'
             name: 'authors'
-            widget: 'list'
-            field:
-              label: 'Author'
-              name: 'author'
-              widget: 'relation'
-              collection: 'authors'
-              searchFields: ['id', 'name']
-              valueField: 'id'
-              displayFields: ['id', 'name']
+            # widget: 'list'
+            # field:
+            # label: 'Author'
+            # name: 'author'
+            widget: 'relation'
+            collection: 'authors'
+            searchFields: ['id', 'name']
+            valueField: 'id'
+            displayFields: ['id', 'name']
+            multiple: true
+            min: 1
 
   - name: authors
     label: 'Authors'
