@@ -1,6 +1,6 @@
 @mixin scrolled {
   padding: $spacer 0;
-  background-color: transparentize($color: $bg-dark, $amount: .1);
+  background-color: transparentize($color: $bg-dark, $amount: 0.1);
 }
 
 .io-header {
@@ -10,7 +10,7 @@
   left: 0;
   padding: ($spacer * 1.5) 0;
   z-index: 997;
-  transition: all .5s;
+  transition: all 0.5s;
 
   &.scrolled {
     @include scrolled;

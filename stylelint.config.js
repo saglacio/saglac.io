@@ -2,16 +2,18 @@ module.exports = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-recommended-scss',
-    'stylelint-config-prettier',
+    'stylelint-prettier/recommended',
   ],
   plugins: ['stylelint-order'],
   rules: {
-    indentation: [
-      2,
-      {
-        indentInsideParens: 'once-at-root-twice-in-block',
-      },
-    ],
+    // 'prettier/prettier': true,
+    // indentation: [
+    //   2,
+    //   {
+    //     indentInsideParens: 'once-at-root-twice-in-block',
+    //   },
+    // ],
+    'alpha-value-notation': null,
     'at-rule-empty-line-before': [
       'always',
       {
@@ -26,8 +28,13 @@ module.exports = {
         ignoreAtRules: ['if', 'else'],
       },
     ],
+    'color-function-notation': 'legacy',
     'declaration-empty-line-before': 'never',
     'declaration-colon-newline-after': null,
+    'function-no-unknown': [
+      true,
+      { ignoreFunctions: ['darken', 'lighten', 'fade-out', 'transparentize'] },
+    ],
     'order/properties-order': [
       // Special
       'content',
@@ -103,8 +110,10 @@ module.exports = {
     ],
 
     // override rules here
-    'number-leading-zero': 'never',
-    'string-quotes': 'single',
+    'scss/no-global-function-names': null,
+    'scss/comment-no-empty': null,
+    // 'number-leading-zero': 'never',
+    // 'string-quotes': 'single',
     'selector-pseudo-class-no-unknown': [
       true,
       {

@@ -14,8 +14,9 @@
     "titleBar.inactiveBackground": "#B4CAC7"
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll": true
   },
+  "stylelint.validate": ["css", "scss"],
   "emmet.includeLanguages": {
     "javascript": "javascript"
   },

@@ -3,7 +3,7 @@
     color: $primary;
     font-family: $title-font;
     font-weight: bold;
-    letter-spacing: -.5px;
+    letter-spacing: -0.5px;
   }
 
   &.light {
@@ -15,7 +15,7 @@
   }
 
   &.text-sm {
-    font-size: .875em;
+    font-size: 0.875em;
     line-height: 1.5rem;
   }
 }

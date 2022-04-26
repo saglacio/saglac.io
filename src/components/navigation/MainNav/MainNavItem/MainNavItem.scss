@@ -1,8 +1,8 @@
 .io-main-nav-item {
   display: inline-block;
   position: relative;
-  margin-left: $spacer * .5;
-  padding: $spacer * .5;
+  margin-left: $spacer * 0.5;
+  padding: $spacer * 0.5;
   color: $gray-200;
   font-family: $title-font;
   font-weight: 500;
@@ -15,11 +15,11 @@
     width: 0;
     height: 2px;
     background-color: $primary;
-    transition: all .3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
     visibility: hidden;
   }
 
-  &.active {
+  %active {
     color: $fg-light;
 
     &::before {
@@ -28,7 +28,11 @@
     }
   }
 
+  &.active {
+    @extend %active;
+  }
+
   @include hover-focus() {
-    @extend .active;
+    @extend %active;
   }
 }

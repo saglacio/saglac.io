@@ -1,5 +1,5 @@
 .io-footer-nav-item {
-  padding: ($spacer * .625) 0;
+  padding: ($spacer * 0.625) 0;
   border-bottom: 1px solid $dark;
 
   &:first-child {
@@ -15,7 +15,7 @@
       color: $primary;
     }
   }
-  font-size: .875rem;
+  font-size: 0.875rem;
 
   .icon {
     // position: absolute;
