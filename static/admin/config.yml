@@ -20,6 +20,9 @@ logo_url: /images/logos/SaglacIO_Logo_Meetups.png
 
 # adds an interface for drafting, reviewing, and approving posts
 publish_mode: editorial_workflow
+# enables non-admin users to create PRs from their auto-created fork
+# (see https://www.netlifycms.org/docs/open-authoring/ for more info)
+open_authoring: true
 
 collections:
   - name: io_events
@@ -81,10 +84,6 @@ collections:
           - label: 'Authors'
             label_singular: 'Author'
             name: 'authors'
-            # widget: 'list'
-            # field:
-            # label: 'Author'
-            # name: 'author'
             widget: 'relation'
             collection: 'authors'
             searchFields: ['id', 'name']
