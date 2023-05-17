@@ -3,7 +3,7 @@
 
   .header-container {
     display: flex;
-    align-items: center; // this will vertically center the content
+    align-items: center;
     justify-content: space-between;
     cursor: pointer;
   }
@@ -15,11 +15,11 @@
   }
 
   .anchor {
-    padding: 0 10px; // adjust as needed
+    padding: 0 10px;
   }
 
   .expand-icon {
-    padding: 0 10px; // adjust as needed
+    padding: 0 10px;
     width: 0.8em;
     height: 0.8em;
     transform: rotate(-90deg);
@@ -57,7 +57,7 @@
   .faq-container {
     .faq-section {
       .faq-question {
-        flex: 0 0 calc(50% - 1em); // subtracting margin
+        flex: 0 0 calc(50% - 1em);
       }
     }
   }
