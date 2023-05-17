@@ -1,0 +1,60 @@
+.faq-container {
+  padding: 2em;
+
+  .faq-section {
+    margin-bottom: 3em;
+
+    h2 {
+      color: $brand-meetup;
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+
+    .faq-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .faq-question {
+        flex: 0 0 calc(100% - 1em); // subtracting margin
+        margin-bottom: 2em;
+
+        h3 {
+          font-size: 1.5em;
+        }
+
+        p {
+          font-size: 1em;
+          line-height: 1.5;
+        }
+
+        .arrow {
+          display: inline-block;
+          width: 0.8em;
+          height: 0.8em;
+          margin-left: 0.5em;
+          border-right: 2px solid;
+          border-bottom: 2px solid;
+          transform: rotate(45deg);
+          transition: transform 0.3s ease;
+
+          &.open {
+            transform: rotate(-135deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .faq-container {
+    .faq-section {
+      .faq-cards {
+        .faq-question {
+          flex: 0 0 calc(50% - 1em);
+        }
+      }
+    }
+  }
+}
