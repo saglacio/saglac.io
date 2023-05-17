@@ -44,7 +44,7 @@ const config = {
   //   },
   // ],
   // Copyright string for the footer of the website and RSS feed.
-  copyright: `Copyright © 2013-${new Date().getFullYear()}. Test`,
+  copyright: `Copyright © 2013-${new Date().getFullYear()}. SagLacIO`,
   themeColor: '#7ecdc3', // Used for setting manifest and progress theme colors.
   backgroundColor: '#161843e6', // Used for setting manifest background color.
 };
