@@ -18,6 +18,7 @@ const FAQPage = ({ sections }) => {
   const toggleQuestion = (slug) => {
     setOpenedQuestion(openedQuestion === slug ? null : slug);
   };
+
   return (
     <PageLayout title="FAQ">
       <div className="faq-container container">
@@ -36,7 +37,10 @@ const FAQPage = ({ sections }) => {
                       onClick={() => toggleQuestion(question.slug)}
                       className="header-container"
                     >
-                      <a href={`#${question.slug}`} className="anchor">
+                      <a
+                        href={`#${question.slug}`}
+                        className="anchor"
+                      >
                         <FontAwesomeIcon icon={faLink} />
                       </a>
                       <div className="question-text">
@@ -44,7 +48,9 @@ const FAQPage = ({ sections }) => {
                       </div>
                       <FontAwesomeIcon
                         icon={faChevronDown}
-                        className={`expand-icon ${openedQuestion === question.slug ? 'open' : ''}`}
+                        className={`expand-icon ${
+                          openedQuestion === question.slug ? 'open' : ''
+                        }`}
                       />
                     </CardHeader>
                     <Collapse isOpen={openedQuestion === question.slug}>
