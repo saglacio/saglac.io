@@ -18,6 +18,10 @@ const LINKS = [
     to: '/contact',
   },
   {
+    children: 'Archives',
+    to: '/archives',
+  },
+  {
     children: 'FAQ',
     to: '/faq',
   },
