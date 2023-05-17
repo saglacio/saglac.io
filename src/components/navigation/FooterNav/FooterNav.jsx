@@ -10,7 +10,7 @@ const LINKS = [
     targetBlank: true,
   },
   {
-    children: 'About',
+    children: 'À propos',
     to: '/about',
   },
   {
