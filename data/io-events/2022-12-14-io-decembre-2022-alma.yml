@@ -1,0 +1,15 @@
+title: IO décembre 2022 à Alma!
+description: Nous vous invitons à vous joindre pour manger et/ou prendre un verre en discutant de techno et de développement informatique. On se donne rendez-vous à 18:00, et les présentations commencent vers 19:00. Venez jaser techno pour la dernière de 2022 avec nous! 🙂
+date: 2022-12-14T18:00:00.000Z
+event_url: https://www.facebook.com/events/1533854587129087/
+location: cafeclocheralma
+talks:
+  - authors:
+      - jim_plourde
+    title: "Terraform: gérer ses ressources cloud avec du code"
+  - authors:
+      - martin_lavoie
+    title: "Nix pour les nuls"
+  - authors:
+      - emileber
+    title: "Qwik: Le future des framework JS"
