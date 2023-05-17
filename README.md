@@ -30,6 +30,8 @@ Make sure the **Authors** and **Locations** have the necessary models before cre
 
 ## Development
 
+Use node version 14
+
 Install the project:
 
 ```sh

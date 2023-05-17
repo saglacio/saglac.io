@@ -1012,8 +1012,8 @@ type AuthorsYaml implements Node {
   name: String
   github: String
   yamlId: String
-  website: String
   twitter: String
+  website: String
   bio: String
 }
 
@@ -1028,6 +1028,7 @@ type AdminYaml implements Node {
   public_folder: String
   logo_url: String
   publish_mode: String
+  open_authoring: Boolean
   collections: [AdminYamlCollections]
 }
 
@@ -1092,17 +1093,12 @@ type AdminYamlCollectionsFieldsFields {
   widget: String
   required: Boolean
   label_singular: String
-  field: AdminYamlCollectionsFieldsFieldsField
-}
-
-type AdminYamlCollectionsFieldsFieldsField {
-  label: String
-  name: String
-  widget: String
   collection: String
   searchFields: [String]
   valueField: String
   displayFields: [String]
+  multiple: Boolean
+  min: Int
 }
 
 type Query {
@@ -1134,9 +1130,9 @@ type Query {
   allFaqYaml(filter: FaqYamlFilterInput, sort: FaqYamlSortInput, skip: Int, limit: Int): FaqYamlConnection!
   dataYaml(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, bistro_du_centre: DataYamlBistro_du_centreFilterInput, boston_pizza_jonquiere: DataYamlBoston_pizza_jonquiereFilterInput, cafeclocheralma: DataYamlCafeclocheralmaFilterInput, conformit: DataYamlConformitFilterInput, exode: DataYamlExodeFilterInput, UQAC_Aquarium: DataYamlUQAC_AquariumFilterInput, moulin_a_cie: DataYamlMoulin_a_cieFilterInput, lion_bleu: DataYamlLion_bleuFilterInput, pacini_alma: DataYamlPacini_almaFilterInput, mikes_chicoutimi_racine: DataYamlMikes_chicoutimi_racineFilterInput, stas_chicoutimi: DataYamlStas_chicoutimiFilterInput, tlm_chicoutimi: DataYamlTlm_chicoutimiFilterInput): DataYaml
   allDataYaml(filter: DataYamlFilterInput, sort: DataYamlSortInput, skip: Int, limit: Int): DataYamlConnection!
-  authorsYaml(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, name: StringQueryOperatorInput, github: StringQueryOperatorInput, yamlId: StringQueryOperatorInput, website: StringQueryOperatorInput, twitter: StringQueryOperatorInput, bio: StringQueryOperatorInput): AuthorsYaml
+  authorsYaml(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, name: StringQueryOperatorInput, github: StringQueryOperatorInput, yamlId: StringQueryOperatorInput, twitter: StringQueryOperatorInput, website: StringQueryOperatorInput, bio: StringQueryOperatorInput): AuthorsYaml
   allAuthorsYaml(filter: AuthorsYamlFilterInput, sort: AuthorsYamlSortInput, skip: Int, limit: Int): AuthorsYamlConnection!
-  adminYaml(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, backend: AdminYamlBackendFilterInput, local_backend: BooleanQueryOperatorInput, media_folder: StringQueryOperatorInput, public_folder: StringQueryOperatorInput, logo_url: StringQueryOperatorInput, publish_mode: StringQueryOperatorInput, collections: AdminYamlCollectionsFilterListInput): AdminYaml
+  adminYaml(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, backend: AdminYamlBackendFilterInput, local_backend: BooleanQueryOperatorInput, media_folder: StringQueryOperatorInput, public_folder: StringQueryOperatorInput, logo_url: StringQueryOperatorInput, publish_mode: StringQueryOperatorInput, open_authoring: BooleanQueryOperatorInput, collections: AdminYamlCollectionsFilterListInput): AdminYaml
   allAdminYaml(filter: AdminYamlFilterInput, sort: AdminYamlSortInput, skip: Int, limit: Int): AdminYamlConnection!
 }
 
@@ -1390,8 +1386,8 @@ input AuthorsYamlFilterInput {
   name: StringQueryOperatorInput
   github: StringQueryOperatorInput
   yamlId: StringQueryOperatorInput
-  website: StringQueryOperatorInput
   twitter: StringQueryOperatorInput
+  website: StringQueryOperatorInput
   bio: StringQueryOperatorInput
 }
 
@@ -1569,6 +1565,7 @@ input AdminYamlFilterInput {
   public_folder: StringQueryOperatorInput
   logo_url: StringQueryOperatorInput
   publish_mode: StringQueryOperatorInput
+  open_authoring: BooleanQueryOperatorInput
   collections: AdminYamlCollectionsFilterListInput
 }
 
@@ -1649,17 +1646,12 @@ input AdminYamlCollectionsFieldsFieldsFilterInput {
   widget: StringQueryOperatorInput
   required: BooleanQueryOperatorInput
   label_singular: StringQueryOperatorInput
-  field: AdminYamlCollectionsFieldsFieldsFieldFilterInput
-}
-
-input AdminYamlCollectionsFieldsFieldsFieldFilterInput {
-  label: StringQueryOperatorInput
-  name: StringQueryOperatorInput
-  widget: StringQueryOperatorInput
   collection: StringQueryOperatorInput
   searchFields: StringQueryOperatorInput
   valueField: StringQueryOperatorInput
   displayFields: StringQueryOperatorInput
+  multiple: BooleanQueryOperatorInput
+  min: IntQueryOperatorInput
 }
 
 type FileConnection {
@@ -2023,8 +2015,8 @@ enum FileFieldsEnum {
   childrenIoEventsYaml___talks___authors___name
   childrenIoEventsYaml___talks___authors___github
   childrenIoEventsYaml___talks___authors___yamlId
-  childrenIoEventsYaml___talks___authors___website
   childrenIoEventsYaml___talks___authors___twitter
+  childrenIoEventsYaml___talks___authors___website
   childrenIoEventsYaml___talks___authors___bio
   childrenIoEventsYaml___talks___title
   childrenIoEventsYaml___talks___description
@@ -2113,8 +2105,8 @@ enum FileFieldsEnum {
   childIoEventsYaml___talks___authors___name
   childIoEventsYaml___talks___authors___github
   childIoEventsYaml___talks___authors___yamlId
-  childIoEventsYaml___talks___authors___website
   childIoEventsYaml___talks___authors___twitter
+  childIoEventsYaml___talks___authors___website
   childIoEventsYaml___talks___authors___bio
   childIoEventsYaml___talks___title
   childIoEventsYaml___talks___description
@@ -2615,8 +2607,8 @@ enum FileFieldsEnum {
   childrenAuthorsYaml___name
   childrenAuthorsYaml___github
   childrenAuthorsYaml___yamlId
-  childrenAuthorsYaml___website
   childrenAuthorsYaml___twitter
+  childrenAuthorsYaml___website
   childrenAuthorsYaml___bio
   childAuthorsYaml___id
   childAuthorsYaml___parent___id
@@ -2659,8 +2651,8 @@ enum FileFieldsEnum {
   childAuthorsYaml___name
   childAuthorsYaml___github
   childAuthorsYaml___yamlId
-  childAuthorsYaml___website
   childAuthorsYaml___twitter
+  childAuthorsYaml___website
   childAuthorsYaml___bio
   childrenAdminYaml
   childrenAdminYaml___id
@@ -2716,6 +2708,7 @@ enum FileFieldsEnum {
   childrenAdminYaml___public_folder
   childrenAdminYaml___logo_url
   childrenAdminYaml___publish_mode
+  childrenAdminYaml___open_authoring
   childrenAdminYaml___collections
   childrenAdminYaml___collections___name
   childrenAdminYaml___collections___label
@@ -2799,6 +2792,7 @@ enum FileFieldsEnum {
   childAdminYaml___public_folder
   childAdminYaml___logo_url
   childAdminYaml___publish_mode
+  childAdminYaml___open_authoring
   childAdminYaml___collections
   childAdminYaml___collections___name
   childAdminYaml___collections___label
@@ -4387,8 +4381,8 @@ enum IoEventsYamlFieldsEnum {
   talks___authors___name
   talks___authors___github
   talks___authors___yamlId
-  talks___authors___website
   talks___authors___twitter
+  talks___authors___website
   talks___authors___bio
   talks___title
   talks___description
@@ -4598,8 +4592,8 @@ enum IoEventsYamlTalksFieldsEnum {
   authors___name
   authors___github
   authors___yamlId
-  authors___website
   authors___twitter
+  authors___website
   authors___bio
   title
   description
@@ -5282,8 +5276,8 @@ enum AuthorsYamlFieldsEnum {
   name
   github
   yamlId
-  website
   twitter
+  website
   bio
 }
 
@@ -5426,6 +5420,7 @@ enum AdminYamlFieldsEnum {
   public_folder
   logo_url
   publish_mode
+  open_authoring
   collections
   collections___name
   collections___label
@@ -5459,6 +5454,12 @@ enum AdminYamlFieldsEnum {
   collections___fields___fields___widget
   collections___fields___fields___required
   collections___fields___fields___label_singular
+  collections___fields___fields___collection
+  collections___fields___fields___searchFields
+  collections___fields___fields___valueField
+  collections___fields___fields___displayFields
+  collections___fields___fields___multiple
+  collections___fields___fields___min
   collections___fields___pattern
   collections___identifier_field
 }
