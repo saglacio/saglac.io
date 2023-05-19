@@ -43,7 +43,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       }
       if (hasOwnProperty.call(node.frontmatter, 'date')) {
         const date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
-        if (!date.isValid) {
+        if (!date.isValid()) {
           // eslint-disable-next-line no-console
           console.warn('WARNING: Invalid date.', node.frontmatter);
         }
