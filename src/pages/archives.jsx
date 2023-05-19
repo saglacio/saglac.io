@@ -1,8 +1,17 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import ArchivesPage from '@/components/pages/ArchivesPage';
 
-export const query = graphql`
-  query ArchivesPageQuery {
+export default function Archives({
+  data: {
+    allIoEventsYaml: { nodes },
+  },
+}) {
+  return <ArchivesPage events={nodes} />;
+}
+
+export const pageQuery = graphql`
+  query ArchivesData {
     allIoEventsYaml {
       nodes {
         title
@@ -29,13 +38,3 @@ export const query = graphql`
     }
   }
 `;
-
-const ArchivesPage = ({ data }) => {
-  const {
-    allIoEventsYaml: { nodes },
-  } = data;
-
-  return <ArchivesPage events={nodes} />;
-};
-
-export default ArchivesPage;
