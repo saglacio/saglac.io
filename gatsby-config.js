@@ -1,5 +1,6 @@
-const path = require('path');
-const urljoin = require('url-join');
+import urljoin from "url-join";
+import { resolve } from "path";
+
 const config = require('./SiteConfig');
 const sassConfig = require('./sass-loader.config');
 
@@ -116,7 +117,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        modulePath: path.resolve('src/netlifycms/index.js'), // default: undefined
+        modulePath: resolve('src/netlifycms/index.js'), // default: undefined
         enableIdentityWidget: true,
         publicPath: 'admin',
         htmlTitle: 'Content Manager',
