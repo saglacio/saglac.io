@@ -37,10 +37,7 @@ const FAQPage = ({ sections }) => {
                       onClick={() => toggleQuestion(question.slug)}
                       className="header-container"
                     >
-                      <a
-                        href={`#${question.slug}`}
-                        className="anchor"
-                      >
+                      <a href={`#${question.slug}`} className="anchor">
                         <FontAwesomeIcon icon={faLink} />
                       </a>
                       <div className="question-text">

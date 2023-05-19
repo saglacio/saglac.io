@@ -48,8 +48,7 @@ const ArchivesPage = ({ data }) => {
               <div key={talk.id}>
                 <h3>{talk.title}</h3>
                 <p>
-                  Auteur:{' '}
-                  {talk.authors.map((author) => author.name).join(', ')}
+                  Auteur: {talk.authors.map((author) => author.name).join(', ')}
                 </p>
               </div>
             ))}
