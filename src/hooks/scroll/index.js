@@ -40,6 +40,7 @@ export function useScrollPosition(
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps);
 }
 
@@ -48,7 +49,7 @@ export function useIsScrolled({ element, wait, offset = 0 } = {}) {
 
   useScrollPosition(
     ({ currPos }) => {
-      const isShow = currPos.y > 0 + offset;
+      const isShow = currPos.y > offset;
       if (isShow !== isScrolled) setScrolled(isShow);
     },
     [isScrolled],

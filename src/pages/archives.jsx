@@ -1,6 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-import Layout from '@/components/layout/PageLayout';
+import { graphql } from 'gatsby';
 
 export const query = graphql`
   query ArchivesPageQuery {
