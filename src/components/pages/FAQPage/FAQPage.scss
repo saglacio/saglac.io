@@ -19,11 +19,11 @@
   }
 
   .expand-icon {
-    padding: 0 10px;
     width: 0.8em;
     height: 0.8em;
-    transform: rotate(-90deg);
+    padding: 0 10px;
     transition: transform 0.3s ease;
+    transform: rotate(-90deg);
 
     &.open {
       transform: rotate(0deg);
@@ -34,8 +34,8 @@
     margin-bottom: 3em;
 
     h2 {
-      font-size: 2em;
       margin-bottom: 1em;
+      font-size: 2em;
     }
 
     .faq-question {
