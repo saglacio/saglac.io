@@ -31,7 +31,7 @@ const AboutSection = ({ id }) => (
           Conférence
         </Typography>
         <Typography light>
-          Anuellement, une journée entière est dédiée à des présentations plus
+          Annuellement, une journée entière est dédiée à des présentations plus
           complètes centrées sur les technologies du web, du jeu vidéo, ou sur
           le développement en général.
         </Typography>
