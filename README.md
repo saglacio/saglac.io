@@ -91,9 +91,9 @@ npm run analyze
 
 Then it should automatically open the browser page.
 
-# Authors
+## Authors
 
-* Emile Bergeron ([@emileber](https://github.com/emileber))
-* Gabriel Le Breton ([@gableroux](https://gableroux.com/))
-* Raphaël Côté ([@qwertyuu](https://github.com/qwertyuu))
-* You? :)
+*   Emile Bergeron ([@emileber](https://github.com/emileber))
+*   Gabriel Le Breton ([@gableroux](https://gableroux.com/))
+*   Raphaël Côté ([@qwertyuu](https://github.com/qwertyuu))
+*   You? :)
