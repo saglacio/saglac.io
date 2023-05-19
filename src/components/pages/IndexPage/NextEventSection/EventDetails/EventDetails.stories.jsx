@@ -12,10 +12,19 @@ const MAP =
 export const DefaultLocationInfo = () => (
   <EventDetails
     mapSrc={MAP}
+    location={{
+      name: text('Name?', 'Hotel le montagnais'),
+      map: text('Map?', MAP),
+      description: text('Description?'),
+      facebook: text('Facebook?'),
+      url: text('URL?'),
+    }}
     name={text('Name?', 'Hotel le montagnais')}
     description={text(
       'Description?',
       'L’Hôtel Le Montagnais est l’un des plus grands hôtels au Québec avec un centre de congrès intégré. Le service attentionné à tous les instants et la qualité de la nourriture est leur priorité et leur renommé.'
     )}
+    eventUrl={text('https://example.com/')}
+    title={text("Titre de l'évènement!")}
   />
 );
