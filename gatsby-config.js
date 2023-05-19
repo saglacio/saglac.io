@@ -232,6 +232,6 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-extract-schema',
+    // 'gatsby-plugin-extract-schema',
   ],
 };
