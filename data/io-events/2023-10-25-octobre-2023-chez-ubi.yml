@@ -4,9 +4,12 @@ date: '2023-10-25T18:00:00.000Z'
 event_url: https://www.facebook.com/events/241778011860741/
 location: ubisoft_saguenay
 talks:
-  - authors: vincent_roy
+  - authors:
+      - vincent_roy
     title: 'Créer son propre VPN, sans VPN, pour connecter ses ressources'
-  - authors: jlapointe
+  - authors:
+      - jlapointe
     title: 'Du web dans les jeux avec Ultralight'
-  - authors: jeanphilippe_gravel
+  - authors:
+      - jeanphilippe_gravel
     title: 'Génération de code avec ChatGPT'
