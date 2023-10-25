@@ -50,13 +50,12 @@
     // @see https://github.com/twbs/bootstrap/blob/v4.4.1/scss/mixins/_text-emphasis.scss
     @each $color, $value in $theme-colors {
       &.text-#{$color} {
-        // TODO: figure out where hover-focus comes from
-        //@include hover-focus() {
-        //  color: darken(
-        //    $value,
-        //    $emphasized-link-hover-darken-percentage
-        //  ) !important;
-        //}
+        @include hover-focus() {
+          color: darken(
+            $value,
+            $emphasized-link-hover-darken-percentage
+          ) !important;
+        }
       }
     }
   }

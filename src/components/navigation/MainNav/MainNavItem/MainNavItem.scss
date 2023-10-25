@@ -32,8 +32,7 @@
     @extend %active;
   }
 
-  // TODO: figure out where hover-focus comes from
-  //@include hover-focus() {
-  //  @extend %active;
-  //}
+  @include hover-focus() {
+    @extend %active;
+  }
 }
