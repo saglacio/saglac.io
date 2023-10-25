@@ -1,6 +1,4 @@
 import React from 'react';
-// import { useForm, ValidationError } from '@formspree/react';
-
 import PageLayout from '@/components/layout/PageLayout';
 import config from '~/SiteConfig';
 import PageIntro from '@/components/layout/PageLayout/PageIntro';
