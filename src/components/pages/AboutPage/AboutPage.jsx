@@ -34,6 +34,14 @@ const AboutPage = () => (
         SagLac IO en octobre 2013, proposant depuis des rencontres mensuelles
         alternées entre Saguenay et Alma.
       </p>
+      <p>
+        En 2019,{' '}
+        <a href="https://conference.saglac.io" target="_blank" rel="noreferrer">
+          une journée complète de conférence
+        </a>{' '}
+        est organisée avec des conférenciers locaux et internationaux, et près
+        de 200 participants de la région et de l'extérieur.
+      </p>
       <Typography variant="h2" className="mb-3">
         Presse
       </Typography>
@@ -89,7 +97,7 @@ const AboutPage = () => (
             target="_blank"
             rel="noreferrer"
           >
-            Radio-Canada - Place publique (24 octobre 2017)
+            Radio-Canada - Place publique (24 octobre 2023)
           </a>
         </li>
       </ul>
