@@ -5,7 +5,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       location: LocationsYaml @link(by: "yamlId")
     }
     type IoEventsYamlTalks implements Node {
-      authors: [AuthorsYaml!]! @link(by: "yamlId")
+      authors: AuthorsYaml @link(by: "yamlId")
     }
   `;
   createTypes(typeDefs);

@@ -15,7 +15,10 @@ const ArchivesPage = ({ events }) => (
             <div key={`event-${index}`}>
               <h3>{talk?.title}</h3>
               <p>
-                Auteur: {talk?.authors.map((author) => author.name).join(', ')}
+                {console.log(talk)}
+                Personne présentant: {talk?.authors?.name}
+                {!talk?.authors &&
+                  'ERREUR: veuillez ajouter le fichier `.yml` pour cette personne dans le répertoire `data/authors`.'}
               </p>
             </div>
           ))}
