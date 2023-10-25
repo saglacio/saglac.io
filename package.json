@@ -77,7 +77,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-markdown": "^9.0.0",
+    "react-markdown": "^8.0.0",
     "react-share": "^4.4.1",
     "react-twitter-widgets": "^1.11.0",
     "reactstrap": "^9.2.0",
