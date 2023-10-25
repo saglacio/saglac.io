@@ -6,6 +6,7 @@ module.exports = {
   ],
   plugins: ['stylelint-order'],
   rules: {
+    'import-notation': null,
     // 'prettier/prettier': true,
     // indentation: [
     //   2,

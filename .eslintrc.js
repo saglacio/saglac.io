@@ -1,5 +1,3 @@
-const path = require('path');
-const fs = require('fs');
 const resolverConfig = require('./resolver.config');
 
 const ERROR = 2;
