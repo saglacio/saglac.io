@@ -1,0 +1,24 @@
+date: '2013-12-09T18:00:00.000Z'
+eventbrite_id: 9389088015
+location: Bar la Zone, à Jonquière, sur la Saint-Dominique (salle à part, sans musique).
+  Nourriture et alcool disponible.
+talks:
+- authors:
+  - keven_lefebvre
+  title: Introduction à Git
+  twitter: kevenlefebvre
+- authors:
+  - gabriel_le_breton
+  slides: https://gableroux.com/presentation/2013/12/09/meteor-saglacio/
+  title: Introduction à Meteor
+  twitter: gableroux
+  website: https://gableroux.com/
+- authors:
+  - julien-samuel_lacroix
+  title: Introduction à Amazon EC2
+  twitter: juliensam
+- authors:
+  - jean-philippe_boily
+  title: Introduction aux tests
+  twitter: jipiboily
+title: Décembre 2013 - aka "beta 2"

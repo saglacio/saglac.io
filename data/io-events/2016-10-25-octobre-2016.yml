@@ -1,0 +1,12 @@
+date: '2016-10-25T18:00:00.000Z'
+event_url: https://www.facebook.com/events/794932377276580/
+location: bistro_du_centre.yml
+talks:
+- authors:
+  - émile_bergeron
+  title: 'Cordova/Ionic: To build two apps with one stone'
+- authors:
+  - kim_desrosiers
+  title: My shell story
+  twitter: kimondd
+title: Octobre 2016

@@ -1,0 +1,22 @@
+date: '2018-05-14T18:00:00.000Z'
+event_url: https://www.facebook.com/events/974324606075464
+location: cafeclocheralma.yml
+talks:
+- authors:
+  - m0xx
+  description: '- Différents modèles d''architectures (frontend, frontend + backend)
+
+    - Structure d''un projet
+
+    - Navigation
+
+    - Générer un site statique
+
+    '
+  title: Server side rendering ou génération de sites statiques avec React et Nextjs
+- authors:
+  - sjuair
+  description: Domotique avec des petits boards esp8266, esp12 et du MicroPython,
+    ça vous parle?
+  title: Le pouvoir de ESP
+title: L'IO Bleu (déplacé au Pacini)

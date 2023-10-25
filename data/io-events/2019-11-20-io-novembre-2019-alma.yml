@@ -1,0 +1,17 @@
+date: '2019-11-20T18:00:00.000Z'
+event_url: https://www.facebook.com/events/394900991193067/
+location: cafeclocheralma.yml
+talks:
+- authors:
+  - vincentpoirier
+  description: Améliorer nos méthodes de travail et troller nos collègues.
+  title: L'API de Slack
+- authors:
+  - gableroux
+  description: Comment l'utiliser en 2019
+  title: Intro à Gitlab CI
+- authors:
+  - jeanphilippe_gravel
+  description: Comment on s'est élevé au-delà du langage machine.
+  title: Tout est un byte stream
+title: IO novembre 2019 à Alma

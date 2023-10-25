@@ -1,0 +1,27 @@
+date: '2017-01-24T18:00:00.000Z'
+event_url: https://www.facebook.com/events/392164731137634/
+location: bistro_du_centre.yml
+talks:
+- authors:
+  - gabriel_le_breton
+  description: Comment installer archlinux, l'utiliser pendant 1 an, trouver ça cool,
+    perdre des fins de semaines et des soirs à essayer de faire fonctionner xorg,
+    bumblebeec, bbswitch, ses display ports et le piton brightness pour finalement
+    faire un backup de son ordi et passer à Fedora parce qu'après un bug étrange,
+    gnome-online-acconts fait des timeouts sans raisons (no more emails), chrome et
+    chromium load pu les pages et des fois gdm décide de pas démarrer.
+  slides: https://gableroux.com/presentation/2017/01/24/arch-is-cool-but-i-need-to-ship-software/
+  title: arch is cool, but I need to ship software
+  twitter: gableroux
+  website: https://gableroux.com/
+- authors:
+  - martin_renaud
+  description: 'Un framework open-source d''intelligence gathering. #cybersec'
+  title: 'Recon-ng : Un outil de reconnaissance'
+  twitter: martinrenaud
+- authors:
+  - émile_bergeron
+  description: Sans compromis sur la lisibilité et avec des benchmarks.
+  title: Optimisez votre JS pour la minification?
+  website: http://www.prismalstudio.com/
+title: Premier io de 2017

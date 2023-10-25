@@ -1,0 +1,14 @@
+date: '2017-12-12T18:00:00.000Z'
+event_url: https://www.facebook.com/events/2045874012295073
+location: exode.yml
+talks:
+- authors:
+  - emileber
+  description: Suite à la présentation d'une heure au CREP, voici un aperçu en 15
+    minutes.
+  title: 'Laravel: Une fondation solide'
+- authors:
+  - jipiboily
+  description: Comment faire un snippet JS qui va partout et qui _scale_.
+  title: Lighting talk sur les snippets JS
+title: Dernier IO de 2017

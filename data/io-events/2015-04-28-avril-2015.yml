@@ -1,0 +1,22 @@
+date: '2015-04-28T18:00:00.000Z'
+eventbrite_id: 16388659923
+location: <a href="http://www.exodecafe.com">l’Exode Café</a>, Alma. Nourriture, café,
+  bière et autres breuvages disponibles.
+talks:
+- authors:
+  - jean-philippe_boily
+  title: 'React.js: le nouveau truc cool!'
+  twitter: jipiboily
+- authors:
+  - frederic_trottier-hebert
+  title: Principes de base de programmation distribuée
+  twitter: mononcqc
+- authors:
+  - pierre-alexandre_audet
+  title: 'Utilisabilité 101 : Qui c’est que c’est quoi?!'
+  twitter: mre_design
+- authors:
+  - toi!
+  title: Le nouveau (ou pas si nouveau!) truc cool qui me fait tripper!
+  twitter: saglacio
+title: Avril 2015

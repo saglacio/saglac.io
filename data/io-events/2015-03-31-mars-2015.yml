@@ -1,0 +1,13 @@
+date: '2015-03-31T18:00:00.000Z'
+eventbrite_id: 16327857060
+location: La Tour à Bière, à Chicoutimi, dans la salle en haut. Microbrasserie et
+  nourriture!
+talks:
+- authors:
+  - jessica_lapointe
+  title: Introduction à git
+- authors:
+  - toi!
+  title: Un super sujet à proposer?
+  twitter: saglacio
+title: Mars 2015

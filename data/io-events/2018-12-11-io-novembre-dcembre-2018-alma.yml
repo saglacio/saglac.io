@@ -1,0 +1,12 @@
+date: '2018-12-11T18:00:00.000Z'
+event_url: https://www.facebook.com/events/196395121292676/
+location: cafeclocheralma.yml
+talks:
+- authors:
+  - jipiboily
+  title: 'Implantation de Google Analytics pour les devs: au delà des bases'
+- authors:
+  - aduquette
+  description: Prototypage d'un jeu vidéo
+  title: Time to do the impossible and make a game
+title: IO novembre-décembre 2018 à Alma

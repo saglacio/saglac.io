@@ -1,0 +1,18 @@
+date: '2014-04-09T18:00:00.000Z'
+eventbrite_id: 10924929759
+location: Bar la Zone, à Jonquière, sur la Saint-Dominique (salle à part, sans musique).
+  Nourriture et alcool disponible.
+talks:
+- authors:
+  - frederic_trottier-hebert
+  title: Erlang
+  twitter: mononcqc
+- authors:
+  - kim_desrosiers
+  title: How to Vim
+  twitter: kimondd
+- authors:
+  - jean-philippe_boily
+  title: Lightning talk à propos de Fourchette et Opinionated
+  twitter: jipiboily
+title: Avril 2014

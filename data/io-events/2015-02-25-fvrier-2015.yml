@@ -1,0 +1,17 @@
+date: '2015-02-25T18:00:00.000Z'
+eventbrite_id: 15510032926
+location: HopEra, 2377 Rue Saint Dominique, Jonquière, QC G7X 6L4. Microbrasserie
+  et nourriture!
+talks:
+- authors:
+  - julien-samuel_lacroix
+  title: Le top des outils essentiels d'un bon OS
+  twitter: JulienSam
+- authors:
+  - jessica_lapointe
+  title: 'Google Summer of Code: Un emploie étudiant qui compte! (lightning talk)'
+- authors:
+  - toi!
+  title: Un super sujet à proposer?
+  twitter: saglacio
+title: Février 2015

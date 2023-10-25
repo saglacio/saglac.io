@@ -1,0 +1,22 @@
+date: '2014-05-13T18:00:00.000Z'
+eventbrite_id: 11311337515
+location: <a href="http://www.exodecafe.com">l’Exode Café</a>, Alma. Nourriture, café,
+  bière et autres breuvages disponibles.
+talks:
+- authors:
+  - steeve_juair
+  title: Titre à venir
+  twitter: Juair
+- authors:
+  - jean-daniel_pearson
+  title: Maven & tests in java
+  twitter: JD_Pearson_
+- authors:
+  - joel_trottier-hebert
+  title: Améliorer la testabilité du code
+  twitter: JoelTHebert
+- authors:
+  - toi!
+  title: Un super sujet à proposer?
+  twitter: saglacio
+title: Mai 2014

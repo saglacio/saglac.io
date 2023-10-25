@@ -1,0 +1,18 @@
+date: '2014-02-10T18:00:00.000Z'
+eventbrite_id: 10256987927
+location: Bar la Zone, à Jonquière, sur la Saint-Dominique (salle à part, sans musique).
+  Nourriture et alcool disponible.
+talks:
+- authors:
+  - alan_boudreault
+  title: Environnement de développement avec Vagrant
+  twitter: AlanBoudreault
+- authors:
+  - julien-samuel_lacroix
+  title: Introduction à AngularJS
+  twitter: JulienSam
+- authors:
+  - marc_pearson
+  title: FreeBSD
+  twitter: marcpearsonTI
+title: Février 2014

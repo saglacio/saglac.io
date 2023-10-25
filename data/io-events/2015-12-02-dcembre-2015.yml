@@ -1,0 +1,15 @@
+date: '2015-12-02T18:00:00.000Z'
+event_url: https://www.facebook.com/events/197726173893502/
+location: mikes_chicoutimi_racine.yml
+talks:
+- authors:
+  - kim_lavoie
+  title: Introduction à Scala
+- authors:
+  - jessica_lapointe
+  title: Révisions de DB avec Alembic et SQLAlchemy
+- authors:
+  - toi!
+  title: Un super sujet à proposer?
+  twitter: saglacio
+title: Décembre 2015

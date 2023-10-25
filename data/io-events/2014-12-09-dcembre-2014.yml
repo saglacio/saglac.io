@@ -1,0 +1,13 @@
+date: '2014-12-09T18:00:00.000Z'
+eventbrite_id: 14698544743
+location: La Tour à Bière, à Chicoutimi, dans la salle en haut. Nourriture et alcool
+  disponible.
+talks:
+- authors:
+  - quentin_bédéneau
+  title: Gestionnaires de mots de passe
+- authors:
+  - kim_desrosiers
+  title: Why I love zsh
+  twitter: kimondd
+title: Décembre 2014
