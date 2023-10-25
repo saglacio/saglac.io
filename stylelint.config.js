@@ -23,12 +23,6 @@ module.exports = {
         ignoreAtRules: ['else'],
       },
     ],
-    'block-closing-brace-newline-after': [
-      'always',
-      {
-        ignoreAtRules: ['if', 'else'],
-      },
-    ],
     'color-function-notation': 'legacy',
     'declaration-empty-line-before': 'never',
     'declaration-colon-newline-after': null,
