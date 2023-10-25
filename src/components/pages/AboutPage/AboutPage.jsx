@@ -2,10 +2,11 @@ import React from 'react';
 import PageLayout from '@/components/layout/PageLayout';
 import Typography from '@/components/shared/Typography';
 import Button from '@/components/shared/Button';
+import Section from '@/components/shared/Section';
 
 const AboutPage = () => (
   <PageLayout title="À propos de SagLac IO">
-    <div className="container">
+    <Section>
       <Typography variant="h2" className="mb-3">
         Qu'est-ce que le SagLac IO?
       </Typography>
@@ -32,6 +33,14 @@ const AboutPage = () => (
         de Québec pour créer un regroupement technologique local. Ainsi naît le
         SagLac IO en octobre 2013, proposant depuis des rencontres mensuelles
         alternées entre Saguenay et Alma.
+      </p>
+      <p>
+        En 2019,{' '}
+        <a href="https://conference.saglac.io" target="_blank" rel="noreferrer">
+          une journée complète de conférence
+        </a>{' '}
+        est organisée avec des conférenciers locaux et internationaux, et près
+        de 200 participants de la région et de l'extérieur.
       </p>
       <Typography variant="h2" className="mb-3">
         Presse
@@ -88,14 +97,14 @@ const AboutPage = () => (
             target="_blank"
             rel="noreferrer"
           >
-            Radio-Canada - Place publique (24 octobre 2017)
+            Radio-Canada - Place publique (24 octobre 2023)
           </a>
         </li>
       </ul>
-      <Button outline size="lg" href="/faq">
+      <Button size="lg" href="/faq">
         En savoir plus
       </Button>
-    </div>
+    </Section>
   </PageLayout>
 );
 
