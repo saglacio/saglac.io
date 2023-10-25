@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "author": "Émile Bergeron <ber.emile@prismalstudio.com>",
   "private": true,
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "npm run dev",
     "develop": "gatsby develop",
