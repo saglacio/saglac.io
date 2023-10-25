@@ -15,7 +15,7 @@ function getScrollPosition({ element, useWindow }) {
 export function useScrollPosition(
   effect,
   deps,
-  { element, useWindow, wait } = {}
+  { element, useWindow, wait } = {},
 ) {
   const position = useRef(getScrollPosition({ useWindow }));
 
@@ -40,6 +40,7 @@ export function useScrollPosition(
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps);
 }
 
@@ -48,11 +49,11 @@ export function useIsScrolled({ element, wait, offset = 0 } = {}) {
 
   useScrollPosition(
     ({ currPos }) => {
-      const isShow = currPos.y > 0 + offset;
+      const isShow = currPos.y > offset;
       if (isShow !== isScrolled) setScrolled(isShow);
     },
     [isScrolled],
-    { element, useWindow: !element, wait }
+    { element, useWindow: !element, wait },
   );
 
   return isScrolled;

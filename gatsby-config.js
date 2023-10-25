@@ -1,7 +1,11 @@
-const path = require('path');
-const urljoin = require('url-join');
 const config = require('./SiteConfig');
 const sassConfig = require('./sass-loader.config');
+
+function urljoin(...parts) {
+  return parts.reduce((prev, curr) => {
+    return prev.replace(/\/+$/, '') + '/' + curr.replace(/^\/+/, '');
+  });
+}
 
 module.exports = {
   pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,
@@ -14,7 +18,7 @@ module.exports = {
       description: config.siteDescription,
       image_url: `${urljoin(
         config.siteUrl,
-        config.pathPrefix
+        config.pathPrefix,
       )}/logos/logo-512.png`,
       copyright: config.copyright,
     },
@@ -114,16 +118,6 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: path.resolve('src/netlifycms/index.js'), // default: undefined
-        enableIdentityWidget: true,
-        publicPath: 'admin',
-        htmlTitle: 'Content Manager',
-        includeRobots: false,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {
         devMode: process.env.NODE_ENV !== 'production',
@@ -137,76 +131,101 @@ module.exports = {
       options: {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
-          ret.allMarkdownRemark = ref.query.allMarkdownRemark;
+          // TODO: uncomment this when we want to use content folder again
+          // ref.query.allMarkdownRemark;
+          ret.allIoEventsYaml = ref.query.allIoEventsYaml;
           ret.generator = 'GatsbyJS Advanced Starter';
           return ret;
         },
         query: `
-        {
-          site {
-            siteMetadata {
-              rssMetadata {
-                site_url
-                feed_url
-                title
-                description
-                image_url
-                copyright
-              }
-            }
+    {
+      site {
+        siteMetadata {
+          rssMetadata {
+            site_url
+            feed_url
+            title
+            description
+            image_url
+            copyright
           }
         }
-      `,
+      }
+    }
+    `,
         feeds: [
           {
             title: 'Default feed title',
             serialize(ctx) {
               const { rssMetadata } = ctx.query.site.siteMetadata;
-              return ctx.query.allMarkdownRemark.edges.map((edge) => ({
-                categories: edge.node.frontmatter.tags,
-                date: edge.node.fields.date,
-                title: edge.node.frontmatter.title,
-                description: edge.node.excerpt,
-                url: rssMetadata.site_url + edge.node.fields.slug,
-                guid: rssMetadata.site_url + edge.node.fields.slug,
-                custom_elements: [
-                  { 'content:encoded': edge.node.html },
-                  { author: config.userEmail },
-                ],
+              return ctx.query.allIoEventsYaml.nodes.map((node) => ({
+                date: node.date,
+                title: node.title,
+                description: node.description,
+                url: rssMetadata.site_url + node.event_url,
+                custom_elements: [{ 'content:encoded': node.html }],
               }));
             },
+            // TODO: uncomment this when we want to use content folder again
+            //             {
+            //               allMarkdownRemark(
+            //                 limit: 1000,
+            //                 sort: { order: DESC, fields: [fields___date] },
+            //               ) {
+            //                 edges {
+            //                   node {
+            //                     excerpt
+            //                     html
+            //                     timeToRead
+            //                     fields {
+            //                       slug
+            //                       date
+            //                     }
+            //                     frontmatter {
+            //                       title
+            //                       cover
+            //                       date
+            //                       category
+            //                       tags
+            //                     }
+            //                   }
+            //                 }
+            //               }
+            //             }
+            //           `,
             query: `
-            {
-              allMarkdownRemark(
-                limit: 1000,
-                sort: { order: DESC, fields: [fields___date] },
-              ) {
-                edges {
-                  node {
-                    excerpt
-                    html
-                    timeToRead
-                    fields {
-                      slug
-                      date
-                    }
-                    frontmatter {
-                      title
-                      cover
-                      date
-                      category
-                      tags
-                    }
-                  }
+        {
+          allIoEventsYaml {
+            nodes {
+              title
+              date
+              event_url
+              location {
+                name
+                address
+                url
+                facebook
+                description
+                map
+              }
+              talks {
+                title
+                authors {
+                  name
+                  twitter
+                  github
+                  website
                 }
               }
             }
-          `,
+          }
+        }
+        `,
             output: config.siteRss,
           },
         ],
       },
     },
-    'gatsby-plugin-extract-schema',
+    // 'gatsby-plugin-extract-schema',
   ],
 };

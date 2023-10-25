@@ -10,12 +10,16 @@ const LINKS = [
     targetBlank: true,
   },
   {
-    children: 'About',
+    children: 'À propos',
     to: '/about',
   },
   {
     children: 'Nous joindre',
     to: '/contact',
+  },
+  {
+    children: 'Archives',
+    to: '/archives',
   },
   {
     children: 'FAQ',

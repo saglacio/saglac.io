@@ -1,32 +1,44 @@
-const sassConfig = require('../sass-loader.config');
-
+const { resolve } = require('path');
 module.exports = {
-  stories: ['../@(src|stories)/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    {
-      name: '@storybook/preset-scss',
-      options: {
-        sassLoaderOptions: sassConfig,
-      },
-    },
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/addon-notes/register',
-    // '@storybook/addon-storysource',
-    // '@storybook/addon-a11y',
   ],
-  framework: '@storybook/react',
-  core: {
-    builder: 'webpack5',
-  },
-  webpackFinal: async (config) => {
+  webpackFinal: async (config, { configType }) => {
     // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
-    config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/];
-    // Use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
-    config.module.rules[0].use[0].options.plugins.push(
-      require.resolve('babel-plugin-remove-graphql-queries')
-    );
+    config.module.rules.push({
+      test: /\.js$/,
+      exclude: /node_modules\/(?!(gatsby)\/)/,
+      use: [
+        {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-react', '@babel/preset-env'],
+            plugins: [
+              require.resolve('babel-plugin-remove-graphql-queries'),
+              // any other plugins you need to use
+            ],
+          },
+        },
+      ],
+    });
+    // Add Sass/SCSS support
+    config.module.rules.push({
+      test: /\.(s*)css$/,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+      include: resolve(__dirname, '../'),
+    });
+
     return config;
+  },
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
+  docs: {
+    autodocs: true,
   },
 };

@@ -6,6 +6,7 @@ module.exports = {
   ],
   plugins: ['stylelint-order'],
   rules: {
+    'import-notation': null,
     // 'prettier/prettier': true,
     // indentation: [
     //   2,
@@ -20,12 +21,6 @@ module.exports = {
         except: ['blockless-after-same-name-blockless'],
         ignore: ['after-comment', 'first-nested'],
         ignoreAtRules: ['else'],
-      },
-    ],
-    'block-closing-brace-newline-after': [
-      'always',
-      {
-        ignoreAtRules: ['if', 'else'],
       },
     ],
     'color-function-notation': 'legacy',

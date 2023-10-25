@@ -14,6 +14,6 @@ Object.keys(sourceData).forEach((locationId) => {
       id: locationId,
       ...location,
     }),
-    console.log
+    console.log,
   );
 });

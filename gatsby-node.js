@@ -1,10 +1,3 @@
-const path = require('path');
-const _ = require('lodash');
-const moment = require('moment');
-const siteConfig = require('./SiteConfig');
-
-const { hasOwnProperty } = Object.prototype;
-
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
   const typeDefs = `
@@ -18,42 +11,43 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(typeDefs);
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
-  let slug;
-  if (node.internal.type === 'MarkdownRemark') {
-    const fileNode = getNode(node.parent);
-    const parsedFilePath = path.parse(fileNode.relativePath);
-    if (
-      hasOwnProperty.call(node, 'frontmatter') &&
-      hasOwnProperty.call(node.frontmatter, 'title')
-    ) {
-      slug = `/${_.kebabCase(node.frontmatter.title)}`;
-    } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
-      slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
-    } else if (parsedFilePath.dir === '') {
-      slug = `/${parsedFilePath.name}/`;
-    } else {
-      slug = `/${parsedFilePath.dir}/`;
-    }
-
-    if (hasOwnProperty.call(node, 'frontmatter')) {
-      if (hasOwnProperty.call(node.frontmatter, 'slug')) {
-        slug = `/${_.kebabCase(node.frontmatter.slug)}`;
-      }
-      if (hasOwnProperty.call(node.frontmatter, 'date')) {
-        const date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
-        if (!date.isValid) {
-          // eslint-disable-next-line no-console
-          console.warn('WARNING: Invalid date.', node.frontmatter);
-        }
-
-        createNodeField({ node, name: 'date', value: date.toISOString() });
-      }
-    }
-    createNodeField({ node, name: 'slug', value: slug });
-  }
-};
+// TODO: uncomment this if we need to use markdown files from `./content` folder
+// exports.onCreateNode = ({ node, actions, getNode }) => {
+//   const { createNodeField } = actions;
+//   let slug;
+//   if (node.internal.type === 'MarkdownRemark') {
+//     const fileNode = getNode(node.parent);
+//     const parsedFilePath = path.parse(fileNode.relativePath);
+//     if (
+//       hasOwnProperty.call(node, 'frontmatter') &&
+//       hasOwnProperty.call(node.frontmatter, 'title')
+//     ) {
+//       slug = `/${_.kebabCase(node.frontmatter.title)}`;
+//     } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
+//       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
+//     } else if (parsedFilePath.dir === '') {
+//       slug = `/${parsedFilePath.name}/`;
+//     } else {
+//       slug = `/${parsedFilePath.dir}/`;
+//     }
+//
+//     if (hasOwnProperty.call(node, 'frontmatter')) {
+//       if (hasOwnProperty.call(node.frontmatter, 'slug')) {
+//         slug = `/${_.kebabCase(node.frontmatter.slug)}`;
+//       }
+//       if (hasOwnProperty.call(node.frontmatter, 'date')) {
+//         const date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
+//         if (!date.isValid()) {
+//           // eslint-disable-next-line no-console
+//           console.warn('WARNING: Invalid date.', node.frontmatter);
+//         }
+//
+//         createNodeField({ node, name: 'date', value: date.toISOString() });
+//       }
+//     }
+//     createNodeField({ node, name: 'slug', value: slug });
+//   }
+// };
 
 // exports.createPages = async ({ graphql, actions }) => {
 //   const { createPage } = actions;

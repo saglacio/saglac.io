@@ -8,7 +8,7 @@ export default {
 
 const TEXT = 'À propos du Saglac IO';
 
-export const titles = () =>
+export const Titles = () =>
   ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].map((variant) => (
     <>
       <span>{variant}</span>
@@ -22,7 +22,7 @@ export const titles = () =>
     </>
   ));
 
-export const otherTexts = () => {
+export const OtherTexts = () => {
   const content = text('Text:', TEXT);
   const props = {
     uppercase: boolean('Uppercase?', false),

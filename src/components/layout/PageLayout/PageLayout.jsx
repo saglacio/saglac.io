@@ -12,7 +12,7 @@ const PageLayout = ({ children, title, intro }) => (
   <div className="io-layout">
     <Helmet title={`${title} | ${config.siteTitle}`}>
       <meta name="description" content={config.siteDescription} />
-      <html lang="en" />
+      <html lang="fr" />
     </Helmet>
     <PageHeader />
     {intro || <PageIntro title={title} />}

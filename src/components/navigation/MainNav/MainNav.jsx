@@ -15,6 +15,7 @@ const MainNav = ({ className, vertical, ...props }) => (
   >
     <MainNavItem to="/">Meetup</MainNavItem>
     <MainNavItem to="/about">À propos</MainNavItem>
+    <MainNavItem to="/archives">Archives</MainNavItem>
     <MainNavItem to="/faq">FAQ</MainNavItem>
     <Button
       href="https://conference.saglac.io/"
