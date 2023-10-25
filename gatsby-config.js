@@ -1,5 +1,3 @@
-const { resolve } = require('path');
-
 const config = require('./SiteConfig');
 const sassConfig = require('./sass-loader.config');
 

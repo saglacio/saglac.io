@@ -1,10 +1,3 @@
-const path = require('path');
-const _ = require('lodash');
-const moment = require('moment');
-const siteConfig = require('./SiteConfig');
-
-const { hasOwnProperty } = Object.prototype;
-
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
   const typeDefs = `
