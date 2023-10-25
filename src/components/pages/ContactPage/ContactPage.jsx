@@ -1,4 +1,6 @@
 import React from 'react';
+// import { useForm, ValidationError } from '@formspree/react';
+
 import PageLayout from '@/components/layout/PageLayout';
 import config from '~/SiteConfig';
 import PageIntro from '@/components/layout/PageLayout/PageIntro';
@@ -12,7 +14,7 @@ const ContactPage = () => (
     title={TITLE}
     intro={
       <PageIntro fullHeight title={TITLE}>
-        <form method="post" action={`https://formspree.io/${config.email}`}>
+        <form method="post" action="https://formspree.io/f/mleyzpgk">
           <Input
             type="hidden"
             name="_subject"
@@ -27,12 +29,13 @@ const ContactPage = () => (
             className="mb-3"
           />
           <Input
-            name="_replyto"
+            name="email"
             id="contact-email"
             placeholder="Courriel"
             className="mb-3"
           />
           <Input
+            name="message"
             type="textarea"
             id="contact-message"
             placeholder="Message"
