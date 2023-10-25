@@ -1,0 +1,14 @@
+date: '2019-04-11T18:00:00.000Z'
+event_url: https://www.facebook.com/events/2411719792172173/
+location: uqac_aquarium
+talks:
+- authors:
+  - valere_plantevin
+  title: 'Le réseau dans les jeux vidéos : là où le fun cache les cauchemars'
+- authors:
+  - elaberge
+  title: 'L''asynchrone : comment bien tout faire tout en même temps'
+- authors:
+  - pa_audet
+  title: 'UI/UX en jeux vidéos : Wow...eurk?!'
+title: IO jeux vidéo à l'UQAC 2.0

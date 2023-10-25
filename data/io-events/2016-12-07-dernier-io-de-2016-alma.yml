@@ -1,0 +1,14 @@
+date: '2016-12-07T18:00:00.000Z'
+event_url: https://www.facebook.com/events/1799450726981595/
+location: cafe_du_clocher_alma
+talks:
+- authors:
+  - maxime_morin
+  title: Pack your 💩 with webpack!
+- authors:
+  - jules_robichaud-gagnon
+  title: '"Reflection" pour programmeurs et hackers'
+- authors:
+  - mathieu_tortuyaux
+  title: Commencez vos projets par la fin!
+title: Dernier io de 2016, à Alma!

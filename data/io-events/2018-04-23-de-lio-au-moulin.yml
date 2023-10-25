@@ -1,0 +1,36 @@
+date: '2018-04-23T18:00:00.000Z'
+event_url: https://www.facebook.com/events/1784388525203963
+location: moulin_a_cie
+talks:
+- authors:
+  - paulhenri_callens
+  - claudia_belanger
+  description: 'Le Moulin à Cie a pour mission de favoriser l’émergence et la prospérité
+    de projets novateurs en offrant aux
+
+    entrepreneurs, aux startups, aux travailleurs autonomes, aux professionnels et
+    aux chercheurs un espace de
+
+    travail partagé et convivial, au cœur du centre-ville de Chicoutimi. Basé sur
+    les principes de l’économie de
+
+    partage, le Moulin à Cie favorise la collaboration, la créativité, et le partage
+    d’expériences.
+
+    '
+  title: Présentation du Moulin et du coworking
+- authors:
+  - jipiboily
+  description: Pourquoi, pourquoi pas, les mythes et comment bien réussir en tant
+    qu’employé et employeur.
+  title: Travailler à distance
+- authors:
+  - joelthebert
+  description: 'Introduction au concept et aux techniques de mise en place de programmation
+    en binôme (pair programming) dans
+
+    une équipe distribuée.
+
+    '
+  title: Programmation en binôme à distance
+title: De l'IO au Moulin

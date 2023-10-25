@@ -1,0 +1,22 @@
+date: '2017-04-10T18:00:00.000Z'
+event_url: https://www.facebook.com/events/1119460338187406/
+location: boston_pizza_jonquiere
+talks:
+- authors:
+  - gabriel_le_breton_et_jules_robichaud-gagnon
+  description: GPGPU dans Unity
+  slides: https://gableroux.com/presentation/2017/04/10/introduction-to-shaders-saglacio/
+  title: Introduction aux Shaders et Compute Shaders
+  twitter: gableroux
+- authors:
+  - joel_trottier-hebert
+  description: Introduction à l'importance des tests unitaires.
+  title: L'ABC des tests
+  twitter: JoelTHebert
+- authors:
+  - martin_renaud
+  description: 'Une distribution regroupant l''ensemble des outils nécessaires aux
+    tests de sécurité d''un système d''information. #cybersec'
+  title: Kali Linux ou Comment faire la démo rapide d’un outil complexe
+  twitter: martinrenaud
+title: IO Spécial fin de session 2017 en collaboration avec l'AEMI

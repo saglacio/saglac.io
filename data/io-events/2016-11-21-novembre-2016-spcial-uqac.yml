@@ -1,0 +1,18 @@
+date: '2016-11-21T18:00:00.000Z'
+event_url: https://www.facebook.com/events/163206777482547/
+location: mikes_chicoutimi_racine
+talks:
+- authors:
+  - frederic_trottier-hebert
+  slides: https://s3.amazonaws.com/ferd-presentations/150-en-10.pdf
+  title: 150 pages de recherches en génie logiciel en 10 slides
+  twitter: mononcqc
+- authors:
+  - gabriel_le_breton
+  slides: https://gableroux.com/presentation/2016/11/21/version-control/
+  title: Introduction à git, l'arbre de la vie
+  twitter: gableroux
+- authors:
+  - jules_robichaud-gagnon
+  title: 'Unity: construire un UI de la bonne façon'
+title: Novembre 2016 Spécial UQAC

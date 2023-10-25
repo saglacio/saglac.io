@@ -1,0 +1,14 @@
+date: '2017-10-17T18:00:00.000Z'
+event_url: https://www.facebook.com/events/120214745326424
+location: bistro_du_centre
+talks:
+- authors:
+  - gableroux
+  description: De la première à la dernière étape pour contribuer à un projet sur
+    Github.
+  title: To pull or not to pull? Ma première contribution open source
+- authors:
+  - emileber
+  description: Un nouveau design bien mérité.
+  title: Nouveau site web du Saglac IO
+title: IO Hacktoberfest - Spécial open source

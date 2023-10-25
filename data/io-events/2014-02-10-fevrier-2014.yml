@@ -1,0 +1,17 @@
+date: '2014-02-10T18:00:00.000Z'
+eventbrite_id: 10256987927
+location: bar_la_zone_jonquiere
+talks:
+- authors:
+  - alan_boudreault
+  title: Environnement de développement avec Vagrant
+  twitter: AlanBoudreault
+- authors:
+  - julien-samuel_lacroix
+  title: Introduction à AngularJS
+  twitter: JulienSam
+- authors:
+  - marc_pearson
+  title: FreeBSD
+  twitter: marcpearsonTI
+title: Février 2014

@@ -20,7 +20,7 @@ const TalkCard = ({ talk: { title, authors } }) => (
         {title}
       </Typography>
       <Typography variant="span" light>
-        <em>{authors.map((author) => author.name).join(', ')}</em>
+        <em>{authors.name}</em>
       </Typography>
     </CardImgOverlay>
   </Card>

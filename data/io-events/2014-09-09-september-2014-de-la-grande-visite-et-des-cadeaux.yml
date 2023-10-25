@@ -1,0 +1,34 @@
+date: '2014-09-09T18:00:00.000Z'
+eventbrite_id: 12592567709
+location: exode
+sponsor: Des t-shirts de <a href="http://circleci.com" target="_blank">Circle CI</a>
+  seront tirés parmis les présents et il y aura des stickers pour tout le monde aussi!
+  Autres surprises en attentes...
+talks:
+- authors:
+  - frédéric_harper_(sr._technical_evangelist_-_mozilla)
+  description: 'HTML5 est un pas de géant dans la bonne direction: il apporte plusieurs
+    fonctionnalités dont les développeurs avaient besoin pour créer plus facilement
+    de meilleures expériences web. Il a aussi fait naitre un débat sans fin: applications
+    natives ou applications web! Lors de cette présentation, Frédéric Harper vous
+    montrera comment le web ouvert peut vous aider à créer des applications mobiles
+    de qualités. Vous en apprendrez plus sur des technologies telles que les WebAPIs,
+    ainsi que les outils qui vous permettront de viser un nouveau marché avec Firefox
+    OS et le web d’aujourd''hui.'
+  title: 'Firefox OS: une plateforme à découvrir'
+  twitter: fharper
+- authors:
+  - jean-philippe_boily
+  description: Dans cette présentation je vais vous parler de différentes options
+    qui s'offrent à vous en terme de serveurs d'intégration continue. Et oui, je vais
+    vous montrer comment créer votre propre CI as a Service, que je vous suggère fortement
+    de ne pas faire!
+  title: 'CI servers: hosted, self-hosted or from scratch (!!!)?'
+  twitter: jipiboily
+- authors:
+  - steeve_juair
+  description: Présentation du BeagleBone Blace Rev C / Node.JS / automation avec
+    peut-etre du data push
+  title: Un Beagle ?
+  twitter: Juair
+title: 'September 2014: de la grande visite et des cadeaux!'

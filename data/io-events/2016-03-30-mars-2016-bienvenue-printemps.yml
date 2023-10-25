@@ -1,0 +1,24 @@
+date: '2016-03-30T18:00:00.000Z'
+event_url: https://www.facebook.com/events/810666755732038/
+location: cafe_du_clocher_alma
+talks:
+- authors:
+  - jean-philippe_boily
+  title: '"De Rails aux microservices Go: notre expérience avec Gemnasium Enterprise"
+    (version allégée de la conférence donnée au WAQ en avril prochain)'
+  twitter: jipiboily
+- authors:
+  - gabriel_le_breton
+  slides: https://gableroux.com/presentation/2016/03/30/letsencrypt-saglacio/
+  title: 'Let''s Encrypt: de kecé?'
+  twitter: gableroux
+  website: https://gableroux.com/
+- authors:
+  - jean-philippe_gravel
+  title: Faire sa propre authentification HTTP Basic en 15 minutes
+  twitter: formixse
+- authors:
+  - jean-philippe_boily
+  title: 'dix-patch: équivalent à Segment.io'
+  twitter: jipiboily
+title: 'Mars 2016: bienvenue, printemps!'

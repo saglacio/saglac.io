@@ -12,7 +12,7 @@ export default function Archives({
 
 export const pageQuery = graphql`
   query ArchivesData {
-    allIoEventsYaml {
+    allIoEventsYaml(sort: { fields: date, order: DESC }) {
       nodes {
         title
         date

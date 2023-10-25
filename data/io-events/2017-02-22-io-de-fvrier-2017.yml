@@ -1,0 +1,19 @@
+date: '2017-02-22T18:00:00.000Z'
+event_url: https://www.facebook.com/events/1496033413763387/
+location: bistro_du_centre
+talks:
+- authors:
+  - frederic_trottier-hebert
+  description: Primeur partielle sur une présentation du WAQ!
+  title: Tout est terrible
+  twitter: mononcqc
+- authors:
+  - juan_pablo_aguilar-lliguin
+  description: Gérer l'aspect social d'une start-up avec des outils techno.
+  title: Start-up mode loin du code
+  website: http://arriba.ec/en/
+- authors:
+  - mathieu_tortuyaux
+  description: L'intégration continue avec docker, gitlab, etc.
+  title: 'Gitlab & Docker: Vers l''infini et au-delà'
+title: IO de février 2017

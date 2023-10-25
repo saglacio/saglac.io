@@ -1,0 +1,17 @@
+date: '2021-10-21T18:00:00.000Z'
+event_url: https://www.facebook.com/events/388684586055492/
+location: cafe_du_clocher_alma
+talks:
+  - authors:
+      - ferd
+    title: 'Choisir ses alertes: Intro aux SLOs'
+    twitter: mononcqc
+  - authors:
+      - emileber
+    title:
+      'One service to rule them all: GraphQL as an aggregation layer serving Ubisoft
+      Connect'
+  - authors:
+      - vincentpoirier
+    title: Comment ça marche les câbles?
+title: IO d'octobre 2021 - Retour en personne!

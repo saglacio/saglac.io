@@ -1,0 +1,18 @@
+date: '2015-01-21T18:00:00.000Z'
+eventbrite_id: 15252480580
+location: exode
+talks:
+- authors:
+  - joel_trottier-hebert
+  title: 'Dart: en plein dans le mille'
+  twitter: JoelTHebert
+- authors:
+  - frederic_trottier-hebert
+  title: (ANNULÉ) Unicode vs. UTF-8 et les signes de quand on se tire dans le pied
+    (lighting talk)
+  twitter: mononcqc
+- authors:
+  - toi!
+  title: Un super sujet à proposer?
+  twitter: saglacio
+title: Janvier 2015

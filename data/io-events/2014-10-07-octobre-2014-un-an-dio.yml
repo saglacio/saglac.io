@@ -1,0 +1,19 @@
+date: '2014-10-07T18:00:00.000Z'
+eventbrite_id: 13170572537
+location:
+talks:
+- authors:
+  - frederic_trottier-hebert
+  title: 'SQL vs. NoSQL: comment choisir sa base de données'
+  twitter: mononcqc
+- authors:
+  - daniel_morissette
+  description: Open Source, Open Data, Open Standards, Open Government, Open API…
+    Avec autant de “buzzwords”, comment s’y retrouver ? Nous allons tenter de démystifier
+    le qui, le quoi et le comment derrière toutes ces tendances “Open”.
+  title: 'Open à toutes les sauces : comment s''y retrouver'
+  twitter: dmorissette
+- authors:
+  - jessica_lapointe
+  title: 'Logiciels de gestion de projet: comparaisons et demos'
+title: 'Octobre 2014: un an d''io!'
