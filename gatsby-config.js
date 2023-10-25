@@ -1,8 +1,13 @@
-import urljoin from "url-join";
-import { resolve } from "path";
+const { resolve } = require("path");
 
 const config = require('./SiteConfig');
 const sassConfig = require('./sass-loader.config');
+
+function urljoin(...parts) {
+  return parts.reduce((prev, curr) => {
+    return prev.replace(/\/+$/, '') + '/' + curr.replace(/^\/+/, '');
+  });
+}
 
 module.exports = {
   pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,
@@ -114,16 +119,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: resolve('src/netlifycms/index.js'), // default: undefined
-        enableIdentityWidget: true,
-        publicPath: 'admin',
-        htmlTitle: 'Content Manager',
-        includeRobots: false,
-      },
-    },
     {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {
