@@ -1,11 +1,11 @@
 import React from 'react';
-import './ArchivesPage.scss';
 import { Link } from 'gatsby';
 import Layout from '@/components/layout/PageLayout/PageLayout';
+import Section from '@/components/shared/Section';
 
 const ArchivesPage = ({ events }) => (
   <Layout title="Archives">
-    <section className="container">
+    <Section>
       {events.map((event) => (
         <div key={event.id}>
           <h2>{event.title}</h2>
@@ -22,7 +22,7 @@ const ArchivesPage = ({ events }) => (
           <Link to={event.event_url}>Lien vers l'évènement</Link>
         </div>
       ))}
-    </section>
+    </Section>
   </Layout>
 );
 
