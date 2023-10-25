@@ -13,7 +13,7 @@ module.exports = {
     'prettier',
     'plugin:storybook/recommended',
   ],
-  plugins: ['import', 'graphql', 'jsx-a11y', 'prettier'],
+  plugins: ['import', 'jsx-a11y', 'prettier'],
   parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 8,
@@ -21,6 +21,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
+    // schema: './schema.graphql',
   },
   globals: {
     __PATH_PREFIX__: true,
@@ -33,17 +34,6 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': ERROR,
-    'graphql/template-strings': [
-      ERROR,
-      {
-        env: `relay`,
-        schemaString: fs.readFileSync(
-          path.resolve(__dirname, './schema.graphql'),
-          { encoding: 'utf-8', flag: 'r' }
-        ),
-        tagName: `graphql`,
-      },
-    ],
     /**
      * default eslint rules override
      */
@@ -169,6 +159,18 @@ module.exports = {
         'import/no-anonymous-default-export': OFF,
       },
     },
+    // {
+    //   files: ["*.js"],
+    //   processor: "@graphql-eslint/graphql"
+    // },
+    // {
+    //   files: ["*.graphql"],
+    //   parser: "@graphql-eslint/eslint-plugin",
+    //   plugins: ["@graphql-eslint"],
+    //   rules: {
+    //     "@graphql-eslint/known-type-names": "error"
+    //   }
+    // }
   ],
   settings: {
     // 'import/core-modules': [],
