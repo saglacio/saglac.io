@@ -24,7 +24,7 @@ It is built with the [JAMStack](https://jamstack.org/), which means it's static 
 
 ## How to add an event?
 
-Log into our [Netlify **Admin CMS** app](https://saglac.io/admin) using your pre-authorized Github account to automagically update the relational YAML data files used in the static rendering of the website.
+See yaml files in [`./data/`](./data/).
 
 Make sure the **Authors** and **Locations** have the necessary models before creating a new event.
 
