@@ -11,9 +11,10 @@
     color: $fg-light;
     // padding: 0;
 
-    @include hover-focus {
-      color: $primary;
-    }
+    // TODO: figure out where hover-focus comes from
+    //@include hover-focus {
+    //  color: $primary;
+    //}
   }
   font-size: 0.875rem;
 

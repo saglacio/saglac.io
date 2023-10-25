@@ -1,23 +1,22 @@
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+const _interopRequireDefault = require('@babel/runtime/helpers/interopRequireDefault');
 exports.__esModule = true;
-(exports.default = Index);
-(exports.pageQuery = void 0);
-var _react = _interopRequireDefault(require("react"));
-var _gatsby = require("gatsby");
-var _IndexPage = _interopRequireDefault(require("./src/components/pages/IndexPage"));
+exports.default = Index;
+exports.pageQuery = void 0;
+const _react = _interopRequireDefault(require('react'));
+const _gatsby = require('gatsby');
+const _IndexPage = _interopRequireDefault(
+  require('@/components/pages/IndexPage'),
+);
 
-function Index(
-  {
-    data: {
-      latestEvent: {
-        nodes: [latestEvent],
-      },
+function Index({
+  data: {
+    latestEvent: {
+      nodes: [latestEvent],
     },
-  }
-) {
+  },
+}) {
   return _react.default.createElement(_IndexPage.default, {
-    event: latestEvent
+    event: latestEvent,
   });
 }
 
