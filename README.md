@@ -70,17 +70,6 @@ Then, it should automatically navigate to `http://localhost:6006/`.
 
 Otherwise, it's always available on the public website under [`https://saglac.io/storybook`](https://saglac.io/storybook/?path=/info/).
 
-### Admin CMS
-
-> [**Netlify CMS**](https://www.netlifycms.org/)  
-> Open source content management for your Git workflow
-
-_Note that while it works in development, it will commit changes to the remote `master` branch._
-
-The configuration file reside in the `static` directory, and it is fetched by the frontend app to bootstrap itself. Refer to `static/admin/config.yml` for the configuration.
-
-Main content is located in [`./data`](./data) and is written in YAML. It is then fetched by the frontend app to render the pages.
-
 ### Webpack Bundle Analyzer
 
 The plugin is configured. Just run
