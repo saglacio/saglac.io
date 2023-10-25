@@ -14,20 +14,14 @@
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     background: rgba(6, 12, 34, 0.6);
   }
 
   .intro-wrapper {
     display: flex;
     position: absolute;
-    top: 90px;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 90px 0 0;
     text-align: center;
     justify-content: center;
     align-items: center;

@@ -25,7 +25,7 @@ const SEO = ({ postNode, postPath, postSEO }) => {
 
   if (
     !image.match(
-      '(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]'
+      '(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]',
     )
   ) {
     image = urljoin(config.siteUrl, config.pathPrefix, image);
@@ -70,7 +70,7 @@ const SEO = ({ postNode, postPath, postSEO }) => {
           url: image,
         },
         description,
-      }
+      },
     );
   }
 

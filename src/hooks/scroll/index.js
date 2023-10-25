@@ -15,7 +15,7 @@ function getScrollPosition({ element, useWindow }) {
 export function useScrollPosition(
   effect,
   deps,
-  { element, useWindow, wait } = {}
+  { element, useWindow, wait } = {},
 ) {
   const position = useRef(getScrollPosition({ useWindow }));
 
@@ -53,7 +53,7 @@ export function useIsScrolled({ element, wait, offset = 0 } = {}) {
       if (isShow !== isScrolled) setScrolled(isShow);
     },
     [isScrolled],
-    { element, useWindow: !element, wait }
+    { element, useWindow: !element, wait },
   );
 
   return isScrolled;

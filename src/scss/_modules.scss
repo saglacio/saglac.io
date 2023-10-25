@@ -1,5 +1,5 @@
 // These includes are made available in all the imported SCSS across the app.
-@import 'variables';
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins';
+@import url('variables');
+@import url('~bootstrap/scss/functions');
+@import url('~bootstrap/scss/variables');
+@import url('~bootstrap/scss/mixins');

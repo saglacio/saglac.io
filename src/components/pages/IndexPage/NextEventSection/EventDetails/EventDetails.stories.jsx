@@ -22,7 +22,7 @@ export const DefaultLocationInfo = () => (
     name={text('Name?', 'Hotel le montagnais')}
     description={text(
       'Description?',
-      'L’Hôtel Le Montagnais est l’un des plus grands hôtels au Québec avec un centre de congrès intégré. Le service attentionné à tous les instants et la qualité de la nourriture est leur priorité et leur renommé.'
+      'L’Hôtel Le Montagnais est l’un des plus grands hôtels au Québec avec un centre de congrès intégré. Le service attentionné à tous les instants et la qualité de la nourriture est leur priorité et leur renommé.',
     )}
     eventUrl={text('https://example.com/')}
     title={text("Titre de l'évènement!")}

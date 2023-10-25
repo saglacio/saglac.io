@@ -1,4 +1,4 @@
-const { resolve } = require("path");
+const { resolve } = require('path');
 
 const config = require('./SiteConfig');
 const sassConfig = require('./sass-loader.config');
@@ -20,7 +20,7 @@ module.exports = {
       description: config.siteDescription,
       image_url: `${urljoin(
         config.siteUrl,
-        config.pathPrefix
+        config.pathPrefix,
       )}/logos/logo-512.png`,
       copyright: config.copyright,
     },
