@@ -26,6 +26,10 @@ It is built with the [JAMStack](https://jamstack.org/), which means it's static 
 
 See yaml files in [`./data/`](./data/).
 
+- an event is added as a .yml file in `data/io-events`
+- authors are in `data/authors`
+- locations are in `data/locations`
+
 Make sure the **Authors** and **Locations** have the necessary models before creating a new event.
 
 ## Development
@@ -82,7 +86,7 @@ Then it should automatically open the browser page.
 
 ## Authors
 
-*   Emile Bergeron ([@emileber](https://github.com/emileber))
-*   Gabriel Le Breton ([@gableroux](https://gableroux.com/))
-*   Raphaël Côté ([@qwertyuu](https://github.com/qwertyuu))
-*   You? :)
+- Emile Bergeron ([@emileber](https://github.com/emileber))
+- Gabriel Le Breton ([@gableroux](https://gableroux.com/))
+- Raphaël Côté ([@qwertyuu](https://github.com/qwertyuu))
+- You? :)
