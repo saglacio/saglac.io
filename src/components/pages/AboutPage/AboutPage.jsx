@@ -10,8 +10,16 @@ const AboutPage = () => (
         Qu'est-ce que le SagLac IO?
       </Typography>
       <p>
-        Le Saglac IO est un rassemblement technologique mensuel gratuit dans la région du Saguenay—Lac-St-Jean, organisé par une communauté d'enthousiastes de la technologie. Ces rencontres, ouvertes à tous, permettent aux professionnels et aux amateurs de partager leur passion et leurs dernières découvertes dans le domaine informatique à travers des discussions, du réseautage et des présentations courtes. Les événements ont lieu alternativement entre Saguenay et Alma, avec une date fixée chaque mois en fonction de la disponibilité des organisateurs et des présentateurs.
-        <p/>
+        Le Saglac IO est un rassemblement technologique mensuel gratuit dans la
+        région du Saguenay—Lac-St-Jean, organisé par une communauté
+        d'enthousiastes de la technologie. Ces rencontres, ouvertes à tous,
+        permettent aux professionnels et aux amateurs de partager leur passion
+        et leurs dernières découvertes dans le domaine informatique à travers
+        des discussions, du réseautage et des présentations courtes. Les
+        événements ont lieu alternativement entre Saguenay et Alma, avec une
+        date fixée chaque mois en fonction de la disponibilité des organisateurs
+        et des présentateurs.
+      </p>
       <Typography variant="h2" className="mb-3">
         Historique rapide
       </Typography>
