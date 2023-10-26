@@ -93,6 +93,7 @@ SocialLinks.propTypes = {
   facebook: PropTypes.string,
   twitter: PropTypes.string,
   linkedIn: PropTypes.string,
+  discord: PropTypes.string,
   github: PropTypes.string,
   other: PropTypes.string,
 };
