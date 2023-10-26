@@ -24,6 +24,7 @@ const config = {
   facebookPage: 'https://www.facebook.com/saglacio', // Facebook Page URL.
   twitterPage: 'https://twitter.com/saglacio', // Twitter Page URL.
   linkedInPage: 'https://www.linkedin.com/company/saglac-io', // LinkedIn Page URL.
+  discordUrl: 'https://discord.gg/8pY5XVhvYM', // Discord URL
 
   // TO REMOVE: Links to social profiles/projects you want to display in the author segment/navigation bar.
   // userLinks: [

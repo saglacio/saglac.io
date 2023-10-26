@@ -4,6 +4,7 @@ import {
   faFacebookF,
   faGithub,
   faLinkedinIn,
+  faDiscord,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import PropTypes from 'prop-types';
@@ -24,6 +25,7 @@ const SocialLinks = ({
   twitter,
   linkedIn,
   github,
+  discord,
   other,
 }) => {
   const btnProps = {
@@ -62,6 +64,13 @@ const SocialLinks = ({
           {...btnProps}
           icon={<FontAwesomeIcon icon={faGithub} />}
           href={github}
+        />
+      )}
+      {discord && (
+        <Button
+          {...btnProps}
+          icon={<FontAwesomeIcon icon={faDiscord} />}
+          href={discord}
         />
       )}
       {other && (

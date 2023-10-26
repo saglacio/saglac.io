@@ -13,7 +13,8 @@ import './Footer.scss';
 
 const Footer = ({ config }) => {
   // const url = config.siteRss;
-  const { copyright, facebookPage, linkedInPage, twitterPage } = config;
+  const { copyright, facebookPage, linkedInPage, twitterPage, discordUrl } =
+    config;
 
   return (
     <footer className="io-footer">
@@ -38,6 +39,7 @@ const Footer = ({ config }) => {
               facebook={facebookPage}
               twitter={twitterPage}
               linkedIn={linkedInPage}
+              discord={discordUrl}
             />
           </FooterCol>
         </Row>
