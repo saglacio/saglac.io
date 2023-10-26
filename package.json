@@ -5,7 +5,7 @@
   "author": "Émile Bergeron <ber.emile@prismalstudio.com>",
   "private": true,
   "engines": {
-    "node": "20.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "npm run dev",

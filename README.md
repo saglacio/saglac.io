@@ -36,7 +36,7 @@ Example PR adding an event: https://github.com/saglacio/saglac.io/pull/15
 
 ## Development
 
-We use NodeJS **version 20**. You can use [NVM](https://github.com/nvm-sh/nvm) or [Volta](https://volta.sh/) or any other NodeJS version manager to install it.
+We use NodeJS **version 18**. You can use [NVM](https://github.com/nvm-sh/nvm) or [Volta](https://volta.sh/) or any other NodeJS version manager to install it.
 
 Install the project:
 
