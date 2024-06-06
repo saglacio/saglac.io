@@ -1,1 +1,38 @@
-// TODO: fill this
+.event-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 16px 0;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-date,
+.event-location,
+.talk-author {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.talk-card {
+  background: #f9f9f9;
+  border-left: 4px solid #007BFF;
+  padding: 8px 16px;
+  margin: 8px 0;
+}
+
+.error-message {
+  color: #dc3545;
+}
+
+.event-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #007BFF;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #0056b3;
+  }
+}
