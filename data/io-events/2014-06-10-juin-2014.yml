@@ -5,13 +5,8 @@ talks:
 - authors:
   - adrien_vitti
   title: Création de paquets RPM pour Fedora/openSUSE/etc
-  twitter: n0tnull
 - authors:
   - martin_renaud
   title: 'Big Data: Le far west (présentation un peu plus longue)'
-  twitter: MartinRenaud
-- authors:
-  - toi!
-  title: Un super sujet à proposer?
-  twitter: saglacio
+
 title: Juin 2014

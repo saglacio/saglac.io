@@ -3,11 +3,10 @@ event_url: https://www.facebook.com/events/1707690526139089/
 location: bistro_du_centre
 talks:
 - authors:
-  - emile_bergeron
+  - emileber
   slides: http://emileber.github.io/cloud9-reveal/#/
   title: 'Cloud9 : Pelleter dans le nuage (Lightning Talk)'
 - authors:
-  - frederic_trottier-hebert
+  - ferd
   title: Du coup, Tmux!
-  twitter: mononcqc
 title: Avril 2016

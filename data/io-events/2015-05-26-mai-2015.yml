@@ -3,15 +3,11 @@ eventbrite_id: 16869582375
 location: entrecote_riverin_jonquiere
 talks:
 - authors:
-  - steeve_juair
+  - sjuair
   title: cos'è un hypervisor? (ça va parler de Proxmox)
-  twitter: Juair
 - authors:
-  - gabriel_le_breton_et_micael_bergeron
+  - gableroux
+  - micael_bergeron
   slides: https://gableroux.com/presentation/2015/06/03/saltstack-saglacio/
   title: SaltStack
-- authors:
-  - toi!
-  title: Le nouveau (ou pas si nouveau!) truc cool qui me fait tripper!
-  twitter: saglacio
 title: Mai 2015

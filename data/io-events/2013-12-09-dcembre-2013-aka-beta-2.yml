@@ -5,19 +5,15 @@ talks:
 - authors:
   - keven_lefebvre
   title: Introduction à Git
-  twitter: kevenlefebvre
 - authors:
-  - gabriel_le_breton
+  - gableroux
   slides: https://gableroux.com/presentation/2013/12/09/meteor-saglacio/
   title: Introduction à Meteor
-  twitter: gableroux
-  website: https://gableroux.com/
 - authors:
-  - julien-samuel_lacroix
+  - julien_samuel_lacroix
   title: Introduction à Amazon EC2
   twitter: juliensam
 - authors:
-  - jean-philippe_boily
+  - jipiboily
   title: Introduction aux tests
-  twitter: jipiboily
 title: Décembre 2013 - aka "beta 2"

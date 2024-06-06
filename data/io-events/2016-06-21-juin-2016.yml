@@ -3,13 +3,13 @@ event_url: https://www.facebook.com/events/1007957892587553/
 location: bistro_du_centre
 talks:
 - authors:
-  - gabriel_le_breton
+  - gableroux
   slides: https://gableroux.com/presentation/2016/06/21/influxdb-telegraf-grafana/
   title: InfluxDB Telegraf Grafana now I see the data
 - authors:
-  - jules_robichaud-gagnon
+  - jrobichaudg
   title: Introduction à Unity WebGL
 - authors:
-  - steeve_juair
+  - sjuair
   title: Home Automation
 title: Juin 2016

@@ -18,7 +18,8 @@ const ArchivesPage = ({ events }) => (
             <div className="talk-card" key={`event-${index}`}>
               <h3>{talk?.title}</h3>
               <p className="talk-author">
-                Personne présentant:{' '}
+                Présenté par:{' '}
+                {/* TODO: support multiple authors */}
                 {talk?.authors?.name || (
                   <span className="error-message">
                     ERREUR: veuillez ajouter le fichier `.yml` pour cette

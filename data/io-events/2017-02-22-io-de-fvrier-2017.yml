@@ -3,12 +3,11 @@ event_url: https://www.facebook.com/events/1496033413763387/
 location: bistro_du_centre
 talks:
 - authors:
-  - frederic_trottier-hebert
+  - ferd
   description: Primeur partielle sur une présentation du WAQ!
   title: Tout est terrible
-  twitter: mononcqc
 - authors:
-  - juan_pablo_aguilar-lliguin
+  - chefjuanpi
   description: Gérer l'aspect social d'une start-up avec des outils techno.
   title: Start-up mode loin du code
   website: http://arriba.ec/en/

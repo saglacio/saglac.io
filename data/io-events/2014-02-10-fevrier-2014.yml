@@ -5,13 +5,11 @@ talks:
 - authors:
   - alan_boudreault
   title: Environnement de développement avec Vagrant
-  twitter: AlanBoudreault
 - authors:
-  - julien-samuel_lacroix
+  - julien_samuel_lacroix
   title: Introduction à AngularJS
   twitter: JulienSam
 - authors:
   - marc_pearson
   title: FreeBSD
-  twitter: marcpearsonTI
 title: Février 2014
