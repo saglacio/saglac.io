@@ -43,11 +43,11 @@ const ArchivesPage = ({ events }) => {
                       />
                       {talk.authors.name}
                     </span>
-                  // TODO: add a way to support bio, github link, twitter link, website link, etc.
                   ) : (
+                    // TODO: add a way to support bio, github link, twitter link, website link, etc.
                     <span className="error-message">
-                      ERREUR: veuillez ajouter le fichier `.yml` pour cette personne
-                      dans le répertoire `data/authors`.
+                      ERREUR: veuillez ajouter le fichier `.yml` pour cette
+                      personne dans le répertoire `data/authors`.
                     </span>
                   )}
                 </p>
