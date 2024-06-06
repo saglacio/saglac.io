@@ -91,4 +91,5 @@ Then it should automatically open the browser page.
 - Emile Bergeron ([@emileber](https://github.com/emileber))
 - Gabriel Le Breton ([@gableroux](https://gableroux.com/))
 - Raphaël Côté ([@qwertyuu](https://github.com/qwertyuu))
+- Jean-Philippe Boily ([@jipiboily](https://github.com/jipiboily))
 - You? :)
