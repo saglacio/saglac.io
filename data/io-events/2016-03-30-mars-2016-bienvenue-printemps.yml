@@ -6,19 +6,14 @@ talks:
   - jipiboily
   title: '"De Rails aux microservices Go: notre expérience avec Gemnasium Enterprise"
     (version allégée de la conférence donnée au WAQ en avril prochain)'
-  twitter: jipiboily
 - authors:
-  - gabriel_le_breton
+  - gableroux
   slides: https://gableroux.com/presentation/2016/03/30/letsencrypt-saglacio/
   title: 'Let''s Encrypt: de kecé?'
-  twitter: gableroux
-  website: https://gableroux.com/
 - authors:
-  - jean-philippe_gravel
+  - jeanphilippe_gravel
   title: Faire sa propre authentification HTTP Basic en 15 minutes
-  twitter: formixse
 - authors:
   - jipiboily
   title: 'dix-patch: équivalent à Segment.io'
-  twitter: jipiboily
 title: 'Mars 2016: bienvenue, printemps!'

@@ -3,7 +3,7 @@ event_url: https://www.facebook.com/events/794932377276580/
 location: bistro_du_centre
 talks:
 - authors:
-  - émile_bergeron
+  - emileber
   title: 'Cordova/Ionic: To build two apps with one stone'
 - authors:
   - kim_desrosiers

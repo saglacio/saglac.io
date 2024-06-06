@@ -25,6 +25,31 @@
   color: #dc3545;
 }
 
+.author-info {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.author-avatar {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  border-radius: 50%;
+}
+
+.slides-link {
+  display: block;
+  margin-top: 8px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #0056b3;
+  }
+}
+
 .event-link {
   display: inline-block;
   margin-top: 8px;

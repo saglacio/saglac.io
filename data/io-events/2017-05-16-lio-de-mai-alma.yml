@@ -3,12 +3,11 @@ event_url: https://www.facebook.com/events/1574808475865288/
 location: cafe_du_clocher_alma
 talks:
 - authors:
-  - jean-philippe_gravel
+  - jeanphilippe_gravel
   slides: https://www.dropbox.com/s/19ce9ujgkjejmfx/SaglacIO-20170516-RFID.pdf?dl=0
   title: 'NFC c''est bien, UHF c''est mieux: Les mille-et-uns visages de la radio-identification.'
-  twitter: formixian
 - authors:
-  - émile_bergeron
+  - emileber
   title: 'Featuring Yarn Bower: Yarn, JavaScript package managers & stuff'
   website: http://www.prismalstudio.com/
 title: L'io de mai à Alma!

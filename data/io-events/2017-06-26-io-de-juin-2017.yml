@@ -3,7 +3,7 @@ event_url: https://www.facebook.com/events/445500365803825
 location: bistro_du_centre
 talks:
 - authors:
-  - jules_robichaud-gagnon
+  - jrobichaudg
   title: 'Awesome Django: factory-boy 🦄'
 - authors:
   - mathieu_auclair

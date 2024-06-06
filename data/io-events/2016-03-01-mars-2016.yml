@@ -5,13 +5,11 @@ talks:
 - authors:
   - sjuair
   title: Docker
-  twitter: Juair
 - authors:
-  - jean-nicolas_viens
+  - jean_nicolas_viens
   title: Design d’interfaces web dans un cadre Agile
   twitter: jni_viens
 - authors:
-  - jean-philippe_gravel
+  - jeanphilippe_gravel
   title: Introduction à l'inférence avec NodeJs
-  twitter: formixse
 title: Mars 2016

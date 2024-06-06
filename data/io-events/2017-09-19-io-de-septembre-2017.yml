@@ -5,10 +5,8 @@ talks:
 - authors:
   - kim_desrosiers
   title: Why we chose Vuejs (en français)
-  twitter: kimondd
 - authors:
-  - gabriel_le_breton
+  - gableroux
   slides: https://gableroux.com/saglacio/2017/09/19/fastlane-deploy-ios-and-android-like-a-boss/
   title: 'Fastlane: deploy android and ios apps like a boss'
-  twitter: gableroux
 title: IO de Septembre 2017

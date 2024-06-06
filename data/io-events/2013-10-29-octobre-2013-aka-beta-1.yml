@@ -4,13 +4,10 @@ talks:
 - authors:
   - jipiboily
   title: Présentation de l’idée du groupe
-  twitter: jipiboily
 - authors:
   - jipiboily
   title: Introduction à CoffeeScript
-  twitter: jipiboily
 - authors:
-  - marc-andré_goderre
+  - marc_andre_goderre
   title: La géomatique dans vos appli!
-  twitter: magoderre
 title: Octobre 2013 - aka "beta 1"

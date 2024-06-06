@@ -5,7 +5,6 @@ talks:
 - authors:
   - ferd
   title: Erlang
-  twitter: mononcqc
 - authors:
   - kim_desrosiers
   title: How to Vim
@@ -13,5 +12,4 @@ talks:
 - authors:
   - jipiboily
   title: Lightning talk à propos de Fourchette et Opinionated
-  twitter: jipiboily
 title: Avril 2014

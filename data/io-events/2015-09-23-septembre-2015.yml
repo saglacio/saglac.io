@@ -7,9 +7,8 @@ talks:
   title: Play games in your CLI
   twitter: kimondd
 - authors:
-  - gabriel_le_breton
+  - gableroux
   title: (REPORTÉ AU MOIS PROCHAIN) HUBOT - Improve and reduce employee efficiency
-  twitter: gableroux
 - authors:
   - patrick_tremblay
   title: Développer pour le chromecast

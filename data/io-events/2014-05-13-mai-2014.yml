@@ -5,17 +5,11 @@ talks:
 - authors:
   - sjuair
   title: Titre à venir
-  twitter: Juair
 - authors:
-  - jean-daniel_pearson
+  - jean_daniel_pearson
   title: Maven & tests in java
-  twitter: JD_Pearson_
 - authors:
-  - joel_trottier-hebert
+  - joelthebert
   title: Améliorer la testabilité du code
-  twitter: JoelTHebert
-- authors:
-  - toi!
-  title: Un super sujet à proposer?
-  twitter: saglacio
+
 title: Mai 2014

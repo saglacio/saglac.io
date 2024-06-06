@@ -6,10 +6,7 @@ talks:
   - kimlavoie
   title: Introduction à Scala
 - authors:
-  - jessica_lapointe
+  - jlapointe
   title: Révisions de DB avec Alembic et SQLAlchemy
-- authors:
-  - toi!
-  title: Un super sujet à proposer?
-  twitter: saglacio
+
 title: Décembre 2015

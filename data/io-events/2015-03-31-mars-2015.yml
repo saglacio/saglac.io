@@ -3,10 +3,7 @@ eventbrite_id: 16327857060
 location: tour_a_biere_chicoutimi
 talks:
 - authors:
-  - jessica_lapointe
+  - jlapointe
   title: Introduction à git
-- authors:
-  - toi!
-  title: Un super sujet à proposer?
-  twitter: saglacio
+
 title: Mars 2015

@@ -5,11 +5,9 @@ talks:
 - authors:
   - ferd
   title: Tester du Python en Erlang
-  twitter: mononcqc
 - authors:
   - sjuair
   title: Docker
-  twitter: Juair
 - authors:
   - kimlavoie
   title: Programmation fonctionnelle en JS
@@ -17,5 +15,4 @@ talks:
   - jipiboily
   title: (Si le temps le permet) Démo de React + Redux + Jasmine dans le code de Metrics
     Watch
-  twitter: jipiboily
 title: Janvier 2016

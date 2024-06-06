@@ -12,11 +12,9 @@ talks:
   title: 'Introduction to Pyramid: a web application development framework.'
   twitter: AlanBoudreault
 - authors:
-  - marc-andré_goderre
+  - marc_andre_goderre
   title: PostgreSQL, de tout pour tous.
-  twitter: magoderre
 - authors:
   - jipiboily
   title: 'RubyMotion: create Mac (or iOS) apps with lovely Ruby'
-  twitter: jipiboily
 title: Janvier 2014 - Nickel edition

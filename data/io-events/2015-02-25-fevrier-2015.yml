@@ -4,14 +4,11 @@ location: hopera_jonquiere
   et nourriture!
 talks:
 - authors:
-  - julien-samuel_lacroix
+  - julien_samuel_lacroix
   title: Le top des outils essentiels d'un bon OS
   twitter: JulienSam
 - authors:
-  - jessica_lapointe
+  - jlapointe
   title: 'Google Summer of Code: Un emploie étudiant qui compte! (lightning talk)'
-- authors:
-  - toi!
-  title: Un super sujet à proposer?
-  twitter: saglacio
+
 title: Février 2015

@@ -5,7 +5,6 @@ talks:
 - authors:
   - sjuair
   title: L'Arduino a nos portes!
-  twitter: Juair
 - authors:
   - francis_renaud
   title: 'Framework Django: cessez de vous répéter'
@@ -13,9 +12,7 @@ talks:
 - authors:
   - martin_lavoie
   title: Elm à Elma
-  twitter: refnil19
 - authors:
   - alexandre_lessard
   title: Polymer, Google veulent tuer javascript! (présentation éclair)
-  twitter: belug23
 title: Mars 2014
