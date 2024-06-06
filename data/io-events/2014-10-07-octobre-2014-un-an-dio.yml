@@ -3,7 +3,7 @@ eventbrite_id: 13170572537
 location:
 talks:
 - authors:
-  - frederic_trottier-hebert
+  - ferd
   title: 'SQL vs. NoSQL: comment choisir sa base de données'
   twitter: mononcqc
 - authors:

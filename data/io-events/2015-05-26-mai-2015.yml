@@ -3,7 +3,7 @@ eventbrite_id: 16869582375
 location: entrecote_riverin_jonquiere
 talks:
 - authors:
-  - steeve_juair
+  - sjuair
   title: cos'è un hypervisor? (ça va parler de Proxmox)
   twitter: Juair
 - authors:
