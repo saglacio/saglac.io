@@ -3,7 +3,7 @@ eventbrite_id: 10924929759
 location: bar_la_zone_jonquiere
 talks:
 - authors:
-  - frederic_trottier-hebert
+  - ferd
   title: Erlang
   twitter: mononcqc
 - authors:
@@ -11,7 +11,7 @@ talks:
   title: How to Vim
   twitter: kimondd
 - authors:
-  - jean-philippe_boily
+  - jipiboily
   title: Lightning talk à propos de Fourchette et Opinionated
   twitter: jipiboily
 title: Avril 2014

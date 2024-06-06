@@ -3,7 +3,7 @@ event_url: https://www.facebook.com/events/163206777482547/
 location: mikes_chicoutimi_racine
 talks:
 - authors:
-  - frederic_trottier-hebert
+  - ferd
   slides: https://s3.amazonaws.com/ferd-presentations/150-en-10.pdf
   title: 150 pages de recherches en génie logiciel en 10 slides
   twitter: mononcqc

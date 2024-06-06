@@ -3,7 +3,7 @@ event_url: https://www.facebook.com/events/810666755732038/
 location: cafe_du_clocher_alma
 talks:
 - authors:
-  - jean-philippe_boily
+  - jipiboily
   title: '"De Rails aux microservices Go: notre expérience avec Gemnasium Enterprise"
     (version allégée de la conférence donnée au WAQ en avril prochain)'
   twitter: jipiboily
@@ -18,7 +18,7 @@ talks:
   title: Faire sa propre authentification HTTP Basic en 15 minutes
   twitter: formixse
 - authors:
-  - jean-philippe_boily
+  - jipiboily
   title: 'dix-patch: équivalent à Segment.io'
   twitter: jipiboily
 title: 'Mars 2016: bienvenue, printemps!'

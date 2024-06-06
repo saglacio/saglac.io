@@ -3,7 +3,7 @@ event_url: https://www.facebook.com/events/197726173893502/
 location: mikes_chicoutimi_racine
 talks:
 - authors:
-  - kim_lavoie
+  - kimlavoie
   title: Introduction à Scala
 - authors:
   - jessica_lapointe

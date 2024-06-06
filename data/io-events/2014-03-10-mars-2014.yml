@@ -3,7 +3,7 @@ eventbrite_id: 10597434211
 location: exode
 talks:
 - authors:
-  - steeve_juair
+  - sjuair
   title: L'Arduino a nos portes!
   twitter: Juair
 - authors:
