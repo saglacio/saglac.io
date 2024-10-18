@@ -1,0 +1,17 @@
+title: '"micro ouvert" beta 1 + doublé des frêres Trottier-Hebert'
+description: 'Nous vous invitons à nous joindre pour manger et/ou prendre un verre en discutant de techno et de développement informatique. On se donne rendez-vous à 18:00, et les présentations commencent vers 19:00. Venez jaser techno avec nous! 🙂'
+date: '2024-10-24T18:00:00.000Z'
+event_url: https://www.facebook.com/events/853584520233971/
+location: scores_chicoutimi
+talks:
+  - authors:
+      - joelthebert
+    title: 'Le puits sans fond des claviers ergonomiques: comment construire son propre clavier'
+  - authors:
+      - ferd
+    title: 'Être on-call sans se brûler'
+    description: 'Quels sont les facteurs à considérer pour établir des rotations de garde qui sont réalistes et durables.'
+  - authors:
+      - openmic
+    title: 'Portion "micro ouvert"'
+    description: 'Tout le monde pourra proposer un sujet duquel vous voulez parler de manière improvisée avec pas ou peu de soutien audio-visuel. Les gens voteront, et 1 ou 2 sujets seront retenus (selon le temps) pour des courtes présentations de 3 à 5 minutes.'
