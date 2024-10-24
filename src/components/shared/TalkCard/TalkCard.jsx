@@ -7,19 +7,13 @@ import Typography from '@/components/shared/Typography';
 import { talkType } from '@/types';
 import './TalkCard.scss';
 
-// Avoids browser caching and reusing the same image.
-let imageIndex = 0;
-const getDefaultSpeakerImage = () =>
-  `https://source.unsplash.com/600x400/?programming,code&sig=${imageIndex++}`;
-
 const TalkCard = ({ talk: { title, authors } }) => (
   <Card className="io-talk-card">
-    <CardImg src={getDefaultSpeakerImage()} alt="Card image cap" />
     <CardImgOverlay className="details">
-      <Typography variant="h4" className="mb-1">
+      <Typography variant="h4" className="title">
         {title}
       </Typography>
-      <Typography variant="span" light>
+      <Typography variant="span" light className="authors">
         <em>{authors.name}</em>
       </Typography>
     </CardImgOverlay>

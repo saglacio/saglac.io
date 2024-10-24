@@ -5,7 +5,7 @@ import './SectionHeader.scss';
 
 const SectionHeader = ({ children, className, title, ...props }) => (
   <header className={cn('io-section-header', className)} {...props}>
-    <Typography className="mb-1" variant="h2" uppercase>
+    <Typography variant="h2" uppercase>
       {title}
     </Typography>
     <Typography lead>{children}</Typography>
