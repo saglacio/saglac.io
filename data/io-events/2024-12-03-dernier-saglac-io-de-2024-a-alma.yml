@@ -9,8 +9,8 @@ location: cafe_du_clocher_alma
 talks:
   - authors:
       - jipiboily
-    title: 'Linux et/ou NixOS'
-    description: '(à confirmer)'
+    title: 'Linux en 2024? Ma quête. Le trésor? NixOS...?'
+    description: 'Une quête épique à travers le monde merveilleux de Linux en 2024, où notre héros découvre NixOS comme le Saint Graal de la configuration système... avec une bonne dose de souffrance en prime! 😅'
   - authors:
       - openmic
     title: 'Portion "micro ouvert"'
