@@ -1,6 +1,6 @@
-title: 'Jeudi à Jonquière: Feature Flags et Neovim au SaglacIO'
+title: 'Mercredi le 30 avril à Jonquière: Feature Flags et Neovim au SaglacIO'
 description: |
-  On se retrouve ce jeudi au Boston Pizza de Jonquière à 18h00 pour une nouvelle soirée techno qui s'annonce captivante !
+  On se retrouve ce mercredi le 30 avril au Boston Pizza de Jonquière à 18h00 pour une nouvelle soirée techno qui s'annonce captivante !
 
   Au programme:
 
@@ -21,6 +21,10 @@ talks:
       - jim_plourde
     title: 'Neovim'
     description: "Un lightning talk sur Neovim, l'éditeur de texte moderne basé sur Vim."
+  - authors:
+      - sjuair
+    title: 'HomeAssistant'
+    description: "Un lightning talk sur HomeAssistant, l'assistant pour la maison intelligente."
   - authors:
       - openmic
     title: 'Portion "micro ouvert"'
