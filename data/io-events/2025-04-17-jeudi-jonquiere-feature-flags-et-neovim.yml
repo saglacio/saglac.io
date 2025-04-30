@@ -1,0 +1,27 @@
+title: 'Jeudi à Jonquière: Feature Flags et Neovim au SaglacIO'
+description: |
+  On se retrouve ce jeudi au Boston Pizza de Jonquière à 18h00 pour une nouvelle soirée techno qui s'annonce captivante !
+
+  Au programme:
+
+  - **Talk** : "Feature Flags: Petit Manuel de Survie" par Benjamin Destrempes
+  - **Lightning talk**: "Neovim" par Jean-Michel Plourde
+  - **Micro ouvert**: Venez proposer vos sujets pour des présentations courtes! Des idées, des découvertes récentes, une techno que vous adorez? C'est le moment de partager !
+
+  Le micro ouvert est une excellente occasion de partager vos passions, technos ou anecdotes avec la communauté, peu importe votre niveau d'expérience. Pas besoin de slides sophistiqués, juste votre enthousiasme !
+date: '2025-04-17T18:00:00.000Z'
+event_url: https://www.facebook.com/share/1C3Z5Sp1HN/
+location: boston_pizza_jonquiere
+talks:
+  - authors:
+      - benjamin_destrempes
+    title: 'Feature Flags: Petit Manuel de Survie'
+    description: 'Un talk sur les Feature Flags et leur utilisation en développement logiciel.'
+  - authors:
+      - jim_plourde
+    title: 'Neovim'
+    description: "Un lightning talk sur Neovim, l'éditeur de texte moderne basé sur Vim."
+  - authors:
+      - openmic
+    title: 'Portion "micro ouvert"'
+    description: 'Tout le monde pourra proposer un sujet duquel vous voulez parler de manière improvisée avec pas ou peu de soutien audio-visuel. Les gens voteront, et 1 ou 2 sujets seront retenus pour des courtes présentations de 3 à 5 minutes.'
