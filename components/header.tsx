@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -13,10 +14,14 @@ export function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <div className="text-2xl font-bold">
-              <span className="text-foreground">saglac</span>
-              <span className="text-primary">.io</span>
-            </div>
+            <Image
+              src="/images/logos/SaglacIO_Logo_Meetups_Inverted.png"
+              alt="Logo de SagLac IO"
+              width={180}
+              height={45}
+              className="h-10 w-auto"
+              unoptimized
+            />
           </Link>
 
           {/* Desktop Navigation */}

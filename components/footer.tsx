@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Facebook, Mail, Twitter, Linkedin, MessageSquare } from 'lucide-react'
 
 export function Footer() {
@@ -7,10 +8,16 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">
-              <span className="text-foreground">saglac</span>
-              <span className="text-primary">.io</span>
-            </h3>
+            <div className="mb-4">
+              <Image
+                src="/images/logos/SaglacIO_Logo_Meetups_Inverted.png"
+                alt="Logo de SagLac IO"
+                width={180}
+                height={45}
+                className="h-10 w-auto"
+                unoptimized
+              />
+            </div>
             <p className="text-foreground/70 leading-relaxed">
               Communauté bénévole de passionnés de technologies numériques au Saguenay—Lac-Saint-Jean.
             </p>
