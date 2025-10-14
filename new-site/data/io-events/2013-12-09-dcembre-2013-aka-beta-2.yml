@@ -1,0 +1,19 @@
+date: '2013-12-09T23:00:00.000Z'
+eventbrite_id: 9389088015
+location: bar_la_zone_jonquiere
+talks:
+- authors:
+  - keven_lefebvre
+  title: Introduction à Git
+- authors:
+  - gableroux
+  slides: https://gableroux.com/presentation/2013/12/09/meteor-saglacio/
+  title: Introduction à Meteor
+- authors:
+  - julien_samuel_lacroix
+  title: Introduction à Amazon EC2
+  twitter: juliensam
+- authors:
+  - jipiboily
+  title: Introduction aux tests
+title: Décembre 2013 - aka "beta 2"

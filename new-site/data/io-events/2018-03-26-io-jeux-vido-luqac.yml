@@ -1,0 +1,25 @@
+date: '2018-03-26T23:00:00.000Z'
+event_url: https://www.facebook.com/events/2093498940886079
+location: uqac_aquarium
+talks:
+- authors:
+  - aduquette
+  description: Les besoins spéciaux de la réalité virtuelle, que ce soit matériel,
+    logiciel ou design, dans les jeux vidéo.
+  title: Les complications du VR Gaming
+- authors:
+  - gableroux
+  description: '[City Crashers](https://gamejolt.com/games/city-crashers/323962)''s
+    satisfying building destruction in 15 minutes.'
+  slides: https://gableroux.com/saglacio/2018/02/26/explode-buildings-in-unity-with-blender/
+  title: How to explode buildings in a gamejam with unity and blender
+- authors:
+  - elaberge
+  description: Deux sujets rapides sur comment implémenter le modèle ECS et sur les
+    stratégies courantes de gestion de la mémoire dans un moteur de jeu.
+  slides:
+  - https://docs.google.com/presentation/d/1znRKPo9kNkGatRea-OIMaNM-1wxiibqDHjuemNqNZ0M
+  - https://docs.google.com/presentation/d/1jSlQ9ooqT3rKxkyxSnb1qv11KSB12UmWzbDKWFPtzW8
+  title: 'Programme double: Implémentation du modèle ECS / Gérer la mémoire dans un
+    jeu'
+title: IO Jeux vidéo à l'UQAC

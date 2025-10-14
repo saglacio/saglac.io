@@ -1,0 +1,17 @@
+title: 'Dernier Saglac IO de 2024 à Alma'
+description: |
+  Nous allons poursuivre avec notre formule "micro ouvert", en la peaufinant légèrement. Chaque participant pourra proposer un sujet à discuter de manière improvisée, avec peu ou pas de soutien visuel. Après des votes, 2 ou 3 sujets seront retenus pour des présentations courtes de 3 à 5 minutes. Cela peut être un sujet d'actualité, une bibliothèque que vous utilisez, ou tout autre sujet qui pourrait intéresser la communauté.
+  De plus, JP Boily présentera soit au sujet de Linux et/ou NixOS (détails à confirmer). Il reste également une place pour un autre talk, donc n'hésitez pas à proposer vos sujets. Sinon, on aura plus de temps pour plus de propositions au micro ouvert.
+  À bientôt!
+date: '2024-12-03T23:00:00.000Z'
+event_url: https://www.facebook.com/events/1278297156657936/
+location: cafe_du_clocher_alma
+talks:
+  - authors:
+      - jipiboily
+    title: 'Linux en 2024? Ma quête. Le trésor? NixOS...?'
+    description: 'Une quête épique à travers le monde merveilleux de Linux en 2024, où notre héros découvre NixOS comme le Saint Graal de la configuration système... avec une bonne dose de souffrance en prime! 😅'
+  - authors:
+      - openmic
+    title: 'Portion "micro ouvert"'
+    description: 'Tout le monde pourra proposer un sujet duquel vous voulez parler de manière improvisée avec pas ou peu de soutien audio-visuel. Les gens voteront, et 1 ou 2 sujets seront retenus (selon le temps) pour des courtes présentations de 3 à 5 minutes.'

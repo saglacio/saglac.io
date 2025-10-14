@@ -1,0 +1,11 @@
+date: '2019-03-19T23:00:00.000Z'
+event_url: https://www.facebook.com/events/302634487076300/
+location: mikes_chicoutimi_racine
+talks:
+- authors:
+  - vincentpoirier
+  title: Gain control of your app with Firebase
+- authors:
+  - mathieu_auclair
+  title: ASP.NET
+title: IO mars 2019 à Chicoutimi

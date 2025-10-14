@@ -1,0 +1,12 @@
+date: '2017-09-19T23:00:00.000Z'
+event_url: https://www.facebook.com/events/397532047316656
+location: bistro_du_centre
+talks:
+- authors:
+  - kim_desrosiers
+  title: Why we chose Vuejs (en français)
+- authors:
+  - gableroux
+  slides: https://gableroux.com/saglacio/2017/09/19/fastlane-deploy-ios-and-android-like-a-boss/
+  title: 'Fastlane: deploy android and ios apps like a boss'
+title: IO de Septembre 2017

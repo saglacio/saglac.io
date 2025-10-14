@@ -1,101 +1,192 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Calendar, MapPin, ExternalLink, User } from "lucide-react"
+import { getNextEvent, getAuthorAvatar } from '@/lib/data-loader'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Calendar, MapPin, ExternalLink, Archive } from 'lucide-react'
+import Link from 'next/link'
 
 export function NextEvent() {
-  // Example event data - in a real app, this would come from a CMS or API
-  const nextEvent = {
-    title: "IO décembre 2022 à Alma!",
-    date: "2022-12-14T23:00:00.000Z",
-    location: "Café du Clocher (Alma)",
-    locationAddress: "19 Rue St Joseph S, Alma, Québec G8B 3E2",
-    eventUrl: "https://www.facebook.com/events/1533854587129087",
-    talks: [
-      {
-        title: "Terraform: gérer ses ressources cloud avec du code",
-        authors: ["Jim Plourde"],
-        description:
-          "Le cloud est complexe d'approche. C'est encore plus vrai lorsqu'on veut utiliser différents environnements (dev, prod, qa, etc.) pour un projet. Nous allons découvrir l'un des outils \"Code as Infrastructure\" qui nous permettent d'aller au-delà de l'implémentation manuelle.",
-      },
-      {
-        title: "Nix pour les nuls",
-        authors: ["Martin Lavoie"],
-        description:
-          "Présentation de l'univers du \"build system\" Nix à partir de l'exécution d'une commande jusqu'à un déploiement sur l'infonuagique. Nous commencerons par les questions de base: quoi, comment, quand, qui et pourquoi.",
-      },
-      {
-        title: "Qwik: Le future des framework JS",
-        authors: ["Émile Bergeron"],
-        description:
-          "Avec des pages de plus en plus lourdes en JavaScript, Qwik est potentiellement la solution à cette tendance.",
-      },
-    ],
-  }
+  const event = getNextEvent()
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
-    return date.toLocaleDateString("fr-CA", {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-    })
+  if (!event) {
+    return (
+      <section id="meetup" className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Prochain <span className="text-primary">événement</span>
+            </h2>
+            <p className="text-lg text-foreground/80 mb-8">
+              Aucun événement à venir pour le moment. Restez à l'affût!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg">
+                <a href="https://www.facebook.com/groups/saglac.io" target="_blank" rel="noopener noreferrer">
+                  Rejoindre le groupe Facebook
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <Link href="/archives">
+                  <Archive className="w-4 h-4 mr-2" />
+                  Voir les événements passés
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
   }
 
   return (
-    <section id="meetup" className="py-24">
+    <section id="meetup" className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Prochain <span className="text-primary">événement</span>
             </h2>
-            <p className="text-lg text-foreground/80">Rejoignez-nous pour notre prochaine rencontre technologique</p>
           </div>
 
-          <Card className="bg-card border-border mb-8">
-            <CardHeader>
-              <CardTitle className="text-3xl">{nextEvent.title}</CardTitle>
-              <div className="flex flex-col gap-3 mt-4 text-foreground/80">
+          <Card className="overflow-hidden border-2 border-primary/20">
+            <CardHeader className="bg-primary/5">
+              <CardTitle className="text-3xl">{event.title}</CardTitle>
+              <div className="space-y-2 text-base mt-4">
                 <div className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5 text-primary" />
-                  <span>{formatDate(nextEvent.date)}</span>
+                  <Calendar className="w-5 h-5" />
+                  {new Date(event.date).toLocaleDateString('fr-CA', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  })}
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <span>
-                    {nextEvent.location} - {nextEvent.locationAddress}
-                  </span>
+                  <MapPin className="w-5 h-5" />
+                  <a
+                    href={event.location.url || event.location.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {event.location.name}
+                  </a>
                 </div>
+                {event.location.address && (
+                  <div className="text-sm text-foreground/70 ml-7">{event.location.address}</div>
+                )}
               </div>
             </CardHeader>
-            <CardContent>
-              <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto">
-                <a href={nextEvent.eventUrl} target="_blank" rel="noopener noreferrer">
-                  Voir l'événement sur Facebook
-                  <ExternalLink className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
 
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold mb-6">Présentations</h3>
-            {nextEvent.talks.map((talk, index) => (
-              <Card key={index} className="bg-secondary border-border hover:border-primary/50 transition-colors">
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-semibold mb-3">{talk.title}</h4>
-                  <div className="flex items-center gap-2 mb-3 text-sm text-primary">
-                    <User className="w-4 h-4" />
-                    <span>{talk.authors.join(", ")}</span>
+            {/* Map and Event Details Grid */}
+            {event.location.map && (
+              <div className="grid md:grid-cols-2 gap-0">
+                {/* Google Maps Embed */}
+                <div className="w-full h-[300px] md:h-[400px]">
+                  <iframe
+                    title="Event Location Map"
+                    src={event.location.map}
+                    className="w-full h-full border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+
+                {/* Event Details */}
+                <CardContent className="py-6">
+                  {event.description && (
+                    <div className="mb-6 prose prose-sm max-w-none dark:prose-invert">
+                      <p>{event.description}</p>
+                    </div>
+                  )}
+
+                  {event.location.description && (
+                    <div className="mb-6 p-4 bg-secondary/30 rounded-lg">
+                      <h3 className="font-semibold mb-2 flex items-center gap-2">
+                        <MapPin className="w-4 h-4" />
+                        À propos du lieu
+                      </h3>
+                      <p className="text-sm text-foreground/70">{event.location.description}</p>
+                    </div>
+                  )}
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    {event.event_url && (
+                      <Button asChild size="default" className="flex-1">
+                        <a href={event.event_url} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Participer
+                        </a>
+                      </Button>
+                    )}
+                    <Button asChild size="default" variant="outline" className="flex-1">
+                      <Link href="/archives">
+                        <Archive className="w-4 h-4 mr-2" />
+                        Archives
+                      </Link>
+                    </Button>
                   </div>
-                  <p className="text-foreground/70 leading-relaxed">{talk.description}</p>
                 </CardContent>
-              </Card>
-            ))}
-          </div>
+              </div>
+            )}
+
+            {/* Talks Section - Full Width */}
+            {event.talks && event.talks.length > 0 && (
+              <CardContent className={event.location.map ? 'pt-0' : 'pt-6'}>
+                {event.description && !event.location.map && (
+                  <div className="mb-6 prose prose-sm max-w-none dark:prose-invert">
+                    <p>{event.description}</p>
+                  </div>
+                )}
+
+                <div className="space-y-4 mb-6">
+                  <h3 className="font-semibold text-lg">Au programme:</h3>
+                  {event.talks.map((talk, idx) => (
+                    <div key={idx} className="border-l-2 border-primary/30 pl-4">
+                      <h4 className="font-medium">{talk.title}</h4>
+                      {talk.description && (
+                        <p className="text-sm text-foreground/70 mb-2">{talk.description}</p>
+                      )}
+                      <div className="flex items-center gap-2 flex-wrap mt-2">
+                        <span className="text-sm text-foreground/60">Par:</span>
+                        {talk.authors.map((author) => (
+                          <div key={author.id} className="flex items-center gap-2">
+                            <Avatar className="w-6 h-6">
+                              <AvatarImage src={getAuthorAvatar(author)} alt={author.name} />
+                              <AvatarFallback>{author.name[0]}</AvatarFallback>
+                            </Avatar>
+                            <span className="text-sm">{author.name}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {!event.location.map && (
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    {event.event_url && (
+                      <Button asChild size="lg" className="flex-1 sm:flex-initial">
+                        <a href={event.event_url} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Voir l'événement Facebook
+                        </a>
+                      </Button>
+                    )}
+                    <Button asChild size="lg" variant="outline" className="flex-1 sm:flex-initial">
+                      <Link href="/archives">
+                        <Archive className="w-4 h-4 mr-2" />
+                        Événements passés
+                      </Link>
+                    </Button>
+                  </div>
+                )}
+              </CardContent>
+            )}
+          </Card>
         </div>
       </div>
     </section>

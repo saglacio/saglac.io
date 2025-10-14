@@ -1,0 +1,11 @@
+date: '2022-11-15T23:00:00.000Z'
+event_url: https://www.facebook.com/events/1292315631348928/
+location: pulsar_informatique.yml
+talks:
+- authors:
+  - vincentpoirier
+  title: C'est quoi un Homelab?
+- authors:
+  - ferd
+  title: On ne découvre pas les erreurs, on les invente.
+title: IO de novembre chez Pulsar Informatique

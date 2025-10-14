@@ -1,0 +1,14 @@
+date: '2022-03-24T23:00:00.000Z'
+event_url: https://www.facebook.com/events/1221379294933684/
+location: lion_bleu
+talks:
+  - authors:
+      - emileber
+    title: Survol technique du nouveau site web du Saglac IO
+  - authors:
+      - jlapointe
+    title: Fonts variables pour le web
+  - authors:
+      - jeanphilippe_gravel
+    title: Je ne suis pas mon code et mon code est probablement mauvais
+title: IO d'avril 2022 au Lion Bleu

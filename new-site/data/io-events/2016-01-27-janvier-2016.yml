@@ -1,0 +1,18 @@
+date: '2016-01-27T23:00:00.000Z'
+event_url: https://www.facebook.com/events/1632742133655739/
+location: cafe_du_clocher_alma
+talks:
+- authors:
+  - ferd
+  title: Tester du Python en Erlang
+- authors:
+  - sjuair
+  title: Docker
+- authors:
+  - kimlavoie
+  title: Programmation fonctionnelle en JS
+- authors:
+  - jipiboily
+  title: (Si le temps le permet) Démo de React + Redux + Jasmine dans le code de Metrics
+    Watch
+title: Janvier 2016

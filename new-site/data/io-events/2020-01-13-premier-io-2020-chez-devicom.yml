@@ -1,0 +1,11 @@
+date: '2020-01-13T23:00:00.000Z'
+event_url: https://www.facebook.com/events/858331021252495/
+location: devicom_chicoutimi
+talks:
+- authors:
+  - vincentpoirier
+  title: Svelte, une alternative à ReactJs et VueJs
+- authors:
+  - jlapointe
+  title: Ubuntu pour Windows
+title: Premier IO 2020 chez Devicom

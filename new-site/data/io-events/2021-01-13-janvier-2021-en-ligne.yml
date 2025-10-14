@@ -1,0 +1,11 @@
+date: '2021-01-13T23:00:00.000Z'
+event_url: https://www.airmeet.com/e/9079c3e0-51bd-11eb-8497-5553e7235276
+location: online
+talks:
+- authors:
+  - ferd
+  title: Être Prêt Pour la Production
+- authors:
+  - vincentpoirier
+  title: Quitter Facebook avec son propre IFTTT (huginn)
+title: 'Janvier 2021: en ligne!'

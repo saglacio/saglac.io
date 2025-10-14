@@ -1,0 +1,14 @@
+date: '2019-09-19T23:00:00.000Z'
+event_url: https://www.facebook.com/events/624576501386603/
+location: stas_chicoutimi
+talks:
+- authors:
+  - alexis_valotaire
+  description: Accompagnés de ses collègues Jean-Pierre et Frédéric, Alexis nous présente
+    un projet 4.0 sur lequel il a travaillé.
+  title: L'industrie 4.0
+- authors:
+  - jim_plourde
+  description: Introduction au TDD
+  title: 'Le Test Driven Development: Kosse ça donne?'
+title: IO septembre 2019 chez STAS

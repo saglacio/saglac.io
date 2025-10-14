@@ -1,0 +1,14 @@
+date: '2015-02-25T23:00:00.000Z'
+eventbrite_id: 15510032926
+location: hopera_jonquiere
+  et nourriture!
+talks:
+- authors:
+  - julien_samuel_lacroix
+  title: Le top des outils essentiels d'un bon OS
+  twitter: JulienSam
+- authors:
+  - jlapointe
+  title: 'Google Summer of Code: Un emploie étudiant qui compte! (lightning talk)'
+
+title: Février 2015

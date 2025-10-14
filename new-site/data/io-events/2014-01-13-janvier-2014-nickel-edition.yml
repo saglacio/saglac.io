@@ -1,0 +1,18 @@
+date: '2014-01-13T23:00:00.000Z'
+eventbrite_id: 9769359417
+location: exode
+talks:
+- authors:
+  - pj_hagerty
+  title: Think Locally - Act Globally
+- authors:
+  - alan_boudreault
+  slides: https://dl.dropboxusercontent.com/u/6210261/introduction-pyramid.zip
+  title: 'Introduction to Pyramid: a web application development framework.'
+- authors:
+  - marc_andre_goderre
+  title: PostgreSQL, de tout pour tous.
+- authors:
+  - jipiboily
+  title: 'RubyMotion: create Mac (or iOS) apps with lovely Ruby'
+title: Janvier 2014 - Nickel edition

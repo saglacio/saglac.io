@@ -1,0 +1,12 @@
+date: '2021-03-23T23:00:00.000Z'
+event_url: https://www.airmeet.com/e/87444d10-7d53-11eb-bcad-59162d08a0eb
+location: online
+talks:
+- authors:
+  - gableroux
+  slides: https://gableroux.com/posts/2021-03-23-nextjs-testing-and-vercel-deployment/
+  title: next.js + tests + vercel deployment
+- authors:
+  - vincentpoirier
+  title: Les librairies les plus farfelues du JS
+title: IO de mars 2021 - En virtuel!

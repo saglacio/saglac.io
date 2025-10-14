@@ -1,0 +1,15 @@
+date: '2014-04-09T23:00:00.000Z'
+eventbrite_id: 10924929759
+location: bar_la_zone_jonquiere
+talks:
+- authors:
+  - ferd
+  title: Erlang
+- authors:
+  - kim_desrosiers
+  title: How to Vim
+  twitter: kimondd
+- authors:
+  - jipiboily
+  title: Lightning talk à propos de Fourchette et Opinionated
+title: Avril 2014

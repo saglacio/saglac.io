@@ -1,0 +1,14 @@
+date: '2019-05-28T23:00:00.000Z'
+event_url: https://www.facebook.com/events/2270068819933982/
+location: conformit
+talks:
+- authors:
+  - laurent_parenteau
+  title: Élargir son champ d'apprentissage - de da Vinci jusqu'à Musk
+- authors:
+  - vincentpoirier
+  title: 'GraphQL: a query language for your API'
+- authors:
+  - pierre_luc_tremblay
+  title: 'GitOps et Helm: amour et haine'
+title: IO de mai chez CONFORMiT

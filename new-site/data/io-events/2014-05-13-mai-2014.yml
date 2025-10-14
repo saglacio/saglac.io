@@ -1,0 +1,15 @@
+date: '2014-05-13T23:00:00.000Z'
+eventbrite_id: 11311337515
+location: exode
+talks:
+- authors:
+  - sjuair
+  title: Titre à venir
+- authors:
+  - jean_daniel_pearson
+  title: Maven & tests in java
+- authors:
+  - joelthebert
+  title: Améliorer la testabilité du code
+
+title: Mai 2014

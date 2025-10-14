@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /qrcode/
+
+Sitemap: https://saglac.io/sitemap.xml
+

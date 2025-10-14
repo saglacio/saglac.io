@@ -1,0 +1,20 @@
+# TODO: remove this file?
+title: IO 2020 test
+description: Le Saglac IO est de retour en personne à Chicoutimi, au restaurant Mikes.
+date: '2020-01-13T23:00:00.000Z'
+event_url: facebook link here test
+location: mikes_chicoutimi_racine
+talks:
+  - authors:
+      - emileber
+      - vincentpoirier
+    description: React is dead
+    title: JS Framework
+  - authors:
+      - jipiboily
+    description: Cool description!
+    title: Another thing
+  - authors:
+      - jipiboily
+    description: Cool description 2!
+    title: Another thing 2

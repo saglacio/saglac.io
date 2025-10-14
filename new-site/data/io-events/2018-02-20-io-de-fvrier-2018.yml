@@ -1,0 +1,10 @@
+date: '2018-02-20T23:00:00.000Z'
+event_url: https://www.facebook.com/events/1611677945583993
+location: bistro_du_centre
+talks:
+- authors:
+  - kimlavoie
+  description: La philosophie du langage de programmation Rust et en quoi il se différencie
+    des autres.
+  title: Introduction à Rust
+title: IO de février 2018

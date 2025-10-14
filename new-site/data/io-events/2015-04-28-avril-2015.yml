@@ -1,0 +1,14 @@
+date: '2015-04-28T23:00:00.000Z'
+eventbrite_id: 16388659923
+location: exode
+talks:
+- authors:
+  - jipiboily
+  title: 'React.js: le nouveau truc cool!'
+- authors:
+  - ferd
+  title: Principes de base de programmation distribuée
+- authors:
+  - pierre_alexandre_audet
+  title: 'Utilisabilité 101 : Qui c’est que c’est quoi?!'
+title: Avril 2015

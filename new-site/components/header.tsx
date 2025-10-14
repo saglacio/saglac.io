@@ -21,17 +21,20 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="#meetup" className="text-foreground/80 hover:text-primary transition-colors">
-              Meetup
+            <Link href="/" className="text-foreground/80 hover:text-primary transition-colors">
+              Accueil
             </Link>
-            <Link href="#a-propos" className="text-foreground/80 hover:text-primary transition-colors">
+            <Link href="/about" className="text-foreground/80 hover:text-primary transition-colors">
               À propos
             </Link>
-            <Link href="#archives" className="text-foreground/80 hover:text-primary transition-colors">
+            <Link href="/archives" className="text-foreground/80 hover:text-primary transition-colors">
               Archives
             </Link>
-            <Link href="#faq" className="text-foreground/80 hover:text-primary transition-colors">
+            <Link href="/faq" className="text-foreground/80 hover:text-primary transition-colors">
               FAQ
+            </Link>
+            <Link href="/contact" className="text-foreground/80 hover:text-primary transition-colors">
+              Contact
             </Link>
             <Button
               asChild
@@ -58,32 +61,39 @@ export function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 flex flex-col gap-4">
             <Link
-              href="#meetup"
+              href="/"
               className="text-foreground/80 hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Meetup
+              Accueil
             </Link>
             <Link
-              href="#a-propos"
+              href="/about"
               className="text-foreground/80 hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               À propos
             </Link>
             <Link
-              href="#archives"
+              href="/archives"
               className="text-foreground/80 hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Archives
             </Link>
             <Link
-              href="#faq"
+              href="/faq"
               className="text-foreground/80 hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               FAQ
+            </Link>
+            <Link
+              href="/contact"
+              className="text-foreground/80 hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
             </Link>
             <Button
               asChild

@@ -25,16 +25,19 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8">
-              Participer
-              <ArrowRight className="ml-2" size={20} />
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8" asChild>
+              <a href="#meetup">
+                Participer
+                <ArrowRight className="ml-2" size={20} />
+              </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 bg-transparent"
+              asChild
             >
-              En savoir plus
+              <a href="#a-propos">En savoir plus</a>
             </Button>
           </div>
 
@@ -49,7 +52,7 @@ export function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-primary rounded-full" />
-              <span>Événements mensuels</span>
+              <span>Événements mensuels <i>ou presque!</i></span>
             </div>
           </div>
         </div>

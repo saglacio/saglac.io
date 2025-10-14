@@ -1,0 +1,12 @@
+date: '2019-01-23T23:00:00.000Z'
+event_url: https://www.facebook.com/events/376737329557674/
+location: mikes_chicoutimi_racine
+talks:
+- authors:
+  - ferd
+  title: 'OpEx: rendre son système opérable'
+- authors:
+  - gableroux
+  description: Déployer une application dans les nuages sans se soucier des serveurs
+  title: Introduction au serverless framework
+title: IO janvier 2019 à Chicoutimi - Premier IO de l'année!
