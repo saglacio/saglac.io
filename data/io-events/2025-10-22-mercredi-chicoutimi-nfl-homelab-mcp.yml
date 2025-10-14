@@ -1,0 +1,19 @@
+title: 'Mercredi le 22 octobre à Chicoutimi: NFL Primetime, HomeLab et MCP'
+description: "On se retrouve ce mercredi pour une nouvelle soirée techno qui s'annonce vraiment hot!"
+date: '2025-10-22T22:00:00.000Z'
+event_url: https://www.facebook.com/events/TBD
+location: mikes_chicoutimi_racine
+talks:
+  - authors:
+      - vincentpoirier
+    title: 'NFL Primetime Fantasy LiveOps'
+    description: "Réalisé en collaboration avec la NFL, Primetime Fantasy était un jeu live développé par l'équipe d'Ubisoft Saguenay. Opérer un jeu live, ce n'est pas simple, et cette présentation se veut une fenêtre sur les outils mis en place pour permettre aux fans de football américain de vivre le sport de fantaisie à un tout autre niveau."
+  - authors:
+      - sjuair
+    title: 'Le Guide du Sysadmin en Pantoufles (Du Serveur au Canapé)'
+    description: "Ce talk est votre ticket d'entrée pour le HomeLab, l'endroit où l'on gère des clusters tout en portant des pantoufles."
+  - authors:
+      - gableroux
+    title: 'Comment faire un jeu d''banane avec un serveur MCP - Version éclair ⚡'
+    description: "Une exploration décalée du Model Context Protocol (MCP) à travers un projet de jeu complètement absurde, mais instructif. Découvrons comment on peut piloter Unity avec un LLM en peu d'efforts."
+
