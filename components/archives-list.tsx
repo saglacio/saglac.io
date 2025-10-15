@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { Calendar, MapPin, ExternalLink, Search, ChevronLeft, ChevronRight, FileText } from 'lucide-react'
+import { Calendar, MapPin, ExternalLink, Search, ChevronLeft, ChevronRight, FileText, Twitter, Github, Linkedin, Globe } from 'lucide-react'
 import type { ResolvedEvent, Author } from '@/lib/types'
 
 interface ArchivesListProps {
@@ -26,6 +26,58 @@ function getAuthorAvatar(author: Author): string {
     return `https://twitter.com/${author.twitter}/profile_image?size=normal`
   }
   return '/images/default_user_icon.png'
+}
+
+// Component to display author social links
+function AuthorSocialLinks({ author }: { author: Author }) {
+  return (
+    <div className="flex items-center gap-1">
+      {author.twitter && (
+        <a
+          href={`https://twitter.com/${author.twitter}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-foreground/60 hover:text-primary transition-colors"
+          title={`@${author.twitter} sur Twitter`}
+        >
+          <Twitter className="w-3.5 h-3.5" />
+        </a>
+      )}
+      {author.github && (
+        <a
+          href={`https://github.com/${author.github}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-foreground/60 hover:text-primary transition-colors"
+          title={`${author.github} sur GitHub`}
+        >
+          <Github className="w-3.5 h-3.5" />
+        </a>
+      )}
+      {author.linkedin && (
+        <a
+          href={`https://linkedin.com/in/${author.linkedin}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-foreground/60 hover:text-primary transition-colors"
+          title={`${author.name} sur LinkedIn`}
+        >
+          <Linkedin className="w-3.5 h-3.5" />
+        </a>
+      )}
+      {author.website && (
+        <a
+          href={author.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-foreground/60 hover:text-primary transition-colors"
+          title={`Site web de ${author.name}`}
+        >
+          <Globe className="w-3.5 h-3.5" />
+        </a>
+      )}
+    </div>
+  )
 }
 
 export function ArchivesList({ events }: ArchivesListProps) {
@@ -233,12 +285,13 @@ export function ArchivesList({ events }: ArchivesListProps) {
                               <div className="flex items-center gap-2 flex-wrap mb-2">
                                 <span className="text-sm text-foreground/60">Par:</span>
                                 {talk.authors.map((author) => (
-                                  <div key={author.id} className="flex items-center gap-2">
+                                  <div key={author.id} className="flex items-center gap-2 bg-secondary/30 rounded-full pr-2 py-0.5">
                                     <Avatar className="w-6 h-6">
                                       <AvatarImage src={getAuthorAvatar(author)} alt={author.name} />
                                       <AvatarFallback>{author.name[0]}</AvatarFallback>
                                     </Avatar>
                                     <span className="text-sm">{author.name}</span>
+                                    <AuthorSocialLinks author={author} />
                                   </div>
                                 ))}
                               </div>

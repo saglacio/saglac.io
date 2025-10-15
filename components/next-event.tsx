@@ -2,8 +2,61 @@ import { getNextEvent, getAuthorAvatar } from '@/lib/data-loader'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Calendar, MapPin, ExternalLink, Archive } from 'lucide-react'
+import { Calendar, MapPin, ExternalLink, Archive, Twitter, Github, Linkedin, Globe } from 'lucide-react'
 import Link from 'next/link'
+import type { Author } from '@/lib/types'
+
+// Component to display author social links
+function AuthorSocialLinks({ author }: { author: Author }) {
+  return (
+    <div className="flex items-center gap-1">
+      {author.twitter && (
+        <a
+          href={`https://twitter.com/${author.twitter}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-foreground/60 hover:text-primary transition-colors"
+          title={`@${author.twitter} sur Twitter`}
+        >
+          <Twitter className="w-3.5 h-3.5" />
+        </a>
+      )}
+      {author.github && (
+        <a
+          href={`https://github.com/${author.github}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-foreground/60 hover:text-primary transition-colors"
+          title={`${author.github} sur GitHub`}
+        >
+          <Github className="w-3.5 h-3.5" />
+        </a>
+      )}
+      {author.linkedin && (
+        <a
+          href={`https://linkedin.com/in/${author.linkedin}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-foreground/60 hover:text-primary transition-colors"
+          title={`${author.name} sur LinkedIn`}
+        >
+          <Linkedin className="w-3.5 h-3.5" />
+        </a>
+      )}
+      {author.website && (
+        <a
+          href={author.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-foreground/60 hover:text-primary transition-colors"
+          title={`Site web de ${author.name}`}
+        >
+          <Globe className="w-3.5 h-3.5" />
+        </a>
+      )}
+    </div>
+  )
+}
 
 export function NextEvent() {
   const event = getNextEvent()
@@ -153,12 +206,13 @@ export function NextEvent() {
                       <div className="flex items-center gap-2 flex-wrap mt-2">
                         <span className="text-sm text-foreground/60">Par:</span>
                         {talk.authors.map((author) => (
-                          <div key={author.id} className="flex items-center gap-2">
+                          <div key={author.id} className="flex items-center gap-2 bg-secondary/30 rounded-full pr-2 py-0.5">
                             <Avatar className="w-6 h-6">
                               <AvatarImage src={getAuthorAvatar(author)} alt={author.name} />
                               <AvatarFallback>{author.name[0]}</AvatarFallback>
                             </Avatar>
                             <span className="text-sm">{author.name}</span>
+                            <AuthorSocialLinks author={author} />
                           </div>
                         ))}
                       </div>

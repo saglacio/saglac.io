@@ -4,6 +4,7 @@ export interface Author {
   name: string
   twitter?: string
   github?: string
+  linkedin?: string
   website?: string
   avatar?: string
 }
