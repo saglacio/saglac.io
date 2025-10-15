@@ -39,10 +39,10 @@ export const metadata: Metadata = {
     siteName: 'SagLac IO',
     images: [
       {
-        url: '/logos/logo-512.png',
-        width: 512,
-        height: 512,
-        alt: 'SagLac IO Logo',
+        url: '/images/open-graph-default-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'SagLac IO - Communauté Tech du Saguenay—Lac-Saint-Jean',
       },
     ],
   },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     description:
       'Rencontres mensuelles gratuites pour passionnés de technologies numériques au Saguenay—Lac-Saint-Jean.',
     creator: '@saglacio',
-    images: ['/logos/logo-512.png'],
+    images: ['/images/open-graph-default-image.png'],
   },
   alternates: {
     types: {

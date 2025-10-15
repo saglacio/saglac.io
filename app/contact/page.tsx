@@ -6,11 +6,26 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: "Contactez l'équipe de SagLac IO",
+  description: "Contactez l'équipe de SagLac IO. Rejoignez notre communauté sur Facebook, Twitter, LinkedIn ou Discord. Courriel: info@saglac.io",
   openGraph: {
     title: 'Contact - SagLac IO',
-    description: "Contactez l'équipe de SagLac IO",
+    description: "Contactez l'équipe de SagLac IO. Rejoignez notre communauté sur Facebook, Twitter, LinkedIn ou Discord.",
+    url: 'https://saglac.io/contact',
     type: 'website',
+    images: [
+      {
+        url: '/images/open-graph-default-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Contactez SagLac IO',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact - SagLac IO',
+    description: "Contactez l'équipe de SagLac IO via courriel ou rejoignez notre communauté.",
+    images: ['/images/open-graph-default-image.png'],
   },
 }
 

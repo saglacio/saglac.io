@@ -6,11 +6,26 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Archives',
-  description: 'Archive complète des événements SagLac IO passés',
+  description: 'Archive complète des événements SagLac IO depuis 2013. Découvrez toutes nos rencontres passées avec présentations et conférenciers.',
   openGraph: {
     title: 'Archives - SagLac IO',
-    description: 'Archive complète des événements SagLac IO passés',
+    description: 'Archive complète des événements SagLac IO depuis 2013. Découvrez toutes nos rencontres passées avec présentations et conférenciers.',
+    url: 'https://saglac.io/archives',
     type: 'website',
+    images: [
+      {
+        url: '/images/open-graph-default-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Archives des événements SagLac IO',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Archives - SagLac IO',
+    description: 'Archive complète des événements SagLac IO depuis 2013.',
+    images: ['/images/open-graph-default-image.png'],
   },
 }
 

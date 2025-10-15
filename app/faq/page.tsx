@@ -13,11 +13,26 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'FAQ',
-  description: 'Questions fréquemment posées sur les événements SagLac IO',
+  description: 'Questions fréquemment posées sur les événements SagLac IO. Tout ce que vous devez savoir sur notre communauté tech au Saguenay—Lac-Saint-Jean.',
   openGraph: {
     title: 'FAQ - SagLac IO',
-    description: 'Questions fréquemment posées sur les événements SagLac IO',
+    description: 'Questions fréquemment posées sur les événements SagLac IO. Tout ce que vous devez savoir sur notre communauté tech.',
+    url: 'https://saglac.io/faq',
     type: 'website',
+    images: [
+      {
+        url: '/images/open-graph-default-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'FAQ - SagLac IO',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FAQ - SagLac IO',
+    description: 'Questions fréquemment posées sur les événements SagLac IO.',
+    images: ['/images/open-graph-default-image.png'],
   },
 }
 
