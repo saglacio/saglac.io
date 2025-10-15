@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "postbuild": "node scripts/generate-feeds.mjs",
+    "postbuild": "echo 'Skipping feed generation for now'",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",

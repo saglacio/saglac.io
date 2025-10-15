@@ -4,7 +4,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { NextEvent } from '../next-event'
-import type { ResolvedEvent } from '@/lib/types'
+import type { ResolvedEvent, Author } from '@/lib/types'
 
 // Mock the data-loader module
 const mockGetNextEvent = vi.fn()
@@ -17,7 +17,7 @@ const mockGetAuthorAvatar = vi.fn((author) => {
 
 vi.mock('@/lib/data-loader', () => ({
   getNextEvent: () => mockGetNextEvent(),
-  getAuthorAvatar: (author: any) => mockGetAuthorAvatar(author),
+  getAuthorAvatar: (author: Author) => mockGetAuthorAvatar(author),
 }))
 
 const mockEvent: ResolvedEvent = {

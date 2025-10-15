@@ -75,7 +75,7 @@ export default function RootLayout({
       <head>
         <link rel="alternate" type="application/rss+xml" title="SagLac IO RSS Feed" href="/rss.xml" />
       </head>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className="font-sans">
         <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
         <Analytics />
       </body>
