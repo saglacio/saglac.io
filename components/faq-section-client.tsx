@@ -26,8 +26,8 @@ export function FAQSectionClient({ sections }: FAQSectionClientProps) {
           </div>
 
           <div className="space-y-8">
-            {previewSections.map((section, sectionIndex) => (
-              <div key={sectionIndex}>
+            {previewSections.map((section) => (
+              <div key={section.id}>
                 <h3 className="text-2xl font-bold mb-4 text-primary">{section.header}</h3>
                 <Accordion type="single" collapsible className="space-y-2">
                   {section.questions.slice(0, 3).map((q) => (

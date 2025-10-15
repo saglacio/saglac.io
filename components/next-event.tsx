@@ -17,6 +17,7 @@ function AuthorSocialLinks({ author }: { author: Author }) {
           rel="noopener noreferrer"
           className="text-foreground/60 hover:text-primary transition-colors"
           title={`@${author.twitter} sur Twitter`}
+          aria-label={`Twitter — @${author.twitter}`}
         >
           <Twitter className="w-3.5 h-3.5" />
         </a>
@@ -28,6 +29,7 @@ function AuthorSocialLinks({ author }: { author: Author }) {
           rel="noopener noreferrer"
           className="text-foreground/60 hover:text-primary transition-colors"
           title={`${author.github} sur GitHub`}
+          aria-label={`GitHub — ${author.github}`}
         >
           <Github className="w-3.5 h-3.5" />
         </a>
@@ -39,6 +41,7 @@ function AuthorSocialLinks({ author }: { author: Author }) {
           rel="noopener noreferrer"
           className="text-foreground/60 hover:text-primary transition-colors"
           title={`${author.name} sur LinkedIn`}
+          aria-label={`${author.name} sur LinkedIn`}
         >
           <Linkedin className="w-3.5 h-3.5" />
         </a>
@@ -50,6 +53,7 @@ function AuthorSocialLinks({ author }: { author: Author }) {
           rel="noopener noreferrer"
           className="text-foreground/60 hover:text-primary transition-colors"
           title={`Site web de ${author.name}`}
+          aria-label={`Site web de ${author.name}`}
         >
           <Globe className="w-3.5 h-3.5" />
         </a>
@@ -107,13 +111,14 @@ export function NextEvent() {
               <div className="space-y-2 text-base mt-4">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-5 h-5" />
-                  {new Date(event.date).toLocaleDateString('fr-CA', {
+                  {new Date(event.date).toLocaleString('fr-CA', {
                     weekday: 'long',
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',
                     hour: '2-digit',
                     minute: '2-digit',
+                    timeZone: 'America/Toronto',
                   })}
                 </div>
                 <div className="flex items-center gap-2">

@@ -47,6 +47,7 @@ export interface FAQQuestion {
 }
 
 export interface FAQSection {
+  id: string
   header: string
   questions: FAQQuestion[]
 }

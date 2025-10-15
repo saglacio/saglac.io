@@ -79,7 +79,18 @@ export function loadEvents(): Event[] {
 export function loadFAQ(): FAQSection[] {
   const faqPath = path.join(DATA_DIR, 'faq.yml')
   const content = fs.readFileSync(faqPath, 'utf-8')
-  return yaml.load(content) as FAQSection[]
+  const sections = yaml.load(content) as Array<Omit<FAQSection, 'id'>>
+  
+  // Generate stable IDs from headers
+  return sections.map((section) => ({
+    ...section,
+    id: section.header
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '') // Remove diacritics
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, ''),
+  }))
 }
 
 /**
