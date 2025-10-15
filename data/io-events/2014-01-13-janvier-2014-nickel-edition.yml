@@ -5,12 +5,10 @@ talks:
 - authors:
   - pj_hagerty
   title: Think Locally - Act Globally
-  twitter: aspleenic
 - authors:
   - alan_boudreault
   slides: https://dl.dropboxusercontent.com/u/6210261/introduction-pyramid.zip
   title: 'Introduction to Pyramid: a web application development framework.'
-  twitter: AlanBoudreault
 - authors:
   - marc_andre_goderre
   title: PostgreSQL, de tout pour tous.
