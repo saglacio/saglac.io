@@ -42,8 +42,14 @@ describe('Utils', () => {
     })
 
     it('should handle complex conditional logic', () => {
-      const variant = 'primary'
-      const size = 'large'
+      function getVariant(): 'primary' | 'secondary' {
+        return 'primary'
+      }
+      function getSize(): 'large' | 'small' {
+        return 'large'
+      }
+      const variant = getVariant()
+      const size = getSize()
       const result = cn(
         'button',
         variant === 'primary' && 'bg-primary',

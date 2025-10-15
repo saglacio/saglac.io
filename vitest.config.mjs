@@ -10,6 +10,10 @@ export default defineConfig({
   test: {
     environment: 'node',
     globals: true,
+    environmentMatchGlobs: [
+      ['**/__tests__/**/*.tsx', 'jsdom'],
+      ['**/*.test.tsx', 'jsdom'],
+    ],
     exclude: ['node_modules', 'e2e/**', 'dist', '.next', 'out'],
     coverage: {
       provider: 'v8',

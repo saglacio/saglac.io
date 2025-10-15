@@ -38,10 +38,11 @@ function loadEvents() {
     
     // Resolve location
     if (event.location && typeof event.location === 'string') {
-      const locationFile = path.join(DATA_DIR, 'locations', `${event.location}.yml`)
+      const locationId = event.location
+      const locationFile = path.join(DATA_DIR, 'locations', `${locationId}.yml`)
       if (fs.existsSync(locationFile)) {
         event.location = yaml.load(fs.readFileSync(locationFile, 'utf-8'))
-        event.location.id = event.location
+        event.location.id = locationId
       }
     }
     

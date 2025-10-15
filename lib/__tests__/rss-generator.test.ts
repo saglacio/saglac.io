@@ -1,14 +1,19 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { generateRSSFeed } from '../rss-generator'
-import type { Event, Location, Author } from '../types'
+import type { ResolvedEvent } from '../types'
 
 // Mock data
-const mockEvents: Event[] = [
+const mockEvents: ResolvedEvent[] = [
   {
     slug: 'test-event-1',
     title: 'Premier événement test',
     date: '2024-12-01',
-    location: 'test-location',
+    location: {
+      id: 'test-location',
+      name: 'Test Venue',
+      address: '123 Test St',
+      url: 'https://testvenue.com',
+    },
     description: 'Description du premier événement',
     event_url: 'https://facebook.com/events/123',
     talks: [
@@ -29,40 +34,20 @@ const mockEvents: Event[] = [
     slug: 'test-event-2',
     title: 'Deuxième événement test',
     date: '2024-11-15',
-    location: 'test-location',
-  },
-]
-
-const mockLocations = new Map<string, Location>([
-  [
-    'test-location',
-    {
+    location: {
       id: 'test-location',
       name: 'Test Venue',
       address: '123 Test St',
-      url: 'https://testvenue.com',
     },
-  ],
-])
+  },
+]
 
-const mockAuthors = new Map<string, Author>([
-  [
-    'testauthor',
-    {
-      id: 'testauthor',
-      name: 'Test Author',
-      twitter: 'testauthor',
-    },
-  ],
-])
 
 describe('generateRSSFeed', () => {
   it('should generate valid RSS XML', () => {
     const xml = generateRSSFeed({
       siteUrl: 'https://saglac.io',
       events: mockEvents,
-      locations: mockLocations,
-      authors: mockAuthors,
     })
 
     expect(xml).toContain('<?xml version="1.0" encoding="UTF-8"?>')
@@ -74,8 +59,6 @@ describe('generateRSSFeed', () => {
     const xml = generateRSSFeed({
       siteUrl: 'https://saglac.io',
       events: mockEvents,
-      locations: mockLocations,
-      authors: mockAuthors,
     })
 
     expect(xml).toContain('SagLac IO - Événements')
@@ -89,8 +72,6 @@ describe('generateRSSFeed', () => {
     const xml = generateRSSFeed({
       siteUrl: 'https://saglac.io',
       events: mockEvents,
-      locations: mockLocations,
-      authors: mockAuthors,
     })
 
     expect(xml).toContain('Premier événement test')
@@ -102,8 +83,6 @@ describe('generateRSSFeed', () => {
     const xml = generateRSSFeed({
       siteUrl: 'https://saglac.io',
       events: mockEvents,
-      locations: mockLocations,
-      authors: mockAuthors,
     })
 
     expect(xml).toContain('Lieu: Test Venue')
@@ -113,8 +92,6 @@ describe('generateRSSFeed', () => {
     const xml = generateRSSFeed({
       siteUrl: 'https://saglac.io',
       events: mockEvents,
-      locations: mockLocations,
-      authors: mockAuthors,
     })
 
     expect(xml).toContain('Présentations:')
@@ -125,8 +102,6 @@ describe('generateRSSFeed', () => {
     const xml = generateRSSFeed({
       siteUrl: 'https://saglac.io',
       events: mockEvents,
-      locations: mockLocations,
-      authors: mockAuthors,
     })
 
     expect(xml).toContain('https://facebook.com/events/123')
@@ -137,8 +112,6 @@ describe('generateRSSFeed', () => {
     const xml = generateRSSFeed({
       siteUrl: 'https://saglac.io',
       events: eventsWithoutUrl,
-      locations: mockLocations,
-      authors: mockAuthors,
     })
 
     expect(xml).toContain('https://saglac.io/archives#test-event-1')
@@ -148,8 +121,6 @@ describe('generateRSSFeed', () => {
     const xml = generateRSSFeed({
       siteUrl: 'https://saglac.io',
       events: [mockEvents[1]],
-      locations: mockLocations,
-      authors: mockAuthors,
     })
 
     expect(xml).toContain('Deuxième événement test')
@@ -160,8 +131,6 @@ describe('generateRSSFeed', () => {
     const xml = generateRSSFeed({
       siteUrl: 'https://saglac.io',
       events: mockEvents,
-      locations: mockLocations,
-      authors: mockAuthors,
     })
 
     expect(xml).toContain('<guid isPermaLink="false">test-event-1</guid>')
@@ -172,8 +141,6 @@ describe('generateRSSFeed', () => {
     const xml = generateRSSFeed({
       siteUrl: 'https://saglac.io',
       events: mockEvents,
-      locations: mockLocations,
-      authors: mockAuthors,
     })
 
     expect(xml).toContain('<pubDate>')
@@ -184,8 +151,6 @@ describe('generateRSSFeed', () => {
     const xml = generateRSSFeed({
       siteUrl: 'https://saglac.io',
       events: [],
-      locations: mockLocations,
-      authors: mockAuthors,
     })
 
     expect(xml).toContain('<?xml version="1.0" encoding="UTF-8"?>')
@@ -194,18 +159,20 @@ describe('generateRSSFeed', () => {
   })
 
   it('should handle missing location data gracefully', () => {
-    const eventsWithUnknownLocation = [
+    const eventsWithUnknownLocation: ResolvedEvent[] = [
       {
         ...mockEvents[0],
-        location: 'unknown-location',
+        location: {
+          id: 'unknown-location',
+          name: 'unknown-location',
+          address: 'Unknown address',
+        },
       },
     ]
 
     const xml = generateRSSFeed({
       siteUrl: 'https://saglac.io',
       events: eventsWithUnknownLocation,
-      locations: new Map(),
-      authors: mockAuthors,
     })
 
     expect(xml).toContain('Lieu: unknown-location')
@@ -215,8 +182,6 @@ describe('generateRSSFeed', () => {
     const xml = generateRSSFeed({
       siteUrl: 'https://saglac.io',
       events: mockEvents,
-      locations: mockLocations,
-      authors: mockAuthors,
     })
 
     // Verify XML structure

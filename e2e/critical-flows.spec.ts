@@ -44,7 +44,7 @@ test.describe('Critical User Flows', () => {
     await expect(page.getByRole('heading', { name: /Archives/i })).toBeVisible()
     
     // Verify search box is present
-    await expect(page.getByPlaceholderText(/Rechercher/i)).toBeVisible()
+    await expect(page.getByPlaceholder(/Rechercher/i)).toBeVisible()
     
     // Verify at least one event is displayed
     await expect(page.locator('[class*="event"]').first()).toBeVisible({ timeout: 10000 })
@@ -57,7 +57,7 @@ test.describe('Critical User Flows', () => {
     await page.waitForLoadState('networkidle')
     
     // Type in search box
-    const searchBox = page.getByPlaceholderText(/Rechercher/i)
+    const searchBox = page.getByPlaceholder(/Rechercher/i)
     await searchBox.fill('homelab')
     
     // Wait a bit for debounce

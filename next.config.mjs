@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'export', // Static site generation
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   typescript: {
     ignoreBuildErrors: true,

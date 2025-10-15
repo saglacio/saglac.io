@@ -1,11 +1,9 @@
 import RSS from 'rss'
-import type { Event, Location, Author } from './types'
+import type { ResolvedEvent } from './types'
 
 export interface RSSGeneratorOptions {
   siteUrl: string
-  events: Event[]
-  locations: Map<string, Location>
-  authors: Map<string, Author>
+  events: ResolvedEvent[]
 }
 
 /**
@@ -14,7 +12,7 @@ export interface RSSGeneratorOptions {
  * @returns RSS XML string
  */
 export function generateRSSFeed(options: RSSGeneratorOptions): string {
-  const { siteUrl, events, locations, authors } = options
+  const { siteUrl, events } = options
 
   const feed = new RSS({
     title: 'SagLac IO - Événements',
@@ -28,7 +26,7 @@ export function generateRSSFeed(options: RSSGeneratorOptions): string {
   })
 
   for (const event of events) {
-    const location = locations.get(event.location) || { name: event.location } as Location
+    const location = event.location
     const talks = event.talks || []
 
     const description = [
