@@ -8,12 +8,17 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'À propos',
-  description: 'Découvrez l\'histoire de SagLac IO, communauté tech du Saguenay—Lac-Saint-Jean depuis 2013. Rencontres mensuelles gratuites pour passionnés de technologies.',
+  description: 'Histoire de SagLac IO depuis 2013 : communauté tech bénévole au Saguenay—Lac-Saint-Jean. Rencontres mensuelles gratuites, présentations et réseautage.',
+  alternates: {
+    canonical: 'https://saglac.io/about',
+  },
   openGraph: {
     title: 'À propos - SagLac IO',
-    description: 'Découvrez l\'histoire de SagLac IO, communauté tech du Saguenay—Lac-Saint-Jean depuis 2013. Rencontres mensuelles gratuites pour passionnés de technologies.',
+    description: 'Histoire de SagLac IO depuis 2013 : communauté tech bénévole au Saguenay—Lac-Saint-Jean. Rencontres mensuelles, présentations et réseautage.',
     url: 'https://saglac.io/about',
     type: 'website',
+    locale: 'fr_CA',
+    siteName: 'SagLac IO',
     images: [
       {
         url: '/images/open-graph-default-image.png',
@@ -26,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'À propos - SagLac IO',
-    description: 'Découvrez l\'histoire de SagLac IO, communauté tech du Saguenay—Lac-Saint-Jean depuis 2013.',
+    description: 'Histoire de SagLac IO depuis 2013 : communauté tech bénévole au Saguenay—Lac-Saint-Jean.',
+    creator: '@saglacio',
     images: ['/images/open-graph-default-image.png'],
   },
 }

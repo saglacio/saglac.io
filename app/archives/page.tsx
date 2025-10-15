@@ -6,12 +6,17 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Archives',
-  description: 'Archive complète des événements SagLac IO depuis 2013. Découvrez toutes nos rencontres passées avec présentations et conférenciers.',
+  description: 'Archives complètes des événements SagLac IO depuis 2013. Consultez toutes nos rencontres tech passées avec présentations, conférenciers et photos.',
+  alternates: {
+    canonical: 'https://saglac.io/archives',
+  },
   openGraph: {
     title: 'Archives - SagLac IO',
-    description: 'Archive complète des événements SagLac IO depuis 2013. Découvrez toutes nos rencontres passées avec présentations et conférenciers.',
+    description: 'Archives complètes des événements SagLac IO depuis 2013. Toutes nos rencontres tech passées avec présentations et conférenciers.',
     url: 'https://saglac.io/archives',
     type: 'website',
+    locale: 'fr_CA',
+    siteName: 'SagLac IO',
     images: [
       {
         url: '/images/open-graph-default-image.png',
@@ -24,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Archives - SagLac IO',
-    description: 'Archive complète des événements SagLac IO depuis 2013.',
+    description: 'Archives complètes des événements SagLac IO depuis 2013.',
+    creator: '@saglacio',
     images: ['/images/open-graph-default-image.png'],
   },
 }
