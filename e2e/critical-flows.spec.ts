@@ -118,8 +118,8 @@ test.describe('Mobile Critical Flows', () => {
       // Verify menu items appear
       await expect(page.getByRole('link', { name: /Archives/i }).first()).toBeVisible()
     } else {
-      // Desktop navigation should be visible
-      await expect(page.getByRole('link', { name: /Archives/i })).toBeVisible()
+      // Desktop navigation should be visible - use .first() to avoid strict mode violation
+      await expect(page.getByRole('link', { name: /Archives/i }).first()).toBeVisible()
     }
   })
 })
