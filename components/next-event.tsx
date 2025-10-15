@@ -118,14 +118,18 @@ export function NextEvent() {
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-5 h-5" />
-                  <a
-                    href={event.location.url || event.location.facebook}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                  >
-                    {event.location.name}
-                  </a>
+                  {event.location.url || event.location.facebook ? (
+                    <a
+                      href={event.location.url || event.location.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {event.location.name}
+                    </a>
+                  ) : (
+                    <span>{event.location.name}</span>
+                  )}
                 </div>
                 {event.location.address && (
                   <div className="text-sm text-foreground/70 ml-7">{event.location.address}</div>

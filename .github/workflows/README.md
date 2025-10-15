@@ -55,7 +55,7 @@ Automatically cancels previous workflow runs when a new commit is pushed to the 
 - Upload Playwright HTML report
 
 **Artifacts**:
-- `playwright-report`: Test report with screenshots/videos (7 days retention)
+- `playwright-report`: Test report with screenshots/videos (30 days retention)
 
 **Tests Cover**:
 - Homepage functionality
@@ -121,7 +121,7 @@ Automatically cancels previous workflow runs when a new commit is pushed to the 
 
 All actions use pinned major versions with maintained releases:
 
-- `actions/checkout@v4` - Latest stable
+- `actions/checkout@v5` - Latest stable
 - `pnpm/action-setup@v4` - pnpm 9.x
 - `actions/setup-node@v4` - Node.js 20 with built-in caching
 - `actions/upload-artifact@v4` - Latest artifact upload
@@ -214,7 +214,7 @@ All artifacts can be downloaded from the GitHub Actions UI:
 
 - **coverage-report** (30 days): HTML coverage report
 - **test-results** (7 days): Raw test results
-- **playwright-report** (7 days): E2E test report
+- **playwright-report** (30 days): E2E test report
 - **build-output** (7 days): Static site build
 
 ## Viewing Reports

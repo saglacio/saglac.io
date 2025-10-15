@@ -179,7 +179,6 @@ The avatar is automatically fetched from GitHub.
 ## Documentation
 
 - **[RSS & Sitemap Generation](./docs/RSS_AND_SITEMAP.md)** - Feed generation details
-- **[Technical Analysis](./ANALYSIS_SUMMARY.md)** - Architecture decisions
 
 ## Community
 
