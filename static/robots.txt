@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: *
-Disallow: */tags/
-Disallow: */categories/
-
-# sitemap: https://saglac.io/sitemap.xml

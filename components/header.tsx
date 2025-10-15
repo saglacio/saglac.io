@@ -1,0 +1,117 @@
+"use client"
+
+import Link from "next/link"
+import Image from "next/image"
+import { useState } from "react"
+import { Menu, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/images/logos/SaglacIO_Logo_Meetups_Inverted.png"
+              alt="Logo de SagLac IO"
+              width={180}
+              height={45}
+              className="h-10 w-auto"
+              unoptimized
+            />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-foreground/80 hover:text-primary transition-colors">
+              Accueil
+            </Link>
+            <Link href="/about" className="text-foreground/80 hover:text-primary transition-colors">
+              À propos
+            </Link>
+            <Link href="/archives" className="text-foreground/80 hover:text-primary transition-colors">
+              Archives
+            </Link>
+            <Link href="/faq" className="text-foreground/80 hover:text-primary transition-colors">
+              FAQ
+            </Link>
+            <Link href="/contact" className="text-foreground/80 hover:text-primary transition-colors">
+              Contact
+            </Link>
+            <Button
+              asChild
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
+            >
+              <a href="https://www.facebook.com/groups/saglac.io" target="_blank" rel="noopener noreferrer">
+                Rejoindre
+              </a>
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-foreground"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 flex flex-col gap-4">
+            <Link
+              href="/"
+              className="text-foreground/80 hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Accueil
+            </Link>
+            <Link
+              href="/about"
+              className="text-foreground/80 hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              À propos
+            </Link>
+            <Link
+              href="/archives"
+              className="text-foreground/80 hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Archives
+            </Link>
+            <Link
+              href="/faq"
+              className="text-foreground/80 hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              FAQ
+            </Link>
+            <Link
+              href="/contact"
+              className="text-foreground/80 hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
+            <Button
+              asChild
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full bg-transparent"
+            >
+              <a href="https://www.facebook.com/groups/saglac.io" target="_blank" rel="noopener noreferrer">
+                Rejoindre
+              </a>
+            </Button>
+          </div>
+        )}
+      </nav>
+    </header>
+  )
+}

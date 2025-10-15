@@ -8,7 +8,6 @@ talks:
 - authors:
   - jean_nicolas_viens
   title: Design d’interfaces web dans un cadre Agile
-  twitter: jni_viens
 - authors:
   - jeanphilippe_gravel
   title: Introduction à l'inférence avec NodeJs

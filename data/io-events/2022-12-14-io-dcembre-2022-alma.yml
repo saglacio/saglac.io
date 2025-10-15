@@ -18,7 +18,6 @@ talks:
     reproduisibles, de contrôler ses dépendances logicielles et finalement de gérer
     des services systemd ou des dotfiles.'
   title: Nix pour les nuls
-  twitter: refnil19
 - authors:
   - emileber
   description: Avec des pages de plus en plus lourdes en JavaScript, Qwik est potentiellement
