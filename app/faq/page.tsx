@@ -12,13 +12,18 @@ import remarkGfm from 'remark-gfm'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'FAQ',
-  description: 'Questions fréquemment posées sur les événements SagLac IO. Tout ce que vous devez savoir sur notre communauté tech au Saguenay—Lac-Saint-Jean.',
+  title: 'Questions fréquentes',
+  description: 'FAQ SagLac IO : réponses à vos questions sur nos événements tech au Saguenay—Lac-Saint-Jean. Inscription, format des rencontres, présentations et plus.',
+  alternates: {
+    canonical: 'https://saglac.io/faq',
+  },
   openGraph: {
-    title: 'FAQ - SagLac IO',
-    description: 'Questions fréquemment posées sur les événements SagLac IO. Tout ce que vous devez savoir sur notre communauté tech.',
+    title: 'Questions fréquentes - SagLac IO',
+    description: 'FAQ SagLac IO : réponses à vos questions sur nos événements tech au Saguenay—Lac-Saint-Jean. Inscription, format, présentations.',
     url: 'https://saglac.io/faq',
     type: 'website',
+    locale: 'fr_CA',
+    siteName: 'SagLac IO',
     images: [
       {
         url: '/images/open-graph-default-image.png',
@@ -30,8 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FAQ - SagLac IO',
-    description: 'Questions fréquemment posées sur les événements SagLac IO.',
+    title: 'Questions fréquentes - SagLac IO',
+    description: 'FAQ SagLac IO : réponses sur nos événements tech au Saguenay—Lac-Saint-Jean.',
+    creator: '@saglacio',
     images: ['/images/open-graph-default-image.png'],
   },
 }
@@ -54,8 +60,8 @@ export default function FAQPage() {
             </div>
 
             <div className="space-y-8">
-              {sections.map((section, sectionIndex) => (
-                <div key={sectionIndex}>
+              {sections.map((section) => (
+                <div key={section.id}>
                   <h2 className="text-2xl font-bold mb-4 text-primary">{section.header}</h2>
                   <Accordion type="single" collapsible className="space-y-2">
                     {section.questions.map((q) => (

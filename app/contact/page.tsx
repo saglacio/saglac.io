@@ -6,12 +6,17 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: "Contactez l'équipe de SagLac IO. Rejoignez notre communauté sur Facebook, Twitter, LinkedIn ou Discord. Courriel: info@saglac.io",
+  description: "Contactez SagLac IO par courriel (info@saglac.io) ou rejoignez notre communauté sur Facebook, Twitter, LinkedIn et Discord. Restez informé des événements tech!",
+  alternates: {
+    canonical: 'https://saglac.io/contact',
+  },
   openGraph: {
     title: 'Contact - SagLac IO',
-    description: "Contactez l'équipe de SagLac IO. Rejoignez notre communauté sur Facebook, Twitter, LinkedIn ou Discord.",
+    description: "Contactez SagLac IO ou rejoignez notre communauté sur Facebook, Twitter, LinkedIn et Discord. Courriel : info@saglac.io",
     url: 'https://saglac.io/contact',
     type: 'website',
+    locale: 'fr_CA',
+    siteName: 'SagLac IO',
     images: [
       {
         url: '/images/open-graph-default-image.png',
@@ -24,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Contact - SagLac IO',
-    description: "Contactez l'équipe de SagLac IO via courriel ou rejoignez notre communauté.",
+    description: "Contactez SagLac IO par courriel ou rejoignez notre communauté tech.",
+    creator: '@saglacio',
     images: ['/images/open-graph-default-image.png'],
   },
 }

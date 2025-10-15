@@ -65,6 +65,33 @@ export const metadata: Metadata = {
   },
 }
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'SagLac IO',
+  url: 'https://saglac.io',
+  logo: 'https://saglac.io/images/open-graph-default-image.png',
+  description:
+    'Communauté tech du Saguenay—Lac-Saint-Jean. Rencontres mensuelles gratuites pour passionnés de technologies numériques.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Saguenay',
+    addressRegion: 'QC',
+    addressCountry: 'CA',
+  },
+  sameAs: [
+    'https://www.facebook.com/groups/saglac.io',
+    'https://twitter.com/saglacio',
+    'https://www.linkedin.com/company/saglac-io',
+    'https://discord.gg/8pY5XVhvYM',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'info@saglac.io',
+    contactType: 'customer service',
+  },
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -74,6 +101,10 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link rel="alternate" type="application/rss+xml" title="SagLac IO RSS Feed" href="/rss.xml" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
