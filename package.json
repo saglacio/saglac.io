@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build && node scripts/generate-feeds.mjs",
+    "build": "next build",
+    "postbuild": "node scripts/generate-feeds.mjs",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
