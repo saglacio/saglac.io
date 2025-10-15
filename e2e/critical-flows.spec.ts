@@ -16,8 +16,8 @@ test.describe('Critical User Flows', () => {
     // Navigate to homepage
     await page.goto('/')
     
-    // Verify page loads
-    await expect(page).toHaveTitle(/SagLac IO/)
+    // Verify page loads with correct French title
+    await expect(page).toHaveTitle(/Accueil \| SagLac IO/)
     
     // Verify logo is visible in header (not footer)
     await expect(page.locator('header img[alt*="Logo"]').first()).toBeVisible()
