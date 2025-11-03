@@ -2,7 +2,8 @@ import { getNextEvent, getAuthorAvatar } from '@/lib/data-loader'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Calendar, MapPin, ExternalLink, Archive, Twitter, Github, Linkedin, Globe } from 'lucide-react'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
+import { Calendar, MapPin, ExternalLink, Archive, Twitter, Github, Linkedin, Globe, ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import type { Author } from '@/lib/types'
 
@@ -105,150 +106,152 @@ export function NextEvent() {
             </h2>
           </div>
 
-          <Card className="overflow-hidden border-2 border-primary/20">
-            <CardHeader className="bg-primary/5">
-              <CardTitle className="text-3xl">{event.title}</CardTitle>
-              <div className="space-y-2 text-base mt-4">
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5" />
-                  {new Date(event.date).toLocaleString('fr-CA', {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit',
-                    timeZone: 'America/Toronto',
-                  })}
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5" />
-                  {event.location.url || event.location.facebook ? (
-                    <a
-                      href={event.location.url || event.location.facebook}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline"
-                    >
-                      {event.location.name}
-                    </a>
-                  ) : (
-                    <span>{event.location.name}</span>
-                  )}
-                </div>
-                {event.location.address && (
-                  <div className="text-sm text-foreground/70 ml-7">{event.location.address}</div>
-                )}
-              </div>
+          <Card className="overflow-hidden">
+            <CardHeader>
+              <CardTitle className="text-2xl md:text-3xl">{event.title}</CardTitle>
             </CardHeader>
-
-            {/* Map and Event Details Grid */}
-            {event.location.map && (
-              <div className="grid md:grid-cols-2 gap-0">
-                {/* Google Maps Embed */}
-                <div className="w-full h-[300px] md:h-[400px]">
-                  <iframe
-                    title="Event Location Map"
-                    src={event.location.map}
-                    className="w-full h-full border-0"
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </div>
-
-                {/* Event Details */}
-                <CardContent className="py-6">
-                  {event.description && (
-                    <div className="mb-6 prose prose-sm max-w-none dark:prose-invert">
-                      <p>{event.description}</p>
-                    </div>
-                  )}
-
-                  {event.location.description && (
-                    <div className="mb-6 p-4 bg-secondary/30 rounded-lg">
-                      <h3 className="font-semibold mb-2 flex items-center gap-2">
-                        <MapPin className="w-4 h-4" />
-                        À propos du lieu
-                      </h3>
-                      <p className="text-sm text-foreground/70">{event.location.description}</p>
-                    </div>
-                  )}
-
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    {event.event_url && (
-                      <Button asChild size="default" className="flex-1">
-                        <a href={event.event_url} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Participer
-                        </a>
-                      </Button>
-                    )}
-                    <Button asChild size="default" variant="outline" className="flex-1">
-                      <Link href="/archives">
-                        <Archive className="w-4 h-4 mr-2" />
-                        Archives
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </div>
-            )}
-
-            {/* Talks Section - Full Width */}
-            {event.talks && event.talks.length > 0 && (
-              <CardContent className={event.location.map ? 'pt-0' : 'pt-6'}>
-                {event.description && !event.location.map && (
-                  <div className="mb-6 prose prose-sm max-w-none dark:prose-invert">
-                    <p>{event.description}</p>
-                  </div>
-                )}
-
-                <div className="space-y-4 mb-6">
-                  <h3 className="font-semibold text-lg">Au programme:</h3>
-                  {event.talks.map((talk, idx) => (
-                    <div key={idx} className="border-l-2 border-primary/30 pl-4">
-                      <h4 className="font-medium">{talk.title}</h4>
-                      {talk.description && (
-                        <p className="text-sm text-foreground/70 mb-2">{talk.description}</p>
-                      )}
-                      <div className="flex items-center gap-2 flex-wrap mt-2">
-                        <span className="text-sm text-foreground/60">Par:</span>
-                        {talk.authors.map((author) => (
-                          <div key={author.id} className="flex items-center gap-2 bg-secondary/30 rounded-full pr-2 py-0.5">
-                            <Avatar className="w-6 h-6">
-                              <AvatarImage src={getAuthorAvatar(author)} alt={author.name} />
-                              <AvatarFallback>{author.name[0]}</AvatarFallback>
-                            </Avatar>
-                            <span className="text-sm">{author.name}</span>
-                            <AuthorSocialLinks author={author} />
-                          </div>
-                        ))}
+            
+            <CardContent className="space-y-8">
+              {/* Top Section: Event Info + Map */}
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Left: Date, Time, Location Info */}
+                <div className="space-y-4">
+                  {/* Date & Time */}
+                  <div className="flex items-start gap-3">
+                    <Calendar className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <div className="font-medium">
+                        {new Date(event.date).toLocaleDateString('fr-CA', {
+                          weekday: 'long',
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric',
+                        })}
+                      </div>
+                      <div className="text-sm text-foreground/70">
+                        {new Date(event.date).toLocaleTimeString('fr-CA', {
+                          hour: '2-digit',
+                          minute: '2-digit',
+                          timeZone: 'America/Toronto',
+                        })}
                       </div>
                     </div>
-                  ))}
+                  </div>
+
+                  {/* Location */}
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div className="flex-1 min-w-0">
+                      {event.location.url || event.location.facebook ? (
+                        <a
+                          href={event.location.url || event.location.facebook}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium hover:underline hover:text-primary transition-colors"
+                        >
+                          {event.location.name}
+                        </a>
+                      ) : (
+                        <div className="font-medium">{event.location.name}</div>
+                      )}
+                      {event.location.address && (
+                        <div className="text-sm text-foreground/70 mt-1">{event.location.address}</div>
+                      )}
+                      
+                      {/* Collapsible Location Description */}
+                      {event.location.description && (
+                        <Collapsible className="mt-3">
+                          <CollapsibleTrigger className="flex items-center gap-1 text-sm text-primary hover:underline">
+                            Voir les détails du lieu
+                            <ChevronDown className="w-4 h-4 transition-transform ui-expanded:rotate-180" />
+                          </CollapsibleTrigger>
+                          <CollapsibleContent className="mt-2">
+                            <p className="text-sm text-foreground/70">{event.location.description}</p>
+                          </CollapsibleContent>
+                        </Collapsible>
+                      )}
+                    </div>
+                  </div>
                 </div>
 
-                {!event.location.map && (
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    {event.event_url && (
-                      <Button asChild size="lg" className="flex-1 sm:flex-initial">
-                        <a href={event.event_url} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Voir l'événement Facebook
-                        </a>
-                      </Button>
-                    )}
-                    <Button asChild size="lg" variant="outline" className="flex-1 sm:flex-initial">
-                      <Link href="/archives">
-                        <Archive className="w-4 h-4 mr-2" />
-                        Événements passés
-                      </Link>
-                    </Button>
+                {/* Right: Map */}
+                {event.location.map && (
+                  <div className="h-[280px] md:h-[300px] rounded-lg overflow-hidden border border-border">
+                    <iframe
+                      title="Emplacement de l'événement"
+                      src={event.location.map}
+                      className="w-full h-full border-0"
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
                   </div>
                 )}
-              </CardContent>
-            )}
+              </div>
+
+              {/* Event Description */}
+              {event.description && (
+                <div className="prose prose-sm max-w-none dark:prose-invert">
+                  <p className="text-foreground/80">{event.description}</p>
+                </div>
+              )}
+
+              {/* Talks Section */}
+              {event.talks && event.talks.length > 0 && (
+                <div className="space-y-8">
+                  <h3 className="font-semibold text-xl">Au programme</h3>
+                  <div className="space-y-8">
+                    {event.talks.map((talk, idx) => (
+                      <div key={idx} className="border-l-4 border-primary/40 pl-6 py-2">
+                        <div className="flex flex-col md:flex-row gap-6">
+                          {/* Speakers Column */}
+                          <div className="flex flex-row md:flex-col gap-4 md:gap-6">
+                            {talk.authors.map((author) => (
+                              <div key={author.id} className="flex flex-col items-center text-center">
+                                <Avatar className="w-24 h-24 md:w-28 md:h-28 border-2 border-primary/20 shadow-md mb-3">
+                                  <AvatarImage src={getAuthorAvatar(author)} alt={author.name} />
+                                  <AvatarFallback className="text-2xl font-medium">{author.name[0]}</AvatarFallback>
+                                </Avatar>
+                                <div className="space-y-2">
+                                  <div className="font-medium text-sm">{author.name}</div>
+                                  <AuthorSocialLinks author={author} />
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Talk Content */}
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-semibold text-xl mb-3">{talk.title}</h4>
+                            {talk.description && (
+                              <p className="text-base text-foreground/70 leading-relaxed">{talk.description}</p>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                {event.event_url && (
+                  <Button asChild className="flex-1 h-12 text-base">
+                    <a href={event.event_url} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Participer
+                    </a>
+                  </Button>
+                )}
+                <Button asChild variant="outline" className="flex-1 h-12 text-base">
+                  <Link href="/archives">
+                    <Archive className="w-4 h-4 mr-2" />
+                    Événements passés
+                  </Link>
+                </Button>
+              </div>
+            </CardContent>
           </Card>
         </div>
       </div>
