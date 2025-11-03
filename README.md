@@ -148,6 +148,10 @@ talks:
     authors:
       - author-id  # Reference to data/authors/
     slides: "https://slides.com/presentation"
+    # or
+    slides:
+      - "https://slides.com/presentation-1"
+      - "https://slides.com/presentation-2"
 ```
 
 3. Test locally: `pnpm dev`
